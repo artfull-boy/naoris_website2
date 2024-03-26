@@ -1,0 +1,31 @@
+.active_section{
+    padding: 3px 0px;
+    background-color: #110F48;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    z-index: 1;
+    color: #00FFA3;
+}
+.active_section::after, .active_section::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    height: 50%;
+    width: 3px;
+    background-color: #00FFA3;
+    transform: translate(-50%, 0);
+    z-index: 0;
+}
+.active_section::after {
+    border-bottom-left-radius: 2.5px;
+    border-bottom-right-radius: 2.5px;
+
+    bottom: -20%;
+}
+.active_section::before {
+    border-top-left-radius: 2.5px;
+    border-top-right-radius: 2.5px;
+    top: -20%;
+}
