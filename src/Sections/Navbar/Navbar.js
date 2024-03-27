@@ -47,7 +47,7 @@ const Navbar = ({ sections, scrollToSection }) => {
     setIsOpen(!isOpen);
   };
   return (
-    <div className="navbar bg-[#110F48] xl:px-28 lg:px-20 md:px-16 sm:px-10 px-[10px]">
+    <div className="navbar sticky top-0 z-10 bg-[#110F48] xl:px-28 lg:px-20 md:px-16 sm:px-10 px-[10px]">
       <div className="navbar-start">
         <div className="dropdown" ref={dropdownRef}>
           <div
@@ -115,7 +115,7 @@ const Navbar = ({ sections, scrollToSection }) => {
         </ul>
       </div>
       <div className="navbar-end">
-        <ul className="menu menu-horizontal text-white">
+        <ul className="menu menu-horizontal text-white relative z-10">
           <li>
             <details>
               <summary>Language</summary>

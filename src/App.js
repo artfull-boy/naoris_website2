@@ -2,6 +2,7 @@ import React from "react";
 
 import Navbar from "./Sections/Navbar/Navbar";
 import HeroSection from "./Sections/HeroSection/HeroSection";
+import Partners from './Sections/Partners/Partners'
 
 function App() {
   const sections = [
@@ -17,10 +18,11 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="relative">
       <Navbar sections={sections} scrollToSection={scrollToSection} />
       <div id="home">
         <HeroSection />
+        <Partners />
       </div>
       <div id="about">About</div>
       <div id="services">Services</div>
