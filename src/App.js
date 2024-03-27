@@ -1,8 +1,10 @@
 import React from "react";
-
+import mesh1 from "./assets/mesh1.png";
+import mesh from "./assets/mesh.png";
 import Navbar from "./Sections/Navbar/Navbar";
 import HeroSection from "./Sections/HeroSection/HeroSection";
 import Partners from './Sections/Partners/Partners'
+import David from "./Sections/Testimonials/David";
 
 function App() {
   const sections = [
@@ -18,16 +20,20 @@ function App() {
   };
 
   return (
-    <div className="relative">
+      <>
       <Navbar sections={sections} scrollToSection={scrollToSection} />
-      <div id="home">
+    <div className="flex flex-col gap-[54px]">
+      <div className="relative" id="home">
+        <img src={mesh} className="absolute top-0 z-0 "/>
         <HeroSection />
-        <Partners />
       </div>
+        <Partners />
+        <David />
       <div id="about">About</div>
       <div id="services">Services</div>
       <div id="contact">Contact</div>
     </div>
+      </>
   );
 }
 

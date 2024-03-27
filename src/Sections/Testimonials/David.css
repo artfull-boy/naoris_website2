@@ -1,0 +1,26 @@
+.quote {
+    position: relative;
+}
+/*
+.quote::before {
+    content: '“';
+    font-family: "Manrope", sans-serif;
+    position: absolute;
+    font-size: 150px;
+    color: #00FFA3;
+    top: -35%;
+    left: 0%;
+    line-height: 0.7;
+}
+.quote::after {
+    content: '“';
+    font-family: "Manrope", sans-serif;
+    position: absolute;
+    font-size: 150px;
+    color: #00FFA3;
+    bottom: -45%;
+    right: 0%;
+    line-height: 0;
+    transform: rotateY(180deg);
+}
+*/

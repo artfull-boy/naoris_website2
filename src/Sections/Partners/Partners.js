@@ -39,7 +39,7 @@ function App() {
 
   return (
     <div className="container slider-container">
-      <div className="flex justify-center items-center flex-col w-full overflow-hidden gap-[30px]">
+      <div className="flex justify-center items-center flex-col w-full overflow-hidden gap-[20px]">
         <p className="font-sans font-bold text-[50px] text-white">
           They Trust Us
         </p>
