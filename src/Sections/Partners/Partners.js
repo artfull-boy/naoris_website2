@@ -1,5 +1,6 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
+import mesh1 from "../../assets/mesh1.png";
 import "./partners.css";
 import logo1 from "../../assets/logos/1.png";
 import logo2 from "../../assets/logos/2.png";
@@ -38,7 +39,9 @@ function App() {
   ];
 
   return (
-    <div className="container slider-container">
+    <div className="relative">
+      <img src={mesh1} className="absolute top-0 z-0 p-0"/>
+    <div className="container relative slider-container">
       <div className="flex justify-center items-center flex-col w-full overflow-hidden gap-[20px]">
         <p className="font-sans font-bold text-[50px] text-white">
           They Trust Us
@@ -63,6 +66,7 @@ function App() {
           ))}
         </Marquee>
       </div>
+    </div>
     </div>
   );
 }

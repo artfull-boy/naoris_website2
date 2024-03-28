@@ -23,10 +23,11 @@ function App() {
       <>
       <Navbar sections={sections} scrollToSection={scrollToSection} />
     <div className="flex flex-col gap-[54px]">
-      <div className="relative" id="home">
+      <div className="relative flex flex-col gap-[54px]" id="home">
         <img src={mesh} className="absolute top-0 z-0 "/>
         <HeroSection />
       </div>
+        
         <Partners />
         <David />
       <div id="about">About</div>

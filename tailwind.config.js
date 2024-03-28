@@ -8,6 +8,9 @@ module.exports = {
       fontFamily: {
         sans: ["Manrope", "sans-serif"],
       },
+      screens: {
+        'vsm':{'max': '517px'}
+      }
     },
   },
   plugins: [require("daisyui")],
