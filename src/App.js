@@ -5,6 +5,7 @@ import Navbar from "./Sections/Navbar/Navbar";
 import HeroSection from "./Sections/HeroSection/HeroSection";
 import Partners from './Sections/Partners/Partners'
 import David from "./Sections/Testimonials/David";
+import Team from "./Sections/Team/Team";
 
 function App() {
   const sections = [
@@ -30,6 +31,7 @@ function App() {
         
         <Partners />
         <David />
+        <Team />
       <div id="about">About</div>
       <div id="services">Services</div>
       <div id="contact">Contact</div>

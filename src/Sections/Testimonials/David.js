@@ -35,7 +35,7 @@ const David = () => {
       <div className=" flex justify-end w-[100%]">
         <div className="testimonials relative vsm:w-[100%]">
           <div className="flex lg:flex-row vsm:flex-col vsm:gap-0 gap-10 items-center justify-end pr-4 width-[100%] h-full">
-            <div className=" relative z-10">
+            <div className=" relative z-[1]">
               <p className="font-bold 2xl:text-[40px] xl:text-[35px] lg:text-[28px] text-[22px] text-white whitespace-nowrap vsm:hidden">
                 David
               </p>
@@ -46,8 +46,8 @@ const David = () => {
               David Holtzman
               </p>
             </div>
-            <div className="relative vsm:hidden z-10 w-[3px] h-[70%] origin-top-left bg-white"></div>
-            <div className=" relative z-10 ">
+            <div className="relative vsm:hidden z-[1] w-[3px] h-[70%] origin-top-left bg-white"></div>
+            <div className=" relative z-[1] ">
               <p className="2xl:text-[30px] xl:text-[25px] lg:text-[20px] text-[20px] text-white whitespace-nowrap vsm:whitespace-normal vsm:text-center">
                 Naoris Consulting Strategy Director
               </p>
