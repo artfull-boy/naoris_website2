@@ -37,7 +37,7 @@ function App() {
   return (
       <>
       <Navbar sections={sections} scrollToSection={scrollToSection} />
-    <div className="flex flex-col gap-[54px]">
+    <div className="flex flex-col gap-[54px] overflow-x-hidden">
       <div className="relative flex flex-col gap-[54px]" id="home">
         <img src={mesh} className="absolute top-0 z-0 "/>
         <HeroSection />
@@ -47,7 +47,9 @@ function App() {
         <David />
         <Team />
         <Advisors />
-      <div id="about">About</div>
+      <div id="about">
+about
+      </div>
       <div id="services">Services</div>
       <div id="contact">Contact</div>
     </div>

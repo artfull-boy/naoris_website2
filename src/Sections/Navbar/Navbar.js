@@ -99,12 +99,12 @@ const Navbar = ({ sections, scrollToSection }) => {
           <img src={logo} width={140} />
         </a>
       </div>
-      <div className="navbar-center hidden lg:flex h-full">
+      <div className="navbar-center hidden lg:flex h-fit">
         <ul className="menu menu-horizontal px-1 gap-4 text-white h-full">
           {sections.map((section) => (
             <li
               key={section.id}
-              className={activeSection === section.id ? "h-full active_section" : "active_section"}
+              className={activeSection === section.id ? "active_section" : "not_active_section"}
               onClick={() => scrollToSection(section.id)}
             >
               <a className={`hover:text-[#00FFA3] hover:bg-transparent h-full`}>
@@ -121,7 +121,7 @@ const Navbar = ({ sections, scrollToSection }) => {
               <summary>Language</summary>
               <ul className="p-2 w-[100%]">
                 <li>
-                  <a>
+                  <a className="text-[#00FFA3]">
                     {" "}
                     <img src={US} /> Ang
                   </a>
