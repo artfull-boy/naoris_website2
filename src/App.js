@@ -6,8 +6,22 @@ import HeroSection from "./Sections/HeroSection/HeroSection";
 import Partners from './Sections/Partners/Partners'
 import David from "./Sections/Testimonials/David";
 import Team from "./Sections/Team/Team";
+import Advisors from "./Sections/Team/Advisors";
+import Lenis from '@studio-freight/lenis'
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function App() {
+  const lenis = new Lenis()
+  
+  lenis.on('scroll', ScrollTrigger.update)
+  
+  gsap.ticker.add((time)=>{
+    lenis.raf(time * 1000)
+  })
+  
+  gsap.ticker.lagSmoothing(0)
+  
   const sections = [
     { id: 'home', name: 'Home' },
     { id: 'about', name: 'About' },
@@ -32,6 +46,7 @@ function App() {
         <Partners />
         <David />
         <Team />
+        <Advisors />
       <div id="about">About</div>
       <div id="services">Services</div>
       <div id="contact">Contact</div>

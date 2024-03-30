@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Ahmed Reda Chami",
+        "position":"President of CESE",
+        "desc":"President of CESE.<br>Former Minister of Industry and New Technologies.<br>Former CEO of Microsoft Southeast Asia",
+        "img":"assets/team/ahmed.png",
+        "linkedin":"#"
+},
+{
+    "name": "Driss Benomar",
+    "position":"President of the AlOmra Group",
+    "desc":"President of the AlOmra Group. Founder and president of the African Think Tanks Association of the Casablanca Club & Atlantide Research Center",
+    "img":"assets/team/driss.png",
+    "linkedin":"#"
+},
+{
+    "name": "Zakaria Fahim",
+    "position":"President of BDO Morocco",
+    "desc":"President of BDO Morocco.<br>Founder of Hub Africa & Former President of the Ethics and Good Governance Commission of the CGEM",
+    "img":"assets/team/zakaria.png",
+    "linkedin":"#"
+},
+{
+    "name": "Salaheddine Mezzouar",
+    "position":"Former Minister of Industry and Commerce",
+    "desc":"Former Minister of Industry and Commerce.<br> Former Minister of Foreign Affairs.<br> Former President of the CGEM",
+    "img":"assets/team/salaheddine.png",
+    "linkedin":"#"
+}
+]

@@ -38,9 +38,7 @@ END: ed8c6549bwf9 */
     bottom: 0%;
     
 }
-.card:hover .card_content {
-    height: fit-content;
-}
+
 .card .card_background {
     border-radius: 0px 0px 8px 8px;
 background: linear-gradient(180deg, rgba(5, 2, 115, 0.00) 0%, #050273 79.56%);
