@@ -57,7 +57,8 @@ const David = () => {
           <motion.div className="flex flex-col gap-0"
           variants={quoteVariants}
           initial="hidden"
-          whileInView="visible">
+          whileInView="visible"
+          viewport={{ once: true }}>
             <span className="text-[#00FFA3] 2xl:text-[200px] xl:text-[170px] lg:text-[150px] text-[120px] font-normal leading-[0]">
               “
             </span>
@@ -85,7 +86,8 @@ const David = () => {
         <motion.div className="flex flex-col gap-0 items-end justify-start lg:w-auto w-[100%]"
         variants={testimonialsVariants}
         initial="hidden"
-        whileInView="visible">
+        whileInView="visible"
+        viewport={{ once: true }}>
           {
             <img
               src={david}
@@ -129,7 +131,8 @@ const David = () => {
       className=" flex justify-end w-[100%]"
       variants={testimonialsVariants}
         initial="hidden"
-        whileInView="visible">
+        whileInView="visible"
+        viewport={{ once: true }}>
         <div className="testimonials relative vsm:w-[100%]">
           <div className="flex lg:flex-row vsm:flex-col vsm:gap-0 gap-10 items-center justify-end pr-4 width-[100%] h-full">
             <div className=" relative z-[1]">

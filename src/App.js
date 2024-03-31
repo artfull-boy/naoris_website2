@@ -41,7 +41,6 @@ function App() {
     <div className="flex flex-col relative gap-[54px] overflow-x-hidden">
       <img src={mesh1} className="absolute top-0 z-0 p-0" style={{"height": "-webkit-fill-available"}}/>
       <div className="relative flex flex-col gap-[54px]" id="home">
-        <img src={mesh} className="absolute top-0 z-0 "/>
         <HeroSection />
       </div>
         
