@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/naoris_website2/static/css/main.7e06dde7.css",
+    "main.js": "/naoris_website2/static/js/main.8ff7de2d.js",
+    "static/media/Ellipse_2.png": "/naoris_website2/static/media/Ellipse_2.6c13a8543c1bca221082.png",
+    "static/media/Ellipse_4.png": "/naoris_website2/static/media/Ellipse_4.b9904355bd94be6b7b4f.png",
+    "static/media/mesh1.png": "/naoris_website2/static/media/mesh1.29fffca12750fe68712d.png",
+    "static/media/Ellipse_3.png": "/naoris_website2/static/media/Ellipse_3.a618cf42ec86d423c29f.png",
+    "static/media/Ellipse_1.png": "/naoris_website2/static/media/Ellipse_1.0e7ed69b4690516c7e0b.png",
+    "static/media/mesh.png": "/naoris_website2/static/media/mesh.e9c9da55172902ddcc16.png",
+    "static/media/eclipse_red.png": "/naoris_website2/static/media/eclipse_red.9b64bf423cd80d7cb789.png",
+    "static/media/David.png": "/naoris_website2/static/media/David.df17b88ff6451c834537.png",
+    "static/media/triangle.png": "/naoris_website2/static/media/triangle.5c4a9c6102767810e607.png",
+    "static/media/3.png": "/naoris_website2/static/media/3.846b8ab8b3d1a8802f1d.png",
+    "static/media/7.png": "/naoris_website2/static/media/7.e0e3bb82922d1b37e60d.png",
+    "static/media/4.png": "/naoris_website2/static/media/4.ee56d409d86a73b83769.png",
+    "static/media/9.png": "/naoris_website2/static/media/9.61ec68b664bf7d0e7d3e.png",
+    "static/media/23.png": "/naoris_website2/static/media/23.40a01c5cc29831512efe.png",
+    "static/media/18.png": "/naoris_website2/static/media/18.ff3c2f8806de3ff62d09.png",
+    "static/media/29.png": "/naoris_website2/static/media/29.782212abbd7e1ba69de2.png",
+    "static/media/22.png": "/naoris_website2/static/media/22.ea543e8ce0ae75558b8b.png",
+    "static/media/30.png": "/naoris_website2/static/media/30.d73b090f443681fa532a.png",
+    "static/media/6.png": "/naoris_website2/static/media/6.338497994f5d900a15d5.png",
+    "static/media/27.png": "/naoris_website2/static/media/27.e5230ce8b23267a36eb5.png",
+    "static/media/20.png": "/naoris_website2/static/media/20.ff92e4c95b878cd3e0d0.png",
+    "static/media/logo.png": "/naoris_website2/static/media/logo.8740245018461d32170f.png",
+    "static/media/25.png": "/naoris_website2/static/media/25.7f7eb8b1666e523a4cb2.png",
+    "static/media/linkedin.svg": "/naoris_website2/static/media/linkedin.6d14363de145d3db823322bce07504e8.svg",
+    "index.html": "/naoris_website2/index.html",
+    "main.7e06dde7.css.map": "/naoris_website2/static/css/main.7e06dde7.css.map",
+    "main.8ff7de2d.js.map": "/naoris_website2/static/js/main.8ff7de2d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7e06dde7.css",
+    "static/js/main.8ff7de2d.js"
+  ]
+}
