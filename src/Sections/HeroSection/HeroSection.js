@@ -4,6 +4,7 @@ import eclipse1 from "../../assets/Ellipse_1.png";
 import eclipse2 from "../../assets/Ellipse_2.png";
 import eclipse3 from "../../assets/Ellipse_3.png";
 import { motion } from "framer-motion";
+import './herosection.css'
 
 const HeroSection = () => {
   return (
@@ -23,20 +24,20 @@ const HeroSection = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
+        transition={{ type: "spring", duration: 1.5, bounce: 0.3}}
         variants={{
           visible: { opacity: 1, scale: 1 },
           hidden: { opacity: 0, scale: 0 },
         }}
         className="container flex gap-0 h-full mt-16 justify-end  items-center relative"
       >
-        <p className="font-sans text-white lg:text-[60px] md:text-[50px] sm:text-[42px] text-[30px] font-bold text-center">
+        <p className="font-sans hero_text lg:text-[60px] md:text-[50px] sm:text-[42px] text-[30px] font-bold text-center">
           UNLEASHING THE FUTURE:{" "}
         </p>
-        <p className="font-sans text-white lg:text-[60px] md:text-[50px] sm:text-[42px] text-[30px] font-bold text-center">
+        <p className="font-sans hero_text lg:text-[60px] md:text-[50px] sm:text-[42px] text-[30px] font-bold text-center">
           LEADING THE <span className="text-[#DE0000]">WEB 3.0</span>
         </p>
-        <p className="font-sans text-white lg:text-[60px] md:text-[50px] sm:text-[42px] text-[30px] font-bold text-center">
+        <p className="font-sans hero_text lg:text-[60px] md:text-[50px] sm:text-[42px] text-[30px] font-bold text-center">
           REVOLUTION
         </p>
       </motion.div>

@@ -5,7 +5,7 @@ import US from "../../assets/us.png";
 import FR from "../../assets/Fr.png";
 
 const Navbar = ({ sections, scrollToSection }) => {
-  const [activeSection, setActiveSection] = useState("");
+  const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
     const handleScroll = () => {

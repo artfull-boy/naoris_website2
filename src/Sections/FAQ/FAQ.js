@@ -15,7 +15,7 @@ const FAQ = () => {
   };
   return (
     <>
-      <img src={eclipse} className="absolute left-0" width={400}></img>
+      <img src={eclipse} className="absolute left-0 bottom-0" width={400}></img>
       <div className="container flex-col items-center justify-center">
         <motion.div
           className="heading relative w-fit"

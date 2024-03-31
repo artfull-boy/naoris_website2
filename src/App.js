@@ -25,9 +25,11 @@ function App() {
   
   const sections = [
     { id: 'home', name: 'Home' },
-    { id: 'about', name: 'About' },
+    { id: 'about', name: 'About Us' },
     { id: 'services', name: 'Services' },
-    { id: 'contact', name: 'Contact' }
+    { id: 'team', name: 'Team' },
+    { id: 'faq', name: 'FAQ' },
+    { id: 'contact', name: 'Contact Us' },
   ];
 
   const scrollToSection = (sectionId) => {
@@ -39,21 +41,25 @@ function App() {
       <>
       <Navbar sections={sections} scrollToSection={scrollToSection} />
     <div className="flex flex-col relative gap-[54px] overflow-x-hidden">
-      <img src={mesh1} className="absolute top-0 z-0 p-0" style={{"height": "-webkit-fill-available"}}/>
+      <img src={mesh1} className="absolute top-0 z-0 p-0 w-full" style={{"height": "-webkit-fill-available"}}/>
       <div className="relative flex flex-col gap-[54px]" id="home">
         <HeroSection />
+        <Partners />
       </div>
         
-        <Partners />
-        <David />
-        <Team />
-        <Advisors />
-        <FAQ />
       <div id="about">
-about
+        <David />
+
       </div>
       <div id="services">Services</div>
-      <div id="contact">Contact</div>
+      <div className="relative flex flex-col gap-[54px]" id="team">
+        <Team />
+        <Advisors />
+      </div>
+      <div id="faq">
+        <FAQ />
+      </div>
+      <div id="contact">Contact Us</div>
     </div>
       </>
   );
