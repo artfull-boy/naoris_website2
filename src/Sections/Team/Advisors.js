@@ -40,7 +40,7 @@ const Team = () => {
                                 src={`${process.env.PUBLIC_URL}/${member.img}`}
                                 className="relative top-0 right-0 z-0 rounded-[8px]"
                             />
-                            <div className="card_background w-full h-[500px] absolute bottom-[-30%] right-0 z-[1]"></div>
+                            <div className="card_background w-full h-[500px] absolute bottom-[-60%] right-0 z-[1]"></div>
                             <div className="card_content absolute bottom-[0%] left-0 w-full h-full p-3 z-[1] flex flex-col gap-3 justify-end ">
                                 <div className="flex flex-col gap-1">
                                     <p className="text-[30px] font-bold text-white leading-none ">
