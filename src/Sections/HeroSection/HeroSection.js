@@ -32,7 +32,7 @@ const HeroSection = () => {
         className="container flex gap-0 h-full mt-16 justify-end  items-center relative"
       >
         <p className="font-sans hero_text lg:text-[60px] md:text-[50px] sm:text-[42px] text-[30px] font-bold text-center">
-          UNLEASHING THE FUTURE:{" "}
+          UNLEASHING THE FUTURE:
         </p>
         <p className="font-sans hero_text lg:text-[60px] md:text-[50px] sm:text-[42px] text-[30px] font-bold text-center">
           LEADING THE <span className="text-[#DE0000]">WEB 3.0</span>

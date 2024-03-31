@@ -34,7 +34,9 @@ function App() {
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
-    section.scrollIntoView({ behavior: 'smooth' });
+    const yOffset = -100; // Adjust this value as needed, negative values scroll a bit above the section, positive values scroll below
+    const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({top: y, behavior: 'smooth'});
   };
 
   return (

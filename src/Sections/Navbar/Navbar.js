@@ -9,7 +9,7 @@ const Navbar = ({ sections, scrollToSection }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + 200; 
+      const scrollPosition = window.scrollY + 100; 
       const sectionIds = sections.map((section) => section.id);
       const currentActiveSection = sectionIds.find((id) => {
         const sectionElement = document.getElementById(id);
