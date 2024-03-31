@@ -29,7 +29,7 @@ const Team = () => {
             }}
              viewport={{ once: true }}
             >
-                <p className="text-[50px] font-bold text-white text-center">Meet Our Team</p>
+                <p className="text-[50px] font-bold text-white text-center vsm:text-[35px]">Meet Our Team</p>
             </motion.div>
             {isMobile ? (
                 <div className="carousel carousel-center w-[100%] p-4 space-x-4  rounded-box">

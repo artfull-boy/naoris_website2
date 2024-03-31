@@ -28,7 +28,7 @@ const Team = () => {
             }}
              viewport={{ once: true }}>
                 <p 
-                className="text-[50px] font-bold text-white text-center"
+                className="text-[50px] font-bold text-white text-center vsm:text-[35px]"
                 >Meet Our Advisors</p>
             </motion.div>
             {isMobile ? (

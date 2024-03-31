@@ -10,6 +10,7 @@ import Advisors from "./Sections/Team/Advisors";
 import Lenis from '@studio-freight/lenis'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import FAQ from "./Sections/FAQ/FAQ";
 
 function App() {
   const lenis = new Lenis()
@@ -37,7 +38,8 @@ function App() {
   return (
       <>
       <Navbar sections={sections} scrollToSection={scrollToSection} />
-    <div className="flex flex-col gap-[54px] overflow-x-hidden">
+    <div className="flex flex-col relative gap-[54px] overflow-x-hidden">
+      <img src={mesh1} className="absolute top-0 z-0 p-0" style={{"height": "-webkit-fill-available"}}/>
       <div className="relative flex flex-col gap-[54px]" id="home">
         <img src={mesh} className="absolute top-0 z-0 "/>
         <HeroSection />
@@ -47,6 +49,7 @@ function App() {
         <David />
         <Team />
         <Advisors />
+        <FAQ />
       <div id="about">
 about
       </div>

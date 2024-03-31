@@ -40,10 +40,10 @@ function App() {
 
   return (
     <div className="relative">
-      <img src={mesh1} className="absolute top-0 z-0 p-0"/>
+
     <div className="container relative slider-container">
       <div className="flex justify-center items-center flex-col w-full overflow-hidden gap-[20px]">
-        <p className="font-sans font-bold text-[50px] text-white">
+        <p className="font-sans font-bold text-[50px] text-white vsm:text-[35px]">
           They Trust Us
         </p>
         <Marquee
