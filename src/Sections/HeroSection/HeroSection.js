@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import './herosection.css'
 
 const HeroSection = () => {
+  const isMobile = window.innerWidth < 420
   return (
     <div className="overflow-hidden w-[100%] h-[100%] flex flex-col justify-center relative items-center gap-4">
       {<img
@@ -31,15 +32,14 @@ const HeroSection = () => {
         }}
         className="container flex gap-0 h-full mt-16 justify-end  items-center relative"
       >
-        <p className="font-sans hero_text lg:text-[60px] md:text-[50px] sm:text-[42px] text-[30px] font-bold text-center">
-          UNLEASHING THE FUTURE:
-        </p>
-        <p className="font-sans hero_text lg:text-[60px] md:text-[50px] sm:text-[42px] text-[30px] font-bold text-center">
-          LEADING THE <span className="text-[#DE0000]">WEB 3.0</span>
-        </p>
-        <p className="font-sans hero_text lg:text-[60px] md:text-[50px] sm:text-[42px] text-[30px] font-bold text-center">
-          REVOLUTION
-        </p>
+        {
+          isMobile ?         <p className="font-sans hero_text lg:text-[60px] md:text-[50px] sm:text-[42px] text-[30px] font-bold text-center">
+          UNLEASHING THE FUTURE: LEADING THE WEB 3.0 REVOLUTION
+        </p> : 
+                <p className="font-sans hero_text lg:text-[60px] md:text-[50px] sm:text-[42px] text-[30px] font-bold text-center">
+                UNLEASHING THE FUTURE:<br/>LEADING THE WEB 3.0<br/>REVOLUTION
+              </p>
+        }
       </motion.div>
       {<div className="flex gap-0  items-center relative justify-center overflow-hidden ">
       <svg width="1200" height="612" fill="none" xmlns="http://www.w3.org/2000/svg">

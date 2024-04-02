@@ -1,0 +1,44 @@
+.quote {
+    position: relative;
+}
+
+.testimonials2::after {
+    content: "";
+    position: absolute;
+    background-image: url("../../assets/triangle2.png");
+    left: 0;
+    z-index: 0;
+    bottom: 0;
+    background-size: cover;
+    width: 120%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+@media (max-width: 517px) {
+    .testimonials2::after {
+        width: 140%;
+    }
+}
+/*
+.quote::before {
+    content: '“';
+    font-family: "Manrope", sans-serif;
+    position: absolute;
+    font-size: 150px;
+    color: #00FFA3;
+    top: -35%;
+    left: 0%;
+    line-height: 0.7;
+}
+.quote::after {
+    content: '“';
+    font-family: "Manrope", sans-serif;
+    position: absolute;
+    font-size: 150px;
+    color: #00FFA3;
+    bottom: -45%;
+    right: 0%;
+    line-height: 0;
+    transform: rotateY(180deg);
+}
+*/

@@ -11,6 +11,8 @@ import Lenis from '@studio-freight/lenis'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import FAQ from "./Sections/FAQ/FAQ";
+import About from "./Sections/About/About";
+import about_elem from "./assets/about_element.png"
 
 function App() {
   const lenis = new Lenis()
@@ -49,10 +51,11 @@ function App() {
         <Partners />
       </div>
         
-      <div id="about">
+      <div id="about" className="relative flex flex-col gap-[100px]">
         <David />
-
+        <About />
       </div>
+        
       <div id="services">Services</div>
       <div className="relative flex flex-col gap-[54px]" id="team">
         <Team />
