@@ -42,7 +42,7 @@ function App() {
     <div className="relative">
 
     <div className="container relative slider-container">
-      <div className="flex justify-center items-center flex-col w-full overflow-hidden gap-[20px]">
+      <div className="flex justify-center items-center flex-col w-full overflow-hidden gap-[50px]">
         <p className="font-sans font-bold text-[50px] text-white vsm:text-[35px]">
           They Trust Us
         </p>

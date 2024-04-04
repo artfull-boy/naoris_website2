@@ -9,7 +9,8 @@ module.exports = {
         sans: ["Manrope", "sans-serif"],
       },
       screens: {
-        'vsm':{'max': '517px'}
+        'vsm':{'max': '517px'},
+        'medium':{'max': '1150px'}
       }
     },
   },

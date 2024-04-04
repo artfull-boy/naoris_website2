@@ -8,6 +8,7 @@
     background: linear-gradient(90deg, #01FEA4 0%, #662CF9 100%);
     border-radius: 34px;
 }
+
 .card_background,.card_content{
     transition-property: bottom;
     transition-duration: 0.5s;

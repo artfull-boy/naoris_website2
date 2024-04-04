@@ -1,0 +1,5 @@
+.seperator {
+    width: 6px;
+    background: linear-gradient(180deg, #00FFA3 0%, #6729FA 100%);
+    border-radius: 34px;
+}

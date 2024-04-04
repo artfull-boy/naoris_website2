@@ -1,12 +1,21 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {cardContainerVariants, cardVariants, headingVariants} from "../../animations";
-import eclipse from "../../assets/Ellipse_4.png";
+import {
+  cardContainerVariants,
+  cardVariants,
+  headingVariants,
+} from "../../animations";
 import plus from "../../assets/plus.png";
 import "./faq.css";
 import FaqData from "./faq.json";
+import faq_elem from "../../assets/faq_element.png";
 
 const FAQ = () => {
+  const spring = {
+    type: "spring",
+    damping: 10,
+    stiffness: 100,
+  };
   const toggleVisibility = (e) => {
     const element = e.currentTarget;
     if (element) {
@@ -15,8 +24,22 @@ const FAQ = () => {
   };
   return (
     <>
-      <img src={eclipse} className="absolute left-0 bottom-0" width={400}></img>
-      <div className="container flex-col items-center justify-center">
+      <motion.img
+        src={faq_elem}
+        initial={{
+          opacity: 0,
+          scale: 0,
+        }}
+        whileInView={{
+          opacity: 1,
+          scale: 1,
+        }}
+        width={600}
+        transition={spring}
+        viewport={{ once: true }}
+        className="absolute left-[-10%] bottom-0"
+      ></motion.img>
+      <div className="container flex-col items-center justify-center gap-[50px]">
         <motion.div
           className="heading relative w-fit"
           variants={headingVariants}
@@ -31,20 +54,21 @@ const FAQ = () => {
             Frequently Asked Questions
           </p>
         </motion.div>
-        <motion.div 
-        className="flex flex-col gap-[45px] w-full items-center"
-        variants={cardVariants}
-                initial="hidden"
-                whileInView="visible"
-                transition={{
-                    duration: 0.5,
-                    delayChildren: 0.3,
-                    delay: 1
-                }}
-                 viewport={{ once: true }}
+        <motion.div
+          className="flex flex-col gap-[45px] w-full items-center"
+          variants={cardVariants}
+          initial="hidden"
+          whileInView="visible"
+          transition={{
+            duration: 0.5,
+            delayChildren: 0.3,
+            delay: 1,
+          }}
+          viewport={{ once: true }}
         >
           {FaqData.map((faq) => (
-              <motion.div key={faq.id}
+            <motion.div
+              key={faq.id}
               variants={cardContainerVariants}
               className="flex question flex-col overflow-hidden gap-[20px] md:w-[80%] w-[100%] relative items-center cursor-pointer border-b-[1.7px] border-[white] py-[20px] "
               onClick={toggleVisibility}
@@ -68,7 +92,6 @@ const FAQ = () => {
               </div>
             </motion.div>
           ))}
-        
         </motion.div>
       </div>
     </>

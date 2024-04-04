@@ -18,7 +18,7 @@ const Team = () => {
     }, []);
 
     return (
-        <div className="container flex-col items-center justify-center">
+        <div className="container flex-col items-center justify-center gap-[50px]">
             <motion.div className="heading relative w-fit"
             variants={headingVariants}
             initial="hidden"

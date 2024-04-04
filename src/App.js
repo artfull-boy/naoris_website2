@@ -1,6 +1,5 @@
 import React from "react";
 import mesh1 from "./assets/mesh1.png";
-import mesh from "./assets/mesh.png";
 import Navbar from "./Sections/Navbar/Navbar";
 import HeroSection from "./Sections/HeroSection/HeroSection";
 import Partners from './Sections/Partners/Partners'
@@ -12,7 +11,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import FAQ from "./Sections/FAQ/FAQ";
 import About from "./Sections/About/About";
-import about_elem from "./assets/about_element.png"
+import Services from "./Sections/Services/Services";
 
 function App() {
   const lenis = new Lenis()
@@ -56,7 +55,9 @@ function App() {
         <About />
       </div>
         
-      <div id="services">Services</div>
+      <div id="services">
+        <Services />
+      </div>
       <div className="relative flex flex-col gap-[54px]" id="team">
         <Team />
         <Advisors />

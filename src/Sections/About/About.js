@@ -51,7 +51,7 @@ const About = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="font-semibold text-[30px] text-white"
+            className="font-semibold text-[30px] medium:text-[27px] vsm:text-[20px] text-white"
           >
             Naoris is an American company founded under a mandate from the North
             Atlantic Treaty Organization (NATO), whose protocol represents a key
@@ -125,7 +125,9 @@ const About = () => {
         scale:1
       }}
       transition={spring}
-      className="absolute right-[-10%] bottom-[-95%]"></motion.img>
+      width={600}
+      viewport={{ once: true }}
+      className="absolute right-[-10%] bottom-[-40%] vsm:w-[400px] vsm:bottom-0"></motion.img>
     </div>
   );
 };
