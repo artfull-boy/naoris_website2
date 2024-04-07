@@ -44,7 +44,7 @@ const About = () => {
   }
   return (
     <div className="relative flex-col">
-      <div className="flex flex-col gap-20 relative z-10">
+      <div className="flex flex-col gap-20 relative z-[1]">
         <div className="container">
           <motion.p
             variants={testimonialsVariants}
@@ -66,7 +66,7 @@ const About = () => {
         </div>
         {isMobile ? (
           <div className=" flex justify-end w-[100%]">
-            <div className="testimonials2 relative vsm:w-[100%]">
+            <div className="testimonials2 relative vsm:w-[100%] z-[1]">
               <div className="flex lg:flex-row vsm:flex-col vsm:gap-0 md:gap-10 items-center justify-end pr-4 width-[100%] h-full">
                 <div className=" relative z-[1]">
                   <p className="font-bold 2xl:text-[40px] xl:text-[35px] lg:text-[28px] text-[22px] text-white whitespace-nowrap">

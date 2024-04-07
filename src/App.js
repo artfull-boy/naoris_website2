@@ -12,6 +12,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import FAQ from "./Sections/FAQ/FAQ";
 import About from "./Sections/About/About";
 import Services from "./Sections/Services/Services";
+import Contact from "./Sections/Contact/Contact";
+import Footer from "./Sections/Footer/Footer";
+import bottom from './assets/bottom.png'
 
 function App() {
   const lenis = new Lenis()
@@ -43,7 +46,7 @@ function App() {
   return (
       <>
       <Navbar sections={sections} scrollToSection={scrollToSection} />
-    <div className="flex flex-col relative gap-[54px] overflow-x-hidden">
+    <div className="flex flex-col relative gap-[54px] overflow-x-hidden pb-10">
       <img src={mesh1} className="absolute top-0 z-0 p-0 w-full" style={{"height": "-webkit-fill-available"}}/>
       <div className="relative flex flex-col gap-[54px]" id="home">
         <HeroSection />
@@ -55,7 +58,7 @@ function App() {
         <About />
       </div>
         
-      <div id="services">
+      <div id="services" className="relative flex flex-col gap-[54px]" >
         <Services />
       </div>
       <div className="relative flex flex-col gap-[54px]" id="team">
@@ -65,7 +68,11 @@ function App() {
       <div id="faq">
         <FAQ />
       </div>
-      <div id="contact">Contact Us</div>
+      <div id="contact" className="relative flex flex-col gap-[54px]">
+        <Contact />
+      </div>
+      <Footer scrollToSection={scrollToSection} />
+      <img src={bottom} className="absolute bottom-0 left-0" />
     </div>
       </>
   );

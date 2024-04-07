@@ -1,6 +1,5 @@
 .active_section{
     padding: 0px 0px;
-    background-color: #110F48;
     width: fit-content;
     height: fit-content;
     position: relative;
@@ -10,7 +9,6 @@
 }
 .not_active_section{
     padding: 0px 0px;
-    background-color: #110F48;
     width: fit-content;
     height: fit-content;
     position: relative;
@@ -18,6 +16,10 @@
     color: #ffffff;
     transition: all 0.3s ease;
 }
+.not_active_section a:active, .active_section a:active {
+    color: #00FFA3;
+    background-color: transparent;
+}   
 .not_active_section::after, .not_active_section::before{
     content: "";
     position: absolute;
@@ -25,7 +27,7 @@
     bottom: -20%;
     height: 0;
     opacity: 0;
-    width: 3px;
+    width: 2px;
     background-color: #00FFA3;
     transform: translate(-50%, 0);
     z-index: 0;
@@ -38,7 +40,7 @@
     bottom: 0%;
     height: 50%;
     opacity: 1;
-    width: 3px;
+    width: 2px;
     background-color: #00FFA3;
     transform: translate(-50%, 0);
     z-index: 0;

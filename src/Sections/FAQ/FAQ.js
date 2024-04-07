@@ -24,21 +24,6 @@ const FAQ = () => {
   };
   return (
     <>
-      <motion.img
-        src={faq_elem}
-        initial={{
-          opacity: 0,
-          scale: 0,
-        }}
-        whileInView={{
-          opacity: 1,
-          scale: 1,
-        }}
-        width={600}
-        transition={spring}
-        viewport={{ once: true }}
-        className="absolute left-[-10%] bottom-0"
-      ></motion.img>
       <div className="container flex-col items-center justify-center gap-[50px]">
         <motion.div
           className="heading relative w-fit"

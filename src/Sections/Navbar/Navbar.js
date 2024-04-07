@@ -47,7 +47,7 @@ const Navbar = ({ sections, scrollToSection }) => {
     setIsOpen(!isOpen);
   };
   return (
-    <div className="navbar sticky top-0 z-10 bg-[#110F48] xl:px-28 lg:px-20 md:px-16 sm:px-10 px-[10px]">
+    <div className="navbar sticky top-0 z-10 bg-[#0501727a] xl:px-28 lg:px-20 md:px-16 sm:px-10 px-[10px]">
       <div className="navbar-start">
         <div className="dropdown" ref={dropdownRef}>
           <div
@@ -107,7 +107,7 @@ const Navbar = ({ sections, scrollToSection }) => {
               className={activeSection === section.id ? "active_section" : "not_active_section"}
               onClick={() => scrollToSection(section.id)}
             >
-              <a className={`hover:text-[#00FFA3] hover:bg-transparent h-full`}>
+              <a className={`hover:text-[#00FFA3] hover:bg-transparent bg-none h-full`}>
                 {section.name}
               </a>
             </li>
