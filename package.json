@@ -4,6 +4,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@mantine/carousel": "^7.7.1",
+    "@mantine/core": "^7.7.1",
+    "@mantine/hooks": "^7.7.1",
+    "@material-tailwind/react": "^2.1.9",
     "@react-email/components": "^0.0.16",
     "@studio-freight/lenis": "^1.0.42",
     "@testing-library/jest-dom": "^5.17.0",
@@ -54,6 +58,9 @@
   "devDependencies": {
     "daisyui": "^4.9.0",
     "gh-pages": "^6.1.1",
+    "postcss": "^8.4.38",
+    "postcss-preset-mantine": "^1.13.0",
+    "postcss-simple-vars": "^7.0.1",
     "tailwindcss": "^3.4.1"
   }
 }

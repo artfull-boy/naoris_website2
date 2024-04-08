@@ -4,6 +4,7 @@ import {motion} from "framer-motion";
 import linkedin_logo from "../../assets/Team/linkedin.svg";
 import {cardContainerVariants, cardVariants, headingVariants} from "../../animations";
 import "./team.css";
+import { Carousel } from "@material-tailwind/react";
 
 
 const Team = () => {
@@ -32,15 +33,15 @@ const Team = () => {
                 >Meet Our Advisors</p>
             </motion.div>
             {isMobile ? (
-                <div className="carousel carousel-center w-[100%] p-4 space-x-4  rounded-box">
+                <Carousel className="w-[100%] rounded-box">
                     {advisorsJson.map((member) => (
-                    <div className="carousel-item w-full justify-center">
+                    <div className="w-full justify-center">
                         <div className="card rounded-[8px] relative w-[100%] overflow-hidden">
                             <img
                                 src={`${process.env.PUBLIC_URL}/${member.img}`}
                                 className="relative top-0 right-0 z-0 rounded-[8px]"
                             />
-                            <div className="card_background w-full h-[500px] absolute bottom-[-60%] right-0 z-[1]"></div>
+                            <div className="card_background w-full h-[500px] absolute bottom-[-20%] right-0 z-[1]"></div>
                             <div className="card_content absolute bottom-[0%] left-0 w-full h-full p-3 z-[1] flex flex-col gap-3 justify-end ">
                                 <div className="flex flex-col gap-1">
                                     <p className="text-[30px] font-bold text-white leading-none ">
@@ -58,7 +59,7 @@ const Team = () => {
                     </div>
                     ))}
                     
-                </div>
+                </Carousel>
             ) : (
                 <motion.div className="flex flex-wrap justify-center gap-10"
                 variants={cardVariants}
