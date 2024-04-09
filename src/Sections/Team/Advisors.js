@@ -77,7 +77,7 @@ const Team = () => {
                         className="card focus:outline-none rounded-[8px] relative w-[330px] overflow-hidden">
                             <img
                                 src={`${process.env.PUBLIC_URL}/${member.img}`}
-                                className="relative top-0 right-0 z-0 rounded-[8px]"
+                                className={`relative top-0 right-0 z-0 rounded-[8px] ${member.name === "Raymond Farhat" ? "h-full object-cover":""}`}
                             />
                             <div className="card_background rounded-[8px] w-full h-[500px] absolute bottom-[-60%] right-0 z-[1]"></div>
                             <div className="card_content rounded-[8px] absolute bottom-[-35%] left-0 w-full h-full p-3 z-[1] flex flex-col gap-3 justify-end ">

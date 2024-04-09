@@ -39,16 +39,16 @@ const David = () => {
   return (
     <div className="relative flex-col lg:mt-4 mt-12">
         
-      <div className="flex lg:flex-row flex-col w-full relative items-center gap-8">
-        <div className="container flex flex-wrap lg:content-start content-center min-w-0 lg:pr-0">
+      <div className="flex xl:flex-row flex-col w-full relative items-center gap-8">
+        <div className="container flex flex-wrap xl:content-start content-center min-w-0 xl:pr-0">
           {isMobile ? <div className="flex flex-col gap-0"
           >
             <span className="text-[#00FFA3] 2xl:text-[200px] xl:text-[170px] lg:text-[150px] text-[120px] font-normal leading-[0]">
               “
             </span>
             <p className="quote text-white font-sans 2xl:text-[50px] xl:text-[45px] lg:text-[40px] xl:whitespace-nowrap text-[35px] lg:text-left text-center">
-              As IoT grows, the vulnerabilities grow <br />
-              with it, not linearly, but exponentially.
+              As IoT grows, the vulnerabilities grow with it, not linearly, but exponentially. Decentralized Quantum Resistance is a must now, to ensure all secrets and all computing is kept safe into the future <br />
+              
             </p>
             <span className="text-[#00FFA3] 2xl:text-[200px] xl:text-[170px] lg:text-[150px] font-normal transform rotate-180 leading-[0] text-[120px]">
               “
@@ -62,9 +62,8 @@ const David = () => {
             <span className="text-[#00FFA3] 2xl:text-[200px] xl:text-[170px] lg:text-[150px] text-[120px] font-normal leading-[0]">
               “
             </span>
-            <p className="quote text-white font-sans 2xl:text-[50px] xl:text-[45px] lg:text-[40px] xl:whitespace-nowrap text-[35px] lg:text-left text-center">
-              As IoT grows, the vulnerabilities grow <br />
-              with it, not linearly, but exponentially.
+            <p className="quote text-white font-sans 2xl:text-[40px] xl:text-[38px] lg:text-[36px] xl:whitespace text-[30px] lg:text-left text-center">
+            As IoT grows, the vulnerabilities grow with it, not linearly, but exponentially. Decentralized Quantum Resistance is a must now, to ensure all secrets and all computing is kept safe into the future
             </p>
             <span className="text-[#00FFA3] 2xl:text-[200px] xl:text-[170px] lg:text-[150px] font-normal transform rotate-180 leading-[0] text-[120px]">
               “
@@ -83,7 +82,7 @@ const David = () => {
           }
         </div>
         :
-        <motion.div className="flex flex-col gap-0 items-end justify-start lg:w-auto w-[100%]"
+        <motion.div className="flex flex-col gap-0 items-end justify-start xl:w-auto w-[100%]"
         variants={testimonialsVariants}
         initial="hidden"
         whileInView="visible"

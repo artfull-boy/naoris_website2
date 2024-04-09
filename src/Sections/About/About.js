@@ -6,7 +6,15 @@ import "./about.css";
 import "../Testimonials/David.css";
 
 const About = () => {
-  const isMobile = window.innerWidth < 508;
+  const [isMobile, setIsMobile] = React.useState(window.innerWidth <= 508);
+
+    React.useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 508);
+        };
+
+        window.addEventListener("resize", handleResize);
+    }, []);
   const quoteVariants = {
     hidden: {
       opacity: 0,
@@ -127,7 +135,7 @@ const About = () => {
       transition={spring}
       width={600}
       viewport={{ once: true }}
-      className="absolute right-[-10%] bottom-[-40%] vsm:w-[400px] vsm:bottom-0"></motion.img>
+      className="absolute right-[-10%] lg:bottom-[-40%] vsm:w-[400px] vsm:hidden md:bottom-3"></motion.img>
     </div>
   );
 };

@@ -26,5 +26,19 @@
     "desc":"Former Minister of Industry and Commerce.<br> Former Minister of Foreign Affairs.<br> Former President of the CGEM",
     "img":"assets/team/salaheddine.png",
     "linkedin":"#"
+},
+{
+    "name": "Khalid Bouksib",
+    "position":"Economic Intelligence  Expert",
+    "desc":"Economic Intelligence Expert<br> Author<br> Speaker & State Advisor ",
+    "img":"assets/team/khalid.jpeg",
+    "linkedin":"#"
+},
+{
+    "name": "Raymond Farhat",
+    "position":"President EMERGE Group",
+    "desc":"President EMERGE Group, Co-Founder NOVAMED, Ex-General Manager SAHAM INSURANCE,Ex-CEO SAHAM Finance",
+    "img":"assets/team/raymond.jpeg",
+    "linkedin":"#"
 }
 ]

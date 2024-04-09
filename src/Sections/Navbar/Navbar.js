@@ -107,7 +107,7 @@ const Navbar = ({ sections, scrollToSection }) => {
               className={activeSection === section.id ? "active_section" : "not_active_section"}
               onClick={() => scrollToSection(section.id)}
             >
-              <a className={`hover:text-[#00FFA3] hover:bg-transparent bg-none h-full`}>
+              <a className={`hover:text-[#00FFA3] hover:bg-transparent bg-none h-full xl:text-[18px]`}>
                 {section.name}
               </a>
             </li>

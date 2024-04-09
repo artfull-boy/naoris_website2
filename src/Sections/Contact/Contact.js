@@ -72,7 +72,10 @@ const Contact = () => {
           </p>
         </motion.div>
         <div className="flex justify-between items-center medium:flex-col medium:gap-8">
-          <motion.form variants={fadeLeft} initial="hidden" whileInView="visible" viewport={{once:true}} className="flex flex-wrap gap-[35px] w-[48%] justify-start medium:w-[100%] medium:order-6"
+          <motion.form 
+          onSubmit={handleSubmit(onSubmiting)}
+          variants={fadeLeft} initial="hidden" whileInView="visible" viewport={{once:true}} 
+          className="flex flex-wrap gap-[35px] w-[48%] justify-start medium:w-[100%] medium:order-6"
           >
             <div className="flex flex-col gap-[5px] md:w-[45%] w-[100%]">
               <label
@@ -211,10 +214,6 @@ const Contact = () => {
                 isSuccess ? "bg-green-600" : "bg-[#336AEA]"
               }`}
               type="submit"
-              onClick={async (e) => {
-                e.preventDefault();
-                await POST()
-              }}
               disabled={isSubmitting || isSuccess}
             >
               {loading

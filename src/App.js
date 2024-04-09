@@ -15,6 +15,7 @@ import Services from "./Sections/Services/Services";
 import Contact from "./Sections/Contact/Contact";
 import Footer from "./Sections/Footer/Footer";
 import bottom from './assets/bottom.png'
+import './App.css'
 
 function App() {
   const lenis = new Lenis()
@@ -65,14 +66,15 @@ function App() {
         <Team />
         <Advisors />
       </div>
-      <div id="faq">
+      <div id="faq" className="relative flex flex-col gap-[54px] z-10" >
         <FAQ />
       </div>
-      <div id="contact" className="relative flex flex-col gap-[54px]">
+      <div id="contact" className="relative flex flex-col gap-[54px] z-[2]">
         <Contact />
       </div>
       <Footer scrollToSection={scrollToSection} />
-      <img src={bottom} className="absolute bottom-0 left-0" />
+      <img src={bottom} className="absolute bottom-0 mt-[50px] left-0 z-[1]" />
+      <div className="ending absolute bottom-0 left-0 z-[0]"></div>
     </div>
       </>
   );

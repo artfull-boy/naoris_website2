@@ -5,11 +5,12 @@ import eclipse2 from "../../assets/Ellipse_2.png";
 import eclipse3 from "../../assets/Ellipse_3.png";
 import { motion } from "framer-motion";
 import './herosection.css'
+import video from "../../assets/videoplayback.mp4";
 
 const HeroSection = () => {
   const isMobile = window.innerWidth < 420
   return (
-    <div className="overflow-hidden w-[100%] h-[100%] flex flex-col justify-center relative items-center gap-4">
+    <div className="overflow-hidden w-[100%] h-[100vh] flex flex-col justify-center pb-[280px] relative items-center gap-4">
       {<img
         src={eclipse}
         alt="eclipse"
@@ -21,6 +22,16 @@ const HeroSection = () => {
         className="absolute max-w[100%] object-contain right-0"
       />*/}
       {/*<img src={earth} alt='eclipse' className='absolute max-w[100%] object-contain right-0'/>*/}
+      <video
+        style={{ width: '100%', height: '100vh' }}
+        loop
+        autoPlay
+        muted
+        className="absolute left-0 top-[0px] object-cover w-full z-0 opacity-40"
+      >
+        <source src={video} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -30,7 +41,7 @@ const HeroSection = () => {
           visible: { opacity: 1, scale: 1 },
           hidden: { opacity: 0, scale: 0 },
         }}
-        className="container flex gap-0 h-full mt-16 justify-end  items-center relative"
+        className="container flex gap-0 justify-center  items-center relative"
       >
         {
           isMobile ?         <p className="font-sans hero_text lg:text-[60px] md:text-[50px] sm:text-[42px] text-[30px] font-bold text-center">
@@ -41,7 +52,7 @@ const HeroSection = () => {
               </p>
         }
       </motion.div>
-      {<div className="flex gap-0  items-center relative justify-center overflow-hidden ">
+      {/*<div className="flex gap-0  items-center relative justify-center overflow-hidden ">
       <svg width="1200" height="612" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="Group">
 <g id="Layer 3">
@@ -1158,7 +1169,7 @@ const HeroSection = () => {
 </svg>
 
 
-        </div>}
+      </div>*/}
 
         
     </div>

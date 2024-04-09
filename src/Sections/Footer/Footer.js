@@ -4,7 +4,7 @@ import "./footer.css";
 
 const Footer = ({ scrollToSection }) => {
   return (
-    <div className="container flex flex-col relative justify-between items-center w-full">
+    <div className="container flex flex-col relative justify-between items-center w-full z-[2]">
       <div className="flex w-full flex-row relative justify-between items-center medium:flex-col medium:gap-12">
         <div className="hidden vsm:flex justify-between items-center w-full order-3">
           <img src={logo} width={180} className="medium:order-6"></img>
