@@ -26,16 +26,7 @@
 .card:hover > img {
     transform: scale(1.1);
 }
-/* BEGIN: ed8c6549bwf9
-.text-desc {
-    transition-property: display;
-    transition-duration: 0.5s;
-    transition-timing-function: ease;
-}
-.card:hover .text-desc {
-    display: initial;
-}
-END: ed8c6549bwf9 */
+
 .card:hover .card_background, .card:hover .card_content {
     bottom: 0%;
     

@@ -1,11 +1,18 @@
-import React from "react";
-import david from "../../assets/David.png";
+import React, {useState, useEffect} from "react";
 import {motion} from "framer-motion";
 
 import "./David.css";
 
 const David = () => {
-  const isMobile = window.innerWidth < 508;
+  const [isMobile, setIsMobile] = useState( typeof window !== 'undefined'&& window.innerWidth <= 508);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 508);
+    };
+
+    window.addEventListener("resize", handleResize);
+  }, []);
   const quoteVariants = {
     hidden: {
       opacity: 0,
@@ -47,8 +54,7 @@ const David = () => {
               “
             </span>
             <p className="quote text-white font-sans 2xl:text-[50px] xl:text-[45px] lg:text-[40px] xl:whitespace-nowrap text-[35px] lg:text-left text-center">
-              As IoT grows, the vulnerabilities grow with it, not linearly, but exponentially. Decentralized Quantum Resistance is a must now, to ensure all secrets and all computing is kept safe into the future <br />
-              
+              As IoT grows, the vulnerabilities grow with it, not linearly, but exponentially. Decentralized Quantum Resistance is a must now, to ensure all secrets and all computing is kept safe into the future
             </p>
             <span className="text-[#00FFA3] 2xl:text-[200px] xl:text-[170px] lg:text-[150px] font-normal transform rotate-180 leading-[0] text-[120px]">
               “
@@ -62,7 +68,7 @@ const David = () => {
             <span className="text-[#00FFA3] 2xl:text-[200px] xl:text-[170px] lg:text-[150px] text-[120px] font-normal leading-[0]">
               “
             </span>
-            <p className="quote text-white font-sans 2xl:text-[40px] xl:text-[38px] lg:text-[36px] xl:whitespace text-[30px] lg:text-left text-center">
+            <p className="quote text-white font-sans 2xl:text-[40px] xl:text-[30px] lg:text-[36px] xl:whitespace text-[30px] lg:text-left text-center">
             As IoT grows, the vulnerabilities grow with it, not linearly, but exponentially. Decentralized Quantum Resistance is a must now, to ensure all secrets and all computing is kept safe into the future
             </p>
             <span className="text-[#00FFA3] 2xl:text-[200px] xl:text-[170px] lg:text-[150px] font-normal transform rotate-180 leading-[0] text-[120px]">
@@ -75,8 +81,8 @@ const David = () => {
         >
           {
             <img
-              src={david}
-              alt="David"
+              src={`${process.env.PUBLIC_URL}/assets/David.png`}
+              alt="David picture"
               className="2xl:max-w-[750px] lg:max-w-[600px] max-w-[450px]"
             />
           }
@@ -89,8 +95,8 @@ const David = () => {
         viewport={{ once: true }}>
           {
             <img
-              src={david}
-              alt="David"
+              src={`${process.env.PUBLIC_URL}/assets/David.png`}
+              alt="David Picture"
               className="2xl:max-w-[750px] lg:max-w-[600px] max-w-[450px]"
             />
           }

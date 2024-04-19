@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "../../assets/logo_footer.png";
 import "./footer.css";
 
 const Footer = ({ scrollToSection }) => {
@@ -7,7 +6,7 @@ const Footer = ({ scrollToSection }) => {
     <div className="container flex flex-col relative justify-between items-center w-full z-[2]">
       <div className="flex w-full flex-row relative justify-between items-center medium:flex-col medium:gap-12">
         <div className="hidden vsm:flex justify-between items-center w-full order-3">
-          <img src={logo} width={180} className="medium:order-6"></img>
+          <img src={`${process.env.PUBLIC_URL}/assets/logo_footer.png`} width={180} className="medium:order-6" alt="Logo Footer"></img>
           <div className="flex gap-2 w-fit h-fit medium:order-3 vsm:flex-col vsm:items-start">
             <div className="border-r vsm:border-none px-3">
               <p
@@ -59,7 +58,7 @@ const Footer = ({ scrollToSection }) => {
             </div>
           </div>
         </div>
-        <img src={logo} width={250} className="medium:order-6 vsm:hidden"></img>
+        <img src={`${process.env.PUBLIC_URL}/assets/logo_footer.png`} width={250} className="medium:order-6 vsm:hidden" alt="Logo Footer"></img>
         <div className="vsm:hidden flex gap-2 w-fit h-fit medium:order-3 vsm:flex-col vsm:items-start">
           <div className="border-r vsm:border-none px-3">
             <p
@@ -119,7 +118,7 @@ const Footer = ({ scrollToSection }) => {
             <input
               type="text"
               placeholder="Enter your email address"
-              className="h-[50px] bg-white rounded-[10px] px-3"
+              className="h-[50px] bg-white text-black rounded-[10px] px-3"
             ></input>
             <button className="submit_subscription h-[50px] rounded-[10px]">
               Subscribe

@@ -1,27 +1,33 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import teamJson from "./team.json";
-import { motion} from "framer-motion";
+import { motion } from "framer-motion";
 import {
   cardContainerVariants,
   cardVariants,
   headingVariants,
 } from "../../animations";
-import linkedin_logo from "../../assets/Team/linkedin.svg";
 import "./team.css";
-import { Carousel } from "@material-tailwind/react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "../../components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay"
+
 
 const Team = () => {
-  const [isMobile, setIsMobile] = React.useState(window.innerWidth <= 1080);
+  const [isMobile, setIsMobile] = useState( typeof window !== 'undefined'&& window.innerWidth <= 1080);
 
-
-  React.useEffect(() => {
+  useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 1080);
     };
 
     window.addEventListener("resize", handleResize);
   }, []);
-
 
   return (
     <div className="container flex-col items-center justify-center gap-[50px]">
@@ -40,37 +46,51 @@ const Team = () => {
         </p>
       </motion.div>
       {isMobile ? (
-        <>
-          <Carousel 
-            className="w-[100%] rounded-box"
-          >
-            {teamJson.map((member,index) => (
-              <div className="w-full justify-center" id={index}>
-                <div className="card rounded-[8px] relative w-[100%] overflow-hidden">
-                  <img
-                    src={`${process.env.PUBLIC_URL}/${member.img}`}
-                    className="relative top-0 right-0 z-0 rounded-[8px]"
-                  />
-                  <div className="card_background w-full h-[500px] absolute bottom-[0%] right-0 z-[1]"></div>
-                  <div className="card_content absolute bottom-[0%] left-0 w-full h-full p-3 z-[1] flex flex-col gap-3 justify-end ">
-                    <div className="flex flex-col gap-1">
-                      <p className="text-[30px] font-bold text-white leading-none whitespace-nowrap vsm:text-[23px]">
-                        {member.name}
-                      </p>
-                      <p className="text-[23px] vsm:text-[15px] font-medium text-white">
-                        {member.desc}
-                      </p>
+        <Carousel className="w-[100%] rounded-box"
+        opts={{
+          align: "start",
+          loop: true,
+        }}
+        plugins={[
+          Autoplay({
+            delay: 2000,
+          }),
+        ]}
+        >
+          <CarouselContent>
+            {teamJson.map((member, index) => (
+              <CarouselItem key={index}
+              
+              >
+ 
+                  <div className="card rounded-[8px] relative w-[100%] overflow-hidden">
+                    <img
+                      src={`${process.env.PUBLIC_URL}/team/${member.img}`}
+                      alt="Team member image"
+                      className="relative top-0 right-0 z-0 rounded-[8px]"
+                    />
+                    <div className="card_background w-full h-[500px] absolute bottom-[0%] right-0 z-[1]"></div>
+                    <div className="card_content absolute bottom-[0%] left-0 w-full h-full p-3 z-[1] flex flex-col gap-3 justify-end ">
+                      <div className="flex flex-col gap-1">
+                        <p className="text-[30px] font-bold text-white leading-none whitespace-nowrap vsm:text-[23px]">
+                          {member.name}
+                        </p>
+                        <p className="text-[23px] vsm:text-[15px] font-medium text-white">
+                          {member.desc}
+                        </p>
+                      </div>
+                      <a target="_blank" href={member.linkedin} className="ml-auto ">
+                        <img src={`${process.env.PUBLIC_URL}/team/linkedin.png`} alt="Linkedin logo" />
+                      </a>
                     </div>
-                    <a href={member.linkedin} className="ml-auto ">
-                      <img src={linkedin_logo} />
-                    </a>
                   </div>
-                </div>
-              </div>
+
+              </CarouselItem>
             ))}
-          </Carousel >
-          
-        </>
+          </CarouselContent>
+          <CarouselPrevious className="small:hidden" />
+          <CarouselNext className="small:hidden" />
+        </Carousel>
       ) : (
         <motion.div
           className="flex flex-wrap justify-center gap-10"
@@ -90,11 +110,12 @@ const Team = () => {
               variants={cardContainerVariants}
             >
               <img
-                src={`${process.env.PUBLIC_URL}/${member.img}`}
+                src={`${process.env.PUBLIC_URL}/team/${member.img}`}
+                alt="Team member image"
                 className="relative top-0 right-0 z-0 rounded-[8px]"
               />
               <div className="card_background rounded-[8px] w-full h-[500px] absolute bottom-[-60%] right-0 z-[1]"></div>
-              <div className="card_content rounded-[8px] absolute bottom-[-78%] left-0 w-full h-full p-3 z-[1] flex flex-col gap-3 ">
+              <div className={`card_content rounded-[8px] absolute ${member.name === "Réda Belkassem Tamssamani" ? "bottom-[-60%]": "bottom-[-78%]"} left-0 w-full h-full p-[6px] z-[1] flex flex-col gap-3`}>
                 <div className="flex flex-col gap-1">
                   {member.name === "Réda Belkassem Tamssamani" ? (
                     <p className="text-[30px] font-bold text-white leading-none whitespace-normal">
@@ -112,8 +133,8 @@ const Team = () => {
                 <p className="text-[15px] font-medium text-white ">
                   {member.desc}
                 </p>
-                <a href={member.linkedin} className="ml-auto ">
-                  <img src={linkedin_logo} />
+                <a target="_blank" href={member.linkedin} className="ml-auto ">
+                  <img src={`${process.env.PUBLIC_URL}/team/linkedin.png`} alt="linkedin logo" />
                 </a>
               </div>
             </motion.div>

@@ -27,7 +27,7 @@
     bottom: -20%;
     height: 0;
     opacity: 0;
-    width: 2px;
+    width: 3px;
     background-color: #00FFA3;
     transform: translate(-50%, 0);
     z-index: 0;
@@ -40,7 +40,7 @@
     bottom: 0%;
     height: 50%;
     opacity: 1;
-    width: 2px;
+    width: 3px;
     background-color: #00FFA3;
     transform: translate(-50%, 0);
     z-index: 0;
@@ -50,10 +50,10 @@
     border-bottom-left-radius: 2.5px;
     border-bottom-right-radius: 2.5px;
 
-    bottom: -20%;
+    bottom: -25%;
 }
 .active_section::before, .not_active_section::before {
     border-top-left-radius: 2.5px;
     border-top-right-radius: 2.5px;
-    top: -20%;
+    top: -25%;
 }

@@ -1,39 +1,40 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
-import mesh1 from "../../assets/mesh1.png";
+
 import "./partners.css";
-import logo1 from "../../assets/logos/1.png";
-import logo2 from "../../assets/logos/2.png";
-import logo3 from "../../assets/logos/3.png";
-import logo4 from "../../assets/logos/4.png";
-import logo5 from "../../assets/logos/5.png";
-import logo6 from "../../assets/logos/6.png";
-import logo7 from "../../assets/logos/7.png";
-import logo8 from "../../assets/logos/8.png";
-import logo9 from "../../assets/logos/9.png";
-import logo10 from "../../assets/logos/10.png";
-import logo11 from "../../assets/logos/11.png";
-import logo12 from "../../assets/logos/12.png";
-import logo13 from "../../assets/logos/13.png";
-import logo14 from "../../assets/logos/14.png";
-import logo15 from "../../assets/logos/15.png";
-import logo16 from "../../assets/logos/16.png";
-import logo17 from "../../assets/logos/17.png";
-import logo18 from "../../assets/logos/18.png";
-import logo19 from "../../assets/logos/19.png";
-import logo20 from "../../assets/logos/20.png";
-import logo21 from "../../assets/logos/21.png";
-import logo22 from "../../assets/logos/22.png";
-import logo23 from "../../assets/logos/23.png";
-import logo24 from "../../assets/logos/24.png";
-import logo25 from "../../assets/logos/25.png";
-import logo26 from "../../assets/logos/26.png";
-import logo27 from "../../assets/logos/27.png";
-import logo28 from "../../assets/logos/28.png";
-import logo29 from "../../assets/logos/29.png";
-import logo30 from "../../assets/logos/30.png";
+
 
 function App() {
+  const logo1 = `${process.env.PUBLIC_URL}/assets/logos/1.png`;
+const logo2 = `${process.env.PUBLIC_URL}/assets/logos/2.png`;
+const logo3 = `${process.env.PUBLIC_URL}/assets/logos/3.png`;
+const logo4 = `${process.env.PUBLIC_URL}/assets/logos/4.png`;
+const logo5 = `${process.env.PUBLIC_URL}/assets/logos/5.png`;
+const logo6 = `${process.env.PUBLIC_URL}/assets/logos/6.png`;
+const logo7 = `${process.env.PUBLIC_URL}/assets/logos/7.png`;
+const logo8 = `${process.env.PUBLIC_URL}/assets/logos/8.png`;
+const logo9 = `${process.env.PUBLIC_URL}/assets/logos/9.png`;
+const logo10 = `${process.env.PUBLIC_URL}/assets/logos/10.png`;
+const logo11 = `${process.env.PUBLIC_URL}/assets/logos/11.png`;
+const logo12 = `${process.env.PUBLIC_URL}/assets/logos/12.png`;
+const logo13 = `${process.env.PUBLIC_URL}/assets/logos/13.png`;
+const logo14 = `${process.env.PUBLIC_URL}/assets/logos/14.png`;
+const logo15 = `${process.env.PUBLIC_URL}/assets/logos/15.png`;
+const logo16 = `${process.env.PUBLIC_URL}/assets/logos/16.png`;
+const logo17 = `${process.env.PUBLIC_URL}/assets/logos/17.png`;
+const logo18 = `${process.env.PUBLIC_URL}/assets/logos/18.png`;
+const logo19 = `${process.env.PUBLIC_URL}/assets/logos/19.png`;
+const logo20 = `${process.env.PUBLIC_URL}/assets/logos/20.png`;
+const logo21 = `${process.env.PUBLIC_URL}/assets/logos/21.png`;
+const logo22 = `${process.env.PUBLIC_URL}/assets/logos/22.png`;
+const logo23 = `${process.env.PUBLIC_URL}/assets/logos/23.png`;
+const logo24 = `${process.env.PUBLIC_URL}/assets/logos/24.png`;
+const logo25 = `${process.env.PUBLIC_URL}/assets/logos/25.png`;
+const logo26 = `${process.env.PUBLIC_URL}/assets/logos/26.png`;
+const logo27 = `${process.env.PUBLIC_URL}/assets/logos/27.png`;
+const logo28 = `${process.env.PUBLIC_URL}/assets/logos/28.png`;
+const logo29 = `${process.env.PUBLIC_URL}/assets/logos/29.png`;
+const logo30 = `${process.env.PUBLIC_URL}/assets/logos/30.png`;
   const logos = [
     logo1,logo2,logo3,logo4,logo5,logo6,logo7,logo8,logo9,logo10,logo11,logo12,logo13,logo14,logo15,logo16,logo17,logo18,logo19,logo20,logo21,logo22,logo23,logo24,logo25,logo26,logo27,logo28,logo29,logo30
   ];
@@ -61,7 +62,7 @@ function App() {
         >
           {logos.map((el) => (
             <div className="image_wrapper">
-              <img src={el} />
+              <img src={el} alt="Partner Logo" />
             </div>
           ))}
         </Marquee>
@@ -72,61 +73,3 @@ function App() {
 }
 
 export default App;
-
-/*const Marquee = styled.div`
-  display: flex;
-  width: 1450px;
-  overflow: hidden;
-  user-select: none;
-
-  mask-image: linear-gradient(
-    to right,
-    hsl(0 0% 0% / 0),
-    hsl(0 0% 0% / 1) 10%,
-    hsl(0 0% 0% / 1) 90%,
-    hsl(0 0% 0% / 0)
-  );
-`;
-
-const scrollX = keyframes`
-  from {
-    left: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-`;
-
-const common = css`
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  white-space: nowrap;
-  width: 100%;
-  animation: ${scrollX} 30s linear infinite;
-`;
-
-const MarqueeGroup = styled.div`
-  ${common}
-`;
-
-
-const ImageGroup = styled.div`
-  display: grid;
-  place-items: center;
-  width: clamp(10rem, 1rem + 40vmin, 30rem);
-  padding: calc(clamp(10rem, 1rem + 30vmin, 30rem) / 10);
-`;
-
-const Image = styled.img`
-  object-fit: contain;
-  width: 100%;
-  height: 100%;
-   border: 1px solid black; 
-  border-radius: 0.5rem;
-  aspect-ratio: 16/9;
-  padding: 5px 20px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-`;
-*/

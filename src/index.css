@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 @layer components {
   .container {
     @apply flex min-w-full flex-col xl:px-24 lg:px-16 md:px-14 sm:px-8 px-[10px] gap-7 justify-center content-center;
@@ -29,4 +30,6 @@ body {
   margin: 0;
   background-color: #040172;
 }
-
+* {
+  font-family: 'Manrope', sans-serif;
+}

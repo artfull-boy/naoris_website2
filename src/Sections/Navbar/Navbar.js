@@ -1,15 +1,13 @@
-import React, { useEffect, useState, useRef } from "react";
+"use client";
+import React from 'react';
 import './Navbar.css';
-import logo from "../../assets/logo.png";
-import US from "../../assets/us.png";
-import FR from "../../assets/Fr.png";
 
 const Navbar = ({ sections, scrollToSection }) => {
-  const [activeSection, setActiveSection] = useState("home");
+  const [activeSection, setActiveSection] = React.useState("home");
 
-  useEffect(() => {
+  React.useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + 100; 
+      const scrollPosition = window.scrollY +100; 
       const sectionIds = sections.map((section) => section.id);
       const currentActiveSection = sectionIds.find((id) => {
         const sectionElement = document.getElementById(id);
@@ -28,10 +26,10 @@ const Navbar = ({ sections, scrollToSection }) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [sections]);
-  const [isOpen, setIsOpen] = useState(false);
-  const dropdownRef = useRef(null);
+  const [isOpen, setIsOpen] = React.useState(false);
+  const dropdownRef = React.useRef(null);
 
-  useEffect(() => {
+  React.useEffect(() => {
     function handleClickOutside(event) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setIsOpen(false);
@@ -47,7 +45,7 @@ const Navbar = ({ sections, scrollToSection }) => {
     setIsOpen(!isOpen);
   };
   return (
-    <div className="navbar sticky top-0 z-10 bg-[#0501727a] xl:px-28 lg:px-20 md:px-16 sm:px-10 px-[10px]">
+    <div className="navbar sticky top-0 z-10 bg-[#05017296] xl:px-28 lg:px-20 md:px-16 sm:px-10 px-[10px]">
       <div className="navbar-start">
         <div className="dropdown" ref={dropdownRef}>
           <div
@@ -96,7 +94,7 @@ const Navbar = ({ sections, scrollToSection }) => {
           )}
         </div>
         <a href="/">
-          <img src={logo} width={140} />
+          <img src={`${process.env.PUBLIC_URL}/assets/logo.png`} alt="Naoris Consulting Logo" width={140} />
         </a>
       </div>
       <div className="navbar-center hidden lg:flex h-fit">
@@ -123,13 +121,13 @@ const Navbar = ({ sections, scrollToSection }) => {
                 <li>
                   <a className="text-[#00FFA3]">
                     {" "}
-                    <img src={US} /> Ang
+                    <img src={`${process.env.PUBLIC_URL}/assets/us.png`} alt='US flag'/> Ang
                   </a>
                 </li>
                 <li>
                   <a>
                     {" "}
-                    <img src={FR} /> Fr
+                    <img src={`${process.env.PUBLIC_URL}/assets/Fr.png`} alt='FR flag' /> Fr
                   </a>
                 </li>
               </ul>

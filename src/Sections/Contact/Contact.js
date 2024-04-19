@@ -1,15 +1,42 @@
-import React, { useState } from "react";
-import { useForm, Controller } from "react-hook-form";
-import { motion } from "framer-motion";
-import {
-  headingVariants,
-} from "../../animations";
-import "./contact.css";
-import map from '../../assets/map.png'
-import { POST } from '../../app/api/send/route';
 
+
+import React, { useState, useEffect, useRef } from "react";
+import { useForm } from "react-hook-form";
+import { motion } from "framer-motion";
+import { headingVariants } from "../../animations";
+import "./contact.css";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const [isMobile, setIsMobile] = useState(
+    typeof window !== "undefined" && window.innerWidth <= 1150
+  );
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1150);
+    };
+
+    window.addEventListener("resize", handleResize);
+  }, []);
+
+  const form = useRef();
+
+  const sendEmail = () => {
+
+    emailjs
+      .sendForm("service_csa70l7", "template_4b6vli9", form.current,
+        "guau5nKsvxHpLqJV2",
+      )
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
   const fadeRight = {
     hidden: { opacity: 0, x: 500 },
     visible: {
@@ -42,16 +69,16 @@ const Contact = () => {
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
-    control,
   } = useForm();
-  const onSubmiting = async (data) => {
+  const onSubmiting = async () => {
     setLoading(true);
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    /*await POST(data);*/
+    sendEmail();
     setIsSuccess(true);
     setLoading(false);
     setTimeout(() => {
       setIsSuccess(false);
-    }, 1000);
+    }, 2000);
     reset();
   };
   return (
@@ -71,163 +98,342 @@ const Contact = () => {
             Contact Us
           </p>
         </motion.div>
-        <div className="flex justify-between items-center medium:flex-col medium:gap-8">
-          <motion.form 
-          onSubmit={handleSubmit(onSubmiting)}
-          variants={fadeLeft} initial="hidden" whileInView="visible" viewport={{once:true}} 
-          className="flex flex-wrap gap-[35px] w-[48%] justify-start medium:w-[100%] medium:order-6"
-          >
-            <div className="flex flex-col gap-[5px] md:w-[45%] w-[100%]">
-              <label
-                className="text-white font-semibold leading-[18px] text-[16px]"
-                htmlFor="first_name"
-              >
-                Full Name{" "}
-                <span className="text-red-600 text-[16px] font-semibold leading-[18px] ">
-                  *
-                </span>
-              </label>
-              <input
-                className="p-[10px] bg-white rounded-[10px] w-full h-[50px]  transition-outline duration-300 outline-none text-black"
-                {...register("first_name", {
-                  required: "Full Name is Required",
-                })}
-                type="text"
-                id="first_name"
-                onClick={(e) =>
-                    e.currentTarget.classList.add("outline-[#336AEA]")
-                  }
-                  onBlur={(e) =>
-                    e.currentTarget.classList.remove("outline-[#336AEA]")
-                  }
-              ></input>
-              {errors.first_name && (
-                <p className="text-red-500">{errors.first_name.message}</p>
-              )}
-            </div>
-            <div className="flex flex-col gap-[5px] md:w-[45%] w-[100%]">
-              <label
-                className="text-[#fff] font-semibold leading-[18px] text-[16px]"
-                htmlFor="email"
-              >
-                Email{" "}
-                <span className="text-red-600 text-[16px] font-semibold leading-[18px] ">
-                  *
-                </span>
-              </label>
-              <input
-                className="bg-white p-[10px] rounded-[6px] w-full h-[50px]  transition-outline duration-300 outline-none text-black"
-                {...register("email", {
-                  required: "Email is Required",
-                })}
-                type="email"
-                id="email"
-                onClick={(e) =>
-                  e.currentTarget.classList.add("outline-[#336AEA]")
-                }
-                onBlur={(e) =>
-                  e.currentTarget.classList.remove("outline-[#336AEA]")
-                }
-              ></input>
-              {errors.email && (
-                <p className="text-red-500">{errors.email.message}</p>
-              )}
-            </div>
-            <div className="flex flex-col gap-[5px] md:w-[45%] w-[100%]">
-              <label
-                className="text-[#fff] font-semibold leading-[18px] text-[16px]"
-                htmlFor="phone"
-              >
-                Phone number{" "}
-              </label>
-              <input
-                className="bg-white p-[10px] rounded-[6px] w-full h-[50px]  transition-outline duration-300 outline-none text-black"
-                {...register("phone")}
-                type="number"
-                id="phone"
-                onClick={(e) =>
-                  e.currentTarget.classList.add("outline-[#336AEA]")
-                }
-                onBlur={(e) =>
-                  e.currentTarget.classList.remove("outline-[#336AEA]")
-                }
-              ></input>
-              {errors.phone && (
-                <p className="text-red-500">{errors.phone.message}</p>
-              )}
-            </div>
-            <div className="flex flex-col gap-[5px] md:w-[45%] w-[100%]">
-              <label
-                className="text-white font-semibold leading-[18px] text-[16px]"
-                htmlFor="subject"
-              >
-                Subject{" "}
-                <span className="text-red-600 text-[16px] font-semibold leading-[18px] ">
-                  *
-                </span>
-              </label>
-              <input
-                className="p-[10px] bg-white rounded-[10px] w-full h-[50px]  transition-outline duration-300 outline-none text-black"
-                {...register("subject", {required: "Subject is Required"})}
-                type="text"
-                id="subject"
-                onClick={(e) =>
-                    e.currentTarget.classList.add("outline-[#336AEA]")
-                  }
-                  onBlur={(e) =>
-                    e.currentTarget.classList.remove("outline-[#336AEA]")
-                  }
-              ></input>
-              {errors.subject && (
-                <p className="text-red-500">{errors.subject.message}</p>
-              )}
-            </div>
-            <div className="flex flex-col gap-[5px] md:w-[calc(90%+30px)] w-[100%]">
-              <label
-                className="text-[#fff] font-semibold  leading-[18px] text-[16px]"
-                htmlFor="msg"
-              >
-                Message
-                <span className="text-red-600 text-[16px] font-semibold leading-[18px] ">
-                  *
-                </span>
-              </label>
-              <textarea
-                rows="4" // Set the number of visible lines
-                className="bg-white text-black p-[10px] rounded-[6px] w-full   transition-outline duration-300 outline-none"
-                {...register("msg", { required: "Message is Required" })}
-                type="text"
-                id="msg"
-                onClick={(e) =>
-                  e.currentTarget.classList.add("outline-[#336AEA]")
-                }
-                onBlur={(e) =>
-                  e.currentTarget.classList.remove("outline-[#336AEA]")
-                }
-              ></textarea>
-              {errors.msg && (
-                <p className="text-red-500">{errors.msg.message}</p>
-              )}
-            </div>
-            <button
-              className={`m-auto botona text-white py-[10px] font-semibold hover:bg-[#3661c8] transition-colors duration-300 h-[50px] ${
-                isSuccess ? "bg-green-600" : "bg-[#336AEA]"
-              }`}
-              type="submit"
-              disabled={isSubmitting || isSuccess}
+        {isMobile ? (
+          <div className={`flex items-center flex-col gap-8`}>
+            <motion.img
+              initial={{ opacity: 0, x: 300 }}
+              transition={{ type: "spring", stiffness: 100, damping: 20 }}
+              viewport={{ once: true }}
+              whileInView={{ opacity: 1, x: 0 }}
+              src={`${process.env.PUBLIC_URL}/assets/map.png`}
+              className={`w-[100%] ml-10`}
+              alt="World Map"
+            ></motion.img>
+            <motion.form
+              ref={form}
+              onSubmit={handleSubmit(onSubmiting)}
+              initial={{ opacity: 0, x: -300 }}
+              transition={{ type: "spring", stiffness: 100, damping: 20 }}
+              viewport={{ once: true }}
+              whileInView={{ opacity: 1, x: 0 }}
+              className={`flex flex-wrap gap-[35px] justify-start w-[100%]" `}
             >
-              {loading
-                ? "Loading..."
-                : isSuccess
-                ? "Successfully Sent"
-                : "Send Message"}
-            </button>
-          </motion.form>
-          <motion.div className="seperator 2xl:h-[500px] lg:h-[600px] medium:hidden ml-[40px]"></motion.div>
-          <motion.img variants={fadeRight} initial="hidden" whileInView="visible" viewport={{once:true}} src={map} className="w-[48%] ml-auto medium:w-[100%] medium:ml-0 medium:order-0">
-            
-          </motion.img>
-        </div>
+              <div className="flex flex-col gap-[5px] md:w-[45%] w-[100%]">
+                <label
+                  className="text-white font-semibold leading-[18px] text-[16px]"
+                  htmlFor="first_name"
+                >
+                  Full Name{" "}
+                  <span className="text-red-600 text-[16px] font-semibold leading-[18px] ">
+                    *
+                  </span>
+                </label>
+                <input
+                  className="p-[10px] bg-white rounded-[10px] w-full h-[50px]  transition-outline duration-300 outline-none text-black"
+                  {...register("first_name", {
+                    required: "Full Name is Required",
+                  })}
+                  type="text"
+                  id="first_name"
+                  onClick={(e) =>
+                    e.currentTarget.classList.add("outline-[#336AEA]")
+                  }
+                  onBlur={(e) =>
+                    e.currentTarget.classList.remove("outline-[#336AEA]")
+                  }
+                ></input>
+                {errors.first_name && (
+                  <p className="text-red-500">{errors.first_name.message}</p>
+                )}
+              </div>
+              <div className="flex flex-col gap-[5px] md:w-[45%] w-[100%]">
+                <label
+                  className="text-[#fff] font-semibold leading-[18px] text-[16px]"
+                  htmlFor="email"
+                >
+                  Email{" "}
+                  <span className="text-red-600 text-[16px] font-semibold leading-[18px] ">
+                    *
+                  </span>
+                </label>
+                <input
+                  className="bg-white p-[10px] rounded-[6px] w-full h-[50px]  transition-outline duration-300 outline-none text-black"
+                  {...register("email", {
+                    required: "Email is Required",
+                  })}
+                  type="email"
+                  id="email"
+                  onClick={(e) =>
+                    e.currentTarget.classList.add("outline-[#336AEA]")
+                  }
+                  onBlur={(e) =>
+                    e.currentTarget.classList.remove("outline-[#336AEA]")
+                  }
+                ></input>
+                {errors.email && (
+                  <p className="text-red-500">{errors.email.message}</p>
+                )}
+              </div>
+              <div className="flex flex-col gap-[5px] md:w-[45%] w-[100%]">
+                <label
+                  className="text-[#fff] font-semibold leading-[18px] text-[16px]"
+                  htmlFor="phone"
+                >
+                  Phone number{" "}
+                </label>
+                <input
+                  className="bg-white p-[10px] rounded-[6px] w-full h-[50px]  transition-outline duration-300 outline-none text-black"
+                  {...register("phone")}
+                  type="number"
+                  id="phone"
+                  onClick={(e) =>
+                    e.currentTarget.classList.add("outline-[#336AEA]")
+                  }
+                  onBlur={(e) =>
+                    e.currentTarget.classList.remove("outline-[#336AEA]")
+                  }
+                ></input>
+                {errors.phone && (
+                  <p className="text-red-500">{errors.phone.message}</p>
+                )}
+              </div>
+              <div className="flex flex-col gap-[5px] md:w-[45%] w-[100%]">
+                <label
+                  className="text-white font-semibold leading-[18px] text-[16px]"
+                  htmlFor="subject"
+                >
+                  Subject{" "}
+                  <span className="text-red-600 text-[16px] font-semibold leading-[18px] ">
+                    *
+                  </span>
+                </label>
+                <input
+                  className="p-[10px] bg-white rounded-[10px] w-full h-[50px]  transition-outline duration-300 outline-none text-black"
+                  {...register("subject", { required: "Subject is Required" })}
+                  type="text"
+                  id="subject"
+                  onClick={(e) =>
+                    e.currentTarget.classList.add("outline-[#336AEA]")
+                  }
+                  onBlur={(e) =>
+                    e.currentTarget.classList.remove("outline-[#336AEA]")
+                  }
+                ></input>
+                {errors.subject && (
+                  <p className="text-red-500">{errors.subject.message}</p>
+                )}
+              </div>
+              <div className="flex flex-col gap-[5px] md:w-[calc(90%+30px)] w-[100%]">
+                <label
+                  className="text-[#fff] font-semibold  leading-[18px] text-[16px]"
+                  htmlFor="msg"
+                >
+                  Message
+                  <span className="text-red-600 text-[16px] font-semibold leading-[18px] ">
+                    *
+                  </span>
+                </label>
+                <textarea
+                  rows="4" // Set the number of visible lines
+                  className="bg-white text-black p-[10px] rounded-[6px] w-full   transition-outline duration-300 outline-none"
+                  {...register("msg", { required: "Message is Required" })}
+                  type="text"
+                  id="msg"
+                  onClick={(e) =>
+                    e.currentTarget.classList.add("outline-[#336AEA]")
+                  }
+                  onBlur={(e) =>
+                    e.currentTarget.classList.remove("outline-[#336AEA]")
+                  }
+                ></textarea>
+                {errors.msg && (
+                  <p className="text-red-500">{errors.msg.message}</p>
+                )}
+              </div>
+              <button
+                className={`m-auto botona text-white py-[10px] font-semibold hover:bg-[#3661c8] transition-colors duration-300 h-[50px] ${
+                  isSuccess ? "bg-success" : "bg-[#336AEA]"
+                }`}
+                type="submit"
+                disabled={isSubmitting || isSuccess}
+              >
+                {loading
+                  ? "Loading..."
+                  : isSuccess
+                  ? "Successfully Sent"
+                  : "Send Message"}
+              </button>
+            </motion.form>
+          </div>
+        ) : (
+          <div className={`flex   items-center justify-between flex-row`}>
+            <motion.form
+              onSubmit={handleSubmit(onSubmiting)}
+              variants={fadeLeft}
+              initial="hidden"
+              ref={form}
+              whileInView="visible"
+              viewport={{ once: true }}
+              className={`flex flex-wrap gap-[35px] justify-start w-[48%]`}
+            >
+              <div className="flex flex-col gap-[5px] md:w-[45%] w-[100%]">
+                <label
+                  className="text-white font-semibold leading-[18px] text-[16px]"
+                  htmlFor="first_name"
+                >
+                  Full Name{" "}
+                  <span className="text-red-600 text-[16px] font-semibold leading-[18px] ">
+                    *
+                  </span>
+                </label>
+                <input
+                  className="p-[10px] bg-white rounded-[10px] w-full h-[50px]  transition-outline duration-300 outline-none text-black"
+                  {...register("first_name", {
+                    required: "Full Name is Required",
+                  })}
+                  type="text"
+                  id="first_name"
+                  onClick={(e) =>
+                    e.currentTarget.classList.add("outline-[#336AEA]")
+                  }
+                  onBlur={(e) =>
+                    e.currentTarget.classList.remove("outline-[#336AEA]")
+                  }
+                ></input>
+                {errors.first_name && (
+                  <p className="text-red-500">{errors.first_name.message}</p>
+                )}
+              </div>
+              <div className="flex flex-col gap-[5px] md:w-[45%] w-[100%]">
+                <label
+                  className="text-[#fff] font-semibold leading-[18px] text-[16px]"
+                  htmlFor="email"
+                >
+                  Email{" "}
+                  <span className="text-red-600 text-[16px] font-semibold leading-[18px] ">
+                    *
+                  </span>
+                </label>
+                <input
+                  className="bg-white p-[10px] rounded-[6px] w-full h-[50px]  transition-outline duration-300 outline-none text-black"
+                  {...register("email", {
+                    required: "Email is Required",
+                  })}
+                  type="email"
+                  id="email"
+                  onClick={(e) =>
+                    e.currentTarget.classList.add("outline-[#336AEA]")
+                  }
+                  onBlur={(e) =>
+                    e.currentTarget.classList.remove("outline-[#336AEA]")
+                  }
+                ></input>
+                {errors.email && (
+                  <p className="text-red-500">{errors.email.message}</p>
+                )}
+              </div>
+              <div className="flex flex-col gap-[5px] md:w-[45%] w-[100%]">
+                <label
+                  className="text-[#fff] font-semibold leading-[18px] text-[16px]"
+                  htmlFor="phone"
+                >
+                  Phone number{" "}
+                </label>
+                <input
+                  className="bg-white p-[10px] rounded-[6px] w-full h-[50px]  transition-outline duration-300 outline-none text-black"
+                  {...register("phone")}
+                  type="number"
+                  id="phone"
+                  onClick={(e) =>
+                    e.currentTarget.classList.add("outline-[#336AEA]")
+                  }
+                  onBlur={(e) =>
+                    e.currentTarget.classList.remove("outline-[#336AEA]")
+                  }
+                ></input>
+                {errors.phone && (
+                  <p className="text-red-500">{errors.phone.message}</p>
+                )}
+              </div>
+              <div className="flex flex-col gap-[5px] md:w-[45%] w-[100%]">
+                <label
+                  className="text-white font-semibold leading-[18px] text-[16px]"
+                  htmlFor="subject"
+                >
+                  Subject{" "}
+                  <span className="text-red-600 text-[16px] font-semibold leading-[18px] ">
+                    *
+                  </span>
+                </label>
+                <input
+                  className="p-[10px] bg-white rounded-[10px] w-full h-[50px]  transition-outline duration-300 outline-none text-black"
+                  {...register("subject", { required: "Subject is Required" })}
+                  type="text"
+                  id="subject"
+                  onClick={(e) =>
+                    e.currentTarget.classList.add("outline-[#336AEA]")
+                  }
+                  onBlur={(e) =>
+                    e.currentTarget.classList.remove("outline-[#336AEA]")
+                  }
+                ></input>
+                {errors.subject && (
+                  <p className="text-red-500">{errors.subject.message}</p>
+                )}
+              </div>
+              <div className="flex flex-col gap-[5px] md:w-[calc(90%+30px)] w-[100%]">
+                <label
+                  className="text-[#fff] font-semibold  leading-[18px] text-[16px]"
+                  htmlFor="msg"
+                >
+                  Message
+                  <span className="text-red-600 text-[16px] font-semibold leading-[18px] ">
+                    *
+                  </span>
+                </label>
+                <textarea
+                  rows="4" // Set the number of visible lines
+                  className="bg-white text-black p-[10px] rounded-[6px] w-full   transition-outline duration-300 outline-none"
+                  {...register("msg", { required: "Message is Required" })}
+                  type="text"
+                  id="msg"
+                  onClick={(e) =>
+                    e.currentTarget.classList.add("outline-[#336AEA]")
+                  }
+                  onBlur={(e) =>
+                    e.currentTarget.classList.remove("outline-[#336AEA]")
+                  }
+                ></textarea>
+                {errors.msg && (
+                  <p className="text-red-500">{errors.msg.message}</p>
+                )}
+              </div>
+              <button
+                className={`m-auto botona text-white py-[10px] font-semibold hover:bg-[#3661c8] transition-colors duration-300 h-[50px] ${
+                  isSuccess ? "bg-success" : "bg-[#336AEA]"
+                }`}
+                type="submit"
+                disabled={isSubmitting || isSuccess}
+              >
+                {loading
+                  ? "Loading..."
+                  : isSuccess
+                  ? "Successfully Sent"
+                  : "Send Message"}
+              </button>
+            </motion.form>
+            <motion.div className="seperator 2xl:h-[500px] lg:h-[600px] ml-[40px]"></motion.div>
+            <motion.img
+              variants={fadeRight}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              src={`${process.env.PUBLIC_URL}/assets/map.png`}
+              className={`w-[48%] ml-auto `}
+              alt="World Map"
+            ></motion.img>
+          </div>
+        )}
       </div>
     </div>
   );

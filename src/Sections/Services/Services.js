@@ -1,11 +1,21 @@
-import React from "react";
+"use client";
+import React,{useState, useEffect} from "react";
 import { motion } from "framer-motion";
 import { headingVariants } from "../../animations";
 import serviceData from "./services.json";
 import "./services.css";
 
 const Services = () => {
-  const isMobile = window.innerWidth < 1150;
+  const [isMobile, setIsMobile] = useState( typeof window !== 'undefined'&& window.innerWidth <= 1150);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1150);
+    };
+
+    window.addEventListener("resize", handleResize);
+  }, []);
+
   const fadeRight = {
     hidden: { opacity: 0, x: 500 },
     visible: {
@@ -63,10 +73,10 @@ const Services = () => {
             return (
               <div className="flex flex-col gap-5 relative h-full">
                 <motion.div
-                  variants={fadeLeft}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
+                                    initial={{ opacity: 0, x: -300 }}
+                                    transition={{ type: "spring", stiffness: 100, damping: 20 }}
+                                    viewport={{ once: true }}
+                                    whileInView={{ opacity: 1, x: 0 }}
                   className="flex flex-col gap-5 w-[50%] medium:w-[100%]"
                 >
                   <div className="heading relative w-fit">
@@ -80,9 +90,9 @@ const Services = () => {
                 </motion.div>
 
                 <motion.img
-                  src={`${process.env.PUBLIC_URL}/${service.image}`}
+                  src={`${process.env.PUBLIC_URL}/services/${service.image}`}
+                  alt="service image"
                   className="w-[370px] m-auto"
-                  variants={fadeRight}
                   initial={{ opacity: 0, x: 300 }}
                   transition={{ type: "spring", stiffness: 100, damping: 20 }}
                   viewport={{ once: true }}
@@ -119,7 +129,8 @@ const Services = () => {
                     className="seperator 2xl:h-[500px] lg:h-[600px] medium:hidden"
                   ></motion.div>
                   <motion.img
-                    src={`${process.env.PUBLIC_URL}/${service.image}`}
+                    src={`${process.env.PUBLIC_URL}/services/${service.image}`}
+                    alt="service image"
                     className="w-[500px] ml-auto medium:m-auto"
                     variants={fadeRight}
                     initial="hidden"
@@ -139,7 +150,8 @@ const Services = () => {
                     viewport={{ once: true }}
                   >
                     <img
-                      src={`${process.env.PUBLIC_URL}/${service.image}`}
+                      src={`${process.env.PUBLIC_URL}/services/${service.image}`}
+                      alt="service image"
                       className="w-[500px] mr-[50px] medium:m-auto"
                     ></img>
                   </motion.div>

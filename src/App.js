@@ -1,4 +1,5 @@
 import React from "react";
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 import mesh1 from "./assets/mesh1.png";
 import Navbar from "./Sections/Navbar/Navbar";
 import HeroSection from "./Sections/HeroSection/HeroSection";
@@ -15,6 +16,7 @@ import Services from "./Sections/Services/Services";
 import Contact from "./Sections/Contact/Contact";
 import Footer from "./Sections/Footer/Footer";
 import bottom from './assets/bottom.png'
+import Kjell from "./Sections/Testimonials/Kjell";
 import './App.css'
 
 function App() {
@@ -45,38 +47,39 @@ function App() {
   };
 
   return (
-      <>
-      <Navbar sections={sections} scrollToSection={scrollToSection} />
-    <div className="flex flex-col relative gap-[54px] overflow-x-hidden pb-10">
-      <img src={mesh1} className="absolute top-0 z-0 p-0 w-full" style={{"height": "-webkit-fill-available"}}/>
-      <div className="relative flex flex-col gap-[54px]" id="home">
-        <HeroSection />
-        <Partners />
-      </div>
-        
-      <div id="about" className="relative flex flex-col gap-[100px]">
-        <David />
-        <About />
-      </div>
-        
-      <div id="services" className="relative flex flex-col gap-[54px]" >
-        <Services />
-      </div>
-      <div className="relative flex flex-col gap-[54px]" id="team">
-        <Team />
-        <Advisors />
-      </div>
-      <div id="faq" className="relative flex flex-col gap-[54px] z-10" >
-        <FAQ />
-      </div>
-      <div id="contact" className="relative flex flex-col gap-[54px] z-[2]">
-        <Contact />
-      </div>
-      <Footer scrollToSection={scrollToSection} />
-      <img src={bottom} className="absolute bottom-0 mt-[50px] left-0 z-[1]" />
-      <div className="ending absolute bottom-0 left-0 z-[0]"></div>
+<>
+    <Navbar sections={sections} scrollToSection={scrollToSection} />
+  <div className="flex flex-col relative gap-[54px] overflow-x-hidden pb-10" suppressHydrationWarning={true}>
+    <img src={mesh1} className="absolute top-0 z-0 p-0 w-full" style={{"height": "-webkit-fill-available"}}/>
+    <div className="relative flex flex-col gap-[54px]" id="home">
+      <HeroSection />
+      <Partners />
     </div>
-      </>
+      
+    <div id="about" className="relative flex flex-col gap-[100px]" suppressHydrationWarning={true}>
+      <David />
+      <Kjell />
+      <About />
+    </div>
+      
+    <div id="services" className="relative flex flex-col gap-[54px]" suppressHydrationWarning={true}>
+      <Services />
+    </div>
+    <div className="relative flex flex-col gap-[54px]" id="team" suppressHydrationWarning={true}>
+      <Team />
+      <Advisors />
+    </div>
+    <div id="faq" className="relative flex flex-col gap-[54px] z-[2]" suppressHydrationWarning={true}>
+      <FAQ />
+    </div>
+    <div id="contact" className="relative flex flex-col gap-[54px] z-[2]" suppressHydrationWarning={true}>
+      <Contact />
+    </div>
+    <Footer scrollToSection={scrollToSection} />
+    <img src={bottom} className="absolute bottom-0 mt-[50px] left-0 z-[1]" />
+    <div className="ending absolute bottom-0 left-0 z-[0]"></div>
+  </div>
+    </>
   );
 }
 

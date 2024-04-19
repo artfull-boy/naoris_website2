@@ -1,21 +1,38 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, {useEffect} from "react";
+import {useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 import {
   cardContainerVariants,
   cardVariants,
   headingVariants,
 } from "../../animations";
-import plus from "../../assets/plus.png";
 import "./faq.css";
 import FaqData from "./faq.json";
-import faq_elem from "../../assets/faq_element.png";
 
 const FAQ = () => {
-  const spring = {
-    type: "spring",
-    damping: 10,
-    stiffness: 100,
-  };
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+  const FaqAnimation = {
+    visible: {
+        opacity: 1,
+        scale: 1,
+        transition: {
+            staggerChildren: 0.5 // Adjust the stagger delay as needed
+        }
+    },
+    hidden: {
+        opacity: 0,
+        scale: 0
+    }
+    }
+    ;
+
   const toggleVisibility = (e) => {
     const element = e.currentTarget;
     if (element) {
@@ -41,15 +58,16 @@ const FAQ = () => {
         </motion.div>
         <motion.div
           className="flex flex-col gap-[45px] w-full items-center"
-          variants={cardVariants}
-          initial="hidden"
-          whileInView="visible"
+          ref={ref}
+      animate={controls}
+      initial="hidden"
+      variants={FaqAnimation}
           transition={{
             duration: 0.5,
             delayChildren: 0.3,
-            delay: 1,
+            delay: 0,
           }}
-          viewport={{ once: true }}
+          viewport={{ once: true}}
         >
           {FaqData.map((faq) => (
             <motion.div
@@ -58,21 +76,21 @@ const FAQ = () => {
               className="flex question flex-col overflow-hidden gap-[20px] md:w-[80%] w-[100%] relative items-center cursor-pointer border-b-[1.7px] border-[white] py-[20px] "
               onClick={toggleVisibility}
             >
-              <div className="flex w-full justify-between items-center ">
+              <div className="flex w-full justify-between items-center">
                 <p className="text-white font-bold text-[30px] vsm:text-[23px]">
                   {faq.question}
                 </p>
                 <img
                   className="h-[24px]"
-                  src={plus}
+                  src={`${process.env.PUBLIC_URL}/assets/plus.png`}
                   alt="plus"
                   width={24}
                   height={24}
+                  
                 />
               </div>
-              <div className="max-h-0 overflow-hidden answer duration-[0.6s]">
-                <p className="text-white font-normal text-[20px] leading-[1.6] vsm:text-[18px]">
-                  {faq.reponse}
+              <div className="max-h-0 overflow-hidden answer duration-[0.4s]" suppressHydrationWarning={true}>
+                <p className="text-white font-normal text-[20px] leading-[1.6] vsm:text-[18px]" dangerouslySetInnerHTML={{__html: faq.reponse}}>
                 </p>
               </div>
             </motion.div>

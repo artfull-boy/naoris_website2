@@ -1,32 +1,47 @@
 [
     {
         "id": 1,
-        "question": "What differentiates the Naoris partnership program from others?",
-        "reponse": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullaid urna quam. Phasellus cursus quam lorem, ut lobortis tellusblandit nec. Suspendisse potenti. Vestibulum pretium ut justoquis molestie. Suspendisse in mauris quam. Sed facilisis erosnon elit congue scelerisque. Ut orci purus, fermentum in sem at,commodo porttitor ipsum.Nam molestie, neque eget sempersuscipit, risus risus sollicitudin eros, nec placerat sem maurisa justo. Curabitur tincidunt vulputate massa, et vulputate nequeconvallis id. Nunc eu lacus aliquam lectus tincidunt luctus insed ante. Nulla malesuada volutpat ligula vitae malesuada. Nuncnunc ipsum, pretium vel blandit id, sodales in nisl. Mauristincidunt a nunc imperdiet vehicula. Donec posuere luctus est,"
+        "question": "What is the essence of Naoris Protocol?",
+        "reponse": "Naoris Protocol serves as a transformative catalyst in the cybersecurity domain, leveraging a Decentralized Physical Infrastructure (DePIN) framework. It integrates blockchain, Swarm AI,and Quantum Blockchain technologies to deliver secure and resilient protection. This protocol ensures advanced security, privacy, and robust defense against cyber threats, outperforming traditional systems."
     },
     {
         "id": 2,
-        "question": "How long does the application process take?",
-        "reponse": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullaid urna quam. Phasellus cursus quam lorem, ut lobortis tellusblandit nec. Suspendisse potenti. Vestibulum pretium ut justoquis molestie. Suspendisse in mauris quam. Sed facilisis erosnon elit congue scelerisque. Ut orci purus, fermentum in sem at,commodo porttitor ipsum.Nam molestie, neque eget sempersuscipit, risus risus sollicitudin eros, nec placerat sem maurisa justo. Curabitur tincidunt vulputate massa, et vulputate nequeconvallis id. Nunc eu lacus aliquam lectus tincidunt luctus insed ante. Nulla malesuada volutpat ligula vitae malesuada. Nuncnunc ipsum, pretium vel blandit id, sodales in nisl. Mauristincidunt a nunc imperdiet vehicula. Donec posuere luctus est,"
+        "question": "Can you highlight the core advantages of Naoris Protocol?",
+        "reponse": "The protocol excels by offering heightened security through a distributed cybersecurity meshand quantum-resistant algorithms. It ensures operational efficiency with dynamic Swarm AI analytics, transparency via blockchain for secure transactions, and adaptable scalability for various industry applications."
     },
     {
         "id": 3,
-        "question": "Are there any fees associated with becoming a partner?",
-        "reponse": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullaid urna quam. Phasellus cursus quam lorem, ut lobortis tellusblandit nec. Suspendisse potenti. Vestibulum pretium ut justoquis molestie. Suspendisse in mauris quam. Sed facilisis erosnon elit congue scelerisque. Ut orci purus, fermentum in sem at,commodo porttitor ipsum.Nam molestie, neque eget sempersuscipit, risus risus sollicitudin eros, nec placerat sem maurisa justo. Curabitur tincidunt vulputate massa, et vulputate nequeconvallis id. Nunc eu lacus aliquam lectus tincidunt luctus insed ante. Nulla malesuada volutpat ligula vitae malesuada. Nuncnunc ipsum, pretium vel blandit id, sodales in nisl. Mauristincidunt a nunc imperdiet vehicula. Donec posuere luctus est,"
+        "question": "What does Naoris Consulting specialize in?",
+        "reponse": "Naoris Consulting represents the commercial wing that offers bespoke solutions encapsulating blockchain’s transformative potential, Swarm AI, and top-tier cybersecurity. It is committed to crafting custom solutions for diverse organizations to spur innovation, operational efficiency,and growth."
     },
     {
         "id": 4,
-        "question": "What support does Naoris provide to its partners?",
-        "reponse": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullaid urna quam. Phasellus cursus quam lorem, ut lobortis tellusblandit nec. Suspendisse potenti. Vestibulum pretium ut justoquis molestie. Suspendisse in mauris quam. Sed facilisis erosnon elit congue scelerisque. Ut orci purus, fermentum in sem at,commodo porttitor ipsum.Nam molestie, neque eget sempersuscipit, risus risus sollicitudin eros, nec placerat sem maurisa justo. Curabitur tincidunt vulputate massa, et vulputate nequeconvallis id. Nunc eu lacus aliquam lectus tincidunt luctus insed ante. Nulla malesuada volutpat ligula vitae malesuada. Nuncnunc ipsum, pretium vel blandit id, sodales in nisl. Mauristincidunt a nunc imperdiet vehicula. Donec posuere luctus est,"
+        "question": "Who can benefit from Naoris Consulting's services?",
+        "reponse": "A broad spectrum of entities, including governments, educational institutions, healthcare providers, non-profits, and private companies, can leverage Naoris Consulting. From enhancing national security and streamlining operations to protecting sensitive data and ensuring transactional transparency, the applications are extensive."
     },
     {
         "id": 5,
-        "question": "Can a company be both a VAD and a Tech Partner?",
-        "reponse": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullaid urna quam. Phasellus cursus quam lorem, ut lobortis tellusblandit nec. Suspendisse potenti. Vestibulum pretium ut justoquis molestie. Suspendisse in mauris quam. Sed facilisis erosnon elit congue scelerisque. Ut orci purus, fermentum in sem at,commodo porttitor ipsum.Nam molestie, neque eget sempersuscipit, risus risus sollicitudin eros, nec placerat sem maurisa justo. Curabitur tincidunt vulputate massa, et vulputate nequeconvallis id. Nunc eu lacus aliquam lectus tincidunt luctus insed ante. Nulla malesuada volutpat ligula vitae malesuada. Nuncnunc ipsum, pretium vel blandit id, sodales in nisl. Mauristincidunt a nunc imperdiet vehicula. Donec posuere luctus est,"
+        "question": "How does integration of Naoris technology function with existing systems?",
+        "reponse": "Naoris technology is adeptly crafted for seamless integration across various technological layers,such as hardware, firmware, and software. This facilitates the reinforcement of device security,the incorporation of security features into firmware, and the embedding of advanced protocols into software."
     },
     {
         "id": 6,
-        "question": "How can I get in touch if I have more questions?",
-        "reponse": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullaid urna quam. Phasellus cursus quam lorem, ut lobortis tellusblandit nec. Suspendisse potenti. Vestibulum pretium ut justoquis molestie. Suspendisse in mauris quam. Sed facilisis erosnon elit congue scelerisque. Ut orci purus, fermentum in sem at,commodo porttitor ipsum.Nam molestie, neque eget sempersuscipit, risus risus sollicitudin eros, nec placerat sem maurisa justo. Curabitur tincidunt vulputate massa, et vulputate nequeconvallis id. Nunc eu lacus aliquam lectus tincidunt luctus insed ante. Nulla malesuada volutpat ligula vitae malesuada. Nuncnunc ipsum, pretium vel blandit id, sodales in nisl. Mauristincidunt a nunc imperdiet vehicula. Donec posuere luctus est,"
+        "question": "What kind of organizations can benefit from Naoris Consulting?",
+        "reponse": "Naoris Consulting can assist a wide range of organizations including:<ul><li><strong>Governments</strong>: Enhancing national security, streamlining public services, and supporting smart governance models.</li><li><strong>Educational Institutions</strong>: Securing personal and research data, improving operational efficiencies.</li><li><strong>Healthcare Providers</strong>: Protecting sensitive health data and optimizing service delivery.</li><li><strong>Non-Profit Organizations</strong>: Ensuring transparency and trust in transactions and donations.</li><li><strong>Private Corporations</strong>: Protecting intellectual property, ensuring operational resilience, and leveraging blockchain for supply chain management</li></ul>"
+      },      
+    {
+        "id":7,
+        "question":"What distinct approach does Naoris Consulting bring to the table?",
+        "reponse":"Naoris Consulting distinguishes itself by fusing blockchain and Swarm AI with cybersecurity foundations, focusing on craTing decentralized, innovative, secure, and cost-effective solutions.This forward-thinking methodology ensures that organizations are well-equipped for the digital era."
+    },
+    {
+        "id":8,
+        "question":" How does Naoris Consulting cater to scalability in its solutions?",
+        "reponse":"The solutions are innately scalable, designed to adapt to organizational growth. The decentralized nature of Naoris technology grants the flexibility and operational scalability that organizations need to expand and evolve."
+    },
+    {
+        "id":9,
+        "question":"Where can organizations learn more about implementing Naoris Consulting solutions?",
+        "reponse":"Organizations interested in learning more about implementing our solutions can contact us directly through our website. Our team is ready to provide detailed information and guidance on how Naoris technologies can be tailored to specific organizational needs and objectives."
     }
 ]
