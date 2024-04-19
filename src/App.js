@@ -1,6 +1,4 @@
 import React from "react";
-import { HelmetProvider, Helmet } from 'react-helmet-async';
-import mesh1 from "./assets/mesh1.png";
 import Navbar from "./Sections/Navbar/Navbar";
 import HeroSection from "./Sections/HeroSection/HeroSection";
 import Partners from './Sections/Partners/Partners'
@@ -15,7 +13,6 @@ import About from "./Sections/About/About";
 import Services from "./Sections/Services/Services";
 import Contact from "./Sections/Contact/Contact";
 import Footer from "./Sections/Footer/Footer";
-import bottom from './assets/bottom.png'
 import Kjell from "./Sections/Testimonials/Kjell";
 import './App.css'
 
@@ -50,7 +47,7 @@ function App() {
 <>
     <Navbar sections={sections} scrollToSection={scrollToSection} />
   <div className="flex flex-col relative gap-[54px] overflow-x-hidden pb-10" suppressHydrationWarning={true}>
-    <img src={mesh1} className="absolute top-0 z-0 p-0 w-full" style={{"height": "-webkit-fill-available"}}/>
+    <img src={`${process.env.PUBLIC_URL}/assets/mesh1.png`} className="absolute top-0 z-0 p-0 w-full" style={{"height": "-webkit-fill-available"}}/>
     <div className="relative flex flex-col gap-[54px]" id="home">
       <HeroSection />
       <Partners />
@@ -76,7 +73,7 @@ function App() {
       <Contact />
     </div>
     <Footer scrollToSection={scrollToSection} />
-    <img src={bottom} className="absolute bottom-0 mt-[50px] left-0 z-[1]" />
+    <img src={`${process.env.PUBLIC_URL}/assets/bottom.png`} className="absolute bottom-0 mt-[50px] left-0 z-[1]" />
     <div className="ending absolute bottom-0 left-0 z-[0]"></div>
   </div>
     </>

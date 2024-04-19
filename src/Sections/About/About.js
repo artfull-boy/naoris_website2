@@ -1,7 +1,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import worldShape from "../../assets/about_element.png";
+
 import "./about.css";
 import "../Testimonials/David.css";
 
@@ -129,7 +129,7 @@ const About = () => {
         )}
       </div>
       <motion.img 
-      src={worldShape}
+      src={`${process.env.PUBLIC_URL}/assets/about_element.png`}
       alt="World Shape"
       initial={{
         opacity:0,
