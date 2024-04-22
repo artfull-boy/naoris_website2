@@ -51,6 +51,7 @@ const FAQ = () => {
             duration: 0.5,
           }}
           viewport={{ once: true }}
+          ref={ref}
         >
           <p className="text-[50px] font-bold text-white text-center vsm:text-[35px]">
             Frequently Asked Questions
@@ -58,7 +59,7 @@ const FAQ = () => {
         </motion.div>
         <motion.div
           className="flex flex-col gap-[45px] w-full items-center"
-          ref={ref}
+          
       animate={controls}
       initial="hidden"
       variants={FaqAnimation}
