@@ -7,6 +7,7 @@
     color: #00FFA3;
     transition: all 0.3s ease;
 }
+
 .not_active_section{
     padding: 0px 0px;
     width: fit-content;
@@ -16,9 +17,9 @@
     color: #ffffff;
     transition: all 0.3s ease;
 }
-.not_active_section a:active, .active_section a:active {
-    color: #00FFA3;
-    background-color: transparent;
+.not_active_section a:active, .active_section a:active, .not_active_section a:focus, .active_section a:focus {
+    color: #00FFA3 !important;
+    background-color: transparent !important;
 }   
 .not_active_section::after, .not_active_section::before{
     content: "";

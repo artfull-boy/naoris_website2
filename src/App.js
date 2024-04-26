@@ -1,31 +1,28 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Navbar from "./Sections/Navbar/Navbar";
-import HeroSection from "./Sections/HeroSection/HeroSection";
-import Partners from './Sections/Partners/Partners'
-import David from "./Sections/Testimonials/David";
-import Team from "./Sections/Team/Team";
-import Advisors from "./Sections/Team/Advisors";
-import Lenis from '@studio-freight/lenis'
+
+import Lenis from '@studio-freight/lenis';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import FAQ from "./Sections/FAQ/FAQ";
-import About from "./Sections/About/About";
-import Services from "./Sections/Services/Services";
-import Contact from "./Sections/Contact/Contact";
+
 import Footer from "./Sections/Footer/Footer";
-import Kjell from "./Sections/Testimonials/Kjell";
-import './App.css'
+
+import './App.css';
+import CaseStudies from "./Pages/CaseStudies/CaseStudies";
+import Media from "./Pages/Media/Media";
+import Home from "./Pages/Home/Home";
 
 function App() {
-  const lenis = new Lenis()
+  const lenis = new Lenis();
   
-  lenis.on('scroll', ScrollTrigger.update)
+  lenis.on('scroll', ScrollTrigger.update);
   
   gsap.ticker.add((time)=>{
-    lenis.raf(time * 1000)
-  })
+    lenis.raf(time * 1000);
+  });
   
-  gsap.ticker.lagSmoothing(0)
+  gsap.ticker.lagSmoothing(0);
   
   const sections = [
     { id: 'home', name: 'Home' },
@@ -34,49 +31,45 @@ function App() {
     { id: 'team', name: 'Team' },
     { id: 'faq', name: 'FAQ' },
     { id: 'contact', name: 'Contact Us' },
+    { id: 'case_studies', name: 'Case Studies'},
+    { id: 'media', name: 'Media'},
   ];
 
   const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    const yOffset = -100; // Adjust this value as needed, negative values scroll a bit above the section, positive values scroll below
-    const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
-    window.scrollTo({top: y, behavior: 'smooth'});
+    if (window.location.href === "/case_studies" || window.location.href === "/media") {
+      if (sectionId !== "case_studies" && sectionId !== "media") {
+        window.location.href = `/#${sectionId}`;
+      }
+      
+    } else if (sectionId !== "case_studies" && sectionId !== "media") {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        const yOffset = -50; // Adjust this value as needed, negative values scroll a bit above the section, positive values scroll below
+        const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+        
+      }
+    }
   };
+  
+  
+    
+  
 
   return (
-<>
-    <Navbar sections={sections} scrollToSection={scrollToSection} />
-  <div className="flex flex-col relative gap-[54px] overflow-x-hidden pb-10" suppressHydrationWarning={true}>
-    <img src={`${process.env.PUBLIC_URL}/assets/mesh1.png`} className="absolute top-0 z-0 p-0 w-full" style={{"height": "-webkit-fill-available"}}/>
-    <div className="relative flex flex-col gap-[54px]" id="home">
-      <HeroSection />
-      <Partners />
-    </div>
+    <Router>
+      <Navbar sections={sections} scrollToSection={scrollToSection} />
       
-    <div id="about" className="relative flex flex-col gap-[100px]" suppressHydrationWarning={true}>
-      <David />
-      <Kjell />
-      <About />
-    </div>
-      
-    <div id="services" className="relative flex flex-col gap-[54px]" suppressHydrationWarning={true}>
-      <Services />
-    </div>
-    <div className="relative flex flex-col gap-[54px]" id="team" suppressHydrationWarning={true}>
-      <Team />
-      <Advisors />
-    </div>
-    <div id="faq" className="relative flex flex-col gap-[54px] z-[2]" suppressHydrationWarning={true}>
-      <FAQ />
-    </div>
-    <div id="contact" className="relative flex flex-col gap-[54px] z-[2]" suppressHydrationWarning={true}>
-      <Contact />
-    </div>
-    <Footer scrollToSection={scrollToSection} />
-    <img src={`${process.env.PUBLIC_URL}/assets/bottom.png`} className="absolute bottom-0 mt-[50px] left-0 z-[1]" />
-    <div className="ending absolute bottom-0 left-0 z-[0]"></div>
-  </div>
-    </>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="case_studies" element={<CaseStudies />}>
+        </Route>
+        <Route path="media" element={<Media />}>
+        </Route>
+      </Routes>
+      <Footer scrollToSection={scrollToSection} />
+        
+    </Router>
   );
 }
 

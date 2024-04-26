@@ -1,6 +1,6 @@
-"use client";
 import React from 'react';
 import './Navbar.css';
+import { Link } from 'react-router-dom';
 
 const Navbar = ({ sections, scrollToSection }) => {
   const [activeSection, setActiveSection] = React.useState("home");
@@ -10,6 +10,9 @@ const Navbar = ({ sections, scrollToSection }) => {
       const scrollPosition = window.scrollY +100; 
       const sectionIds = sections.map((section) => section.id);
       const currentActiveSection = sectionIds.find((id) => {
+        if (id == "case_studies" || id == "media") {
+          return true
+        }
         const sectionElement = document.getElementById(id);
         if (sectionElement) {
           const sectionTop = sectionElement.offsetTop;
@@ -17,6 +20,7 @@ const Navbar = ({ sections, scrollToSection }) => {
           return scrollPosition >= sectionTop && scrollPosition < sectionBottom;
         }
         return false;
+      
       });
       setActiveSection(currentActiveSection || "");
     };
@@ -90,6 +94,7 @@ const Navbar = ({ sections, scrollToSection }) => {
                   </a>
                 </li>
               ))}
+              
             </ul>
           )}
         </div>
@@ -105,11 +110,21 @@ const Navbar = ({ sections, scrollToSection }) => {
               className={activeSection === section.id ? "active_section" : "not_active_section"}
               onClick={() => scrollToSection(section.id)}
             >
-              <a className={`hover:text-[#00FFA3] hover:bg-transparent bg-none h-full xl:text-[18px]`}>
+              {section.id == "case_studies" || section.id == "media" ?
+              <>
+              <Link onClick={() => setActiveSection(section.id)} className={` hover:text-[#00FFA3] hover:bg-transparent bg-none h-full xl:text-[18px]`} to={section.id}>{section.name}</Link>
+              </>
+            :
+            <Link to={`/#${section.id}`} onClick={() => setActiveSection(section.id)} className={`active:bg-transparent active:text-[#00FFA3] hover:text-[#00FFA3] hover:bg-transparent bg-none h-full xl:text-[18px]`}>
                 {section.name}
-              </a>
+              </Link>
+            
+            }
+              
+
             </li>
           ))}
+          
         </ul>
       </div>
       <div className="navbar-end">

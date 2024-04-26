@@ -1,0 +1,9 @@
+/*.media {
+    background: radial-gradient(249.57% 212.97% at 108.6% -0.08%, #000 0%, #0454A4 100%);
+}*/
+.animation {
+    transform: rotateY(180deg);
+}
+.media_card {
+
+}
