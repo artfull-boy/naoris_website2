@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 @layer components {
   .container {
-    @apply flex min-w-full flex-col xl:px-24 lg:px-16 md:px-14 sm:px-8 px-[10px] gap-7 justify-center content-center;
+    @apply flex min-w-full flex-col 2xl:px-24 xl:px-20 lg:px-16 md:px-14 sm:px-8 px-[10px] gap-7 justify-center content-center;
   }
 }
 @layer utilities {

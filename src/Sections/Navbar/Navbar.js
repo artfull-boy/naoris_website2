@@ -50,7 +50,7 @@ const Navbar = ({ sections, scrollToSection }) => {
     setIsOpen(!isOpen);
   };
   return (
-    <div className="navbar sticky top-0 z-10 bg-[#05017296] xl:px-28 lg:px-20 md:px-16 sm:px-10 px-[10px]">
+    <div className="navbar sticky top-0 z-10 bg-[#05017296] 2xl:px-24 xl:px-20 lg:px-16 md:px-14 sm:px-8 px-[10px]">
       <div className="navbar-start">
         <div className="dropdown" ref={dropdownRef}>
           <div
@@ -115,7 +115,7 @@ const Navbar = ({ sections, scrollToSection }) => {
         </a>
       </div>
       <div className="navbar-center hidden lg:flex h-fit">
-        <ul className="menu menu-horizontal px-1 gap-4 text-white h-full">
+        <ul className="menu menu-horizontal px-1 text-white h-full  gap-1">
           {sections.map((section) => (
             <li
               key={section.id}
@@ -124,14 +124,14 @@ const Navbar = ({ sections, scrollToSection }) => {
             >
               {section.id === "case_studies" ?
               <>
-              <Link onClick={() => setActiveSection("case_studies")} className={` hover:text-[#00FFA3] hover:bg-transparent bg-none h-full xl:text-[18px]`} to={section.id}>{section.name}</Link>
+              <Link onClick={() => setActiveSection("case_studies")} className={` hover:text-[#00FFA3] hover:bg-transparent bg-none h-full 2xl:text-[18px]`} to={section.id}>{section.name}</Link>
               </>
             : section.id === "media" ?
             <>
-              <Link onClick={() => setActiveSection("media")} className={` hover:text-[#00FFA3] hover:bg-transparent bg-none h-full xl:text-[18px]`} to={section.id}>{section.name}</Link>
+              <Link onClick={() => setActiveSection("media")} className={` hover:text-[#00FFA3] hover:bg-transparent bg-none h-full 2xl:text-[18px]`} to={section.id}>{section.name}</Link>
               </>
               :
-            <Link to={`/#${section.id}`} onClick={() => setActiveSection(section.id)} className={`active:bg-transparent active:text-[#00FFA3] hover:text-[#00FFA3] hover:bg-transparent bg-none h-full xl:text-[18px]`}>
+            <Link to={`/#${section.id}`} onClick={() => setActiveSection(section.id)} className={`active:bg-transparent active:text-[#00FFA3] hover:text-[#00FFA3] hover:bg-transparent bg-none h-full 2xl:text-[18px]`}>
                 {section.name}
               </Link>
             
@@ -144,7 +144,7 @@ const Navbar = ({ sections, scrollToSection }) => {
         </ul>
       </div>
       <div className="navbar-end">
-        <ul className="menu menu-horizontal text-white relative z-10">
+        <ul className="menu menu-horizontal text-white relative z-10 ">
           <li>
             <details>
               <summary>Language</summary>

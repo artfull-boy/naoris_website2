@@ -11,7 +11,7 @@ module.exports = withMT({
       },
       screens: {
         'vsm':{'max': '517px'},
-        'medium':{'max': '1150px'}
+        'medium':{'max': '1250px'}
       }
     },
   },
