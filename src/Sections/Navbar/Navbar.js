@@ -3,29 +3,30 @@ import './Navbar.css';
 import { Link } from 'react-router-dom';
 
 const Navbar = ({ sections, scrollToSection }) => {
+  
   const [activeSection, setActiveSection] = React.useState("home");
 
   React.useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY +100; 
+      const scrollPosition = window.scrollY + 100; 
       const sectionIds = sections.map((section) => section.id);
       const currentActiveSection = sectionIds.find((id) => {
-        if (id == "case_studies" || id == "media") {
-          return true
-        }
         const sectionElement = document.getElementById(id);
         if (sectionElement) {
           const sectionTop = sectionElement.offsetTop;
           const sectionBottom = sectionTop + sectionElement.offsetHeight;
+          
           return scrollPosition >= sectionTop && scrollPosition < sectionBottom;
         }
         return false;
-      
       });
+      console.log("Current active section:", currentActiveSection);
       setActiveSection(currentActiveSection || "");
     };
-
-    window.addEventListener("scroll", handleScroll);
+    
+    if (activeSection !== "case_studies" && activeSection !== "media") {
+      window.addEventListener("scroll", handleScroll);
+    }
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -89,9 +90,20 @@ const Navbar = ({ sections, scrollToSection }) => {
                   }
                   onClick={() => scrollToSection(section.id)}
                 >
-                  <a className="hover:text-[#00FFA3] hover:bg-transparent">
-                    {section.name}
-                  </a>
+                  {section.id === "case_studies" ?
+              <>
+              <Link onClick={() => setActiveSection("case_studies")} className="hover:text-[#00FFA3] hover:bg-transparent" to={section.id}>{section.name}</Link>
+              </>
+            : section.id === "media" ?
+            <>
+              <Link onClick={() => setActiveSection("media")} className="hover:text-[#00FFA3] hover:bg-transparent" to={section.id}>{section.name}</Link>
+              </>
+              :
+            <Link to={`/#${section.id}`} onClick={() => setActiveSection(section.id)} className="hover:text-[#00FFA3] hover:bg-transparent">
+                {section.name}
+              </Link>
+            
+            }
                 </li>
               ))}
               
@@ -110,11 +122,15 @@ const Navbar = ({ sections, scrollToSection }) => {
               className={activeSection === section.id ? "active_section" : "not_active_section"}
               onClick={() => scrollToSection(section.id)}
             >
-              {section.id == "case_studies" || section.id == "media" ?
+              {section.id === "case_studies" ?
               <>
-              <Link onClick={() => setActiveSection(section.id)} className={` hover:text-[#00FFA3] hover:bg-transparent bg-none h-full xl:text-[18px]`} to={section.id}>{section.name}</Link>
+              <Link onClick={() => setActiveSection("case_studies")} className={` hover:text-[#00FFA3] hover:bg-transparent bg-none h-full xl:text-[18px]`} to={section.id}>{section.name}</Link>
               </>
-            :
+            : section.id === "media" ?
+            <>
+              <Link onClick={() => setActiveSection("media")} className={` hover:text-[#00FFA3] hover:bg-transparent bg-none h-full xl:text-[18px]`} to={section.id}>{section.name}</Link>
+              </>
+              :
             <Link to={`/#${section.id}`} onClick={() => setActiveSection(section.id)} className={`active:bg-transparent active:text-[#00FFA3] hover:text-[#00FFA3] hover:bg-transparent bg-none h-full xl:text-[18px]`}>
                 {section.name}
               </Link>

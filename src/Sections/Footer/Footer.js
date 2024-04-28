@@ -10,52 +10,52 @@ const Footer = ({ scrollToSection }) => {
           <img src={`${process.env.PUBLIC_URL}/assets/logo_footer.png`} width={180} className="medium:order-6" alt="Logo Footer"></img>
           <div className="flex gap-2 w-fit h-fit medium:order-3 vsm:flex-col vsm:items-start">
             <div className="border-r vsm:border-none px-3">
-              <p
+              <Link to={"/"}
                 onClick={() => scrollToSection("home")}
                 className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
               >
                 Home
-              </p>
+              </Link>
             </div>
             <div className="border-r vsm:border-none px-3">
-              <p
+              <Link to={"/#about"}
                 onClick={() => scrollToSection("about")}
                 className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
               >
                 About Us
-              </p>
+              </Link>
             </div>
             <div className="border-r vsm:border-none px-3">
-              <p
+              <Link to={"/#services"}
                 onClick={() => scrollToSection("services")}
                 className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
               >
                 Services
-              </p>
+              </Link>
             </div>
             <div className="border-r vsm:border-none px-3">
-              <p
+              <Link to={"/#team"}
                 onClick={() => scrollToSection("team")}
                 className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
               >
                 Team
-              </p>
+              </Link>
             </div>
             <div className="border-r vsm:border-none px-3">
-              <p
+              <Link to={"/#faq"}
                 onClick={() => scrollToSection("faq")}
                 className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
               >
                 FAQ
-              </p>
+              </Link>
             </div>
             <div className="px-3">
-              <p
+              <Link to={"/#contact"}
                 onClick={() => scrollToSection("contact")}
                 className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
               >
                 Contact Us
-              </p>
+              </Link>
             </div>
             <div className="px-3">
               <Link to={"/media"}
@@ -78,44 +78,44 @@ const Footer = ({ scrollToSection }) => {
         <img src={`${process.env.PUBLIC_URL}/assets/logo_footer.png`} width={250} className="medium:order-6 vsm:hidden" alt="Logo Footer"></img>
         <div className="vsm:hidden flex gap-2 w-fit h-fit medium:order-3 vsm:flex-col vsm:items-start">
           <div className="border-r vsm:border-none px-3">
-            <p
+            <Link to={"/"}
               onClick={() => scrollToSection("home")}
               className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
             >
               Home
-            </p>
+            </Link>
           </div>
           <div className="border-r vsm:border-none px-3">
-            <p
+            <Link to={"/#about"}
               onClick={() => scrollToSection("about")}
               className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
             >
               About Us
-            </p>
+            </Link>
           </div>
           <div className="border-r vsm:border-none px-3">
-            <p
+            <Link to={"/#services"}
               onClick={() => scrollToSection("services")}
               className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
             >
               Services
-            </p>
+            </Link>
           </div>
           <div className="border-r vsm:border-none px-3">
-            <p
+            <Link to={"/#team"}
               onClick={() => scrollToSection("team")}
               className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
             >
               Team
-            </p>
+            </Link>
           </div>
           <div className="border-r vsm:border-none px-3">
-            <p
+            <Link to={"/#faq"}
               onClick={() => scrollToSection("faq")}
               className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
             >
               FAQ
-            </p>
+            </Link>
           </div>
           <div className="px-3 border-r vsm:border-none">
             <Link to={"/#contact"}

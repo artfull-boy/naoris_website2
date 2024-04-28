@@ -29,6 +29,7 @@
 body {
   margin: 0;
   background-color: #040172;
+  z-index: 0;
 }
 * {
   font-family: 'Manrope', sans-serif;

@@ -1,0 +1,86 @@
+[
+    {
+        "name": "Media 1 Tv",
+        "logo": "/assets/medi1tv.png",
+        "description": "Naoris Consulting successfully organized a significant event in Tanger. During this event, the integration and optimization of emerging technologies were passionately discussed... ",
+        "link":"https://www.youtube.com/watch?v=X-jM3JzuyYY&ab_channel=Medi1TVAfrique"
+    },
+    {
+        "name": "Snrt News",
+        "logo": "/assets/snrt.png",
+        "description": "Naoris, an American company at the forefront of blockchain and artificial intelligence cybersecurity...",
+        "link":"https://snrtnews.com/fr/article/naoris-lance-ses-operations-au-maroc-95413"
+    },
+    {
+        "name": "Hiba Press",
+        "logo": "/assets/hiba.png",
+        "description": "Industry 5.0: Naoris Consulting and the Future of Meshed Decentralized Cybersecurity – Emphasis on Data Quality, Security, and Immutability...",
+        "link":"https://fr.hibapress.com/news-107420.html"
+    },
+    {
+        "name": "Le 360",
+        "logo": "/assets/360.png",
+        "description": "As a pioneer in decentralization and cybersecurity, Naoris Consulting officially launched its presence in Morocco on Thursday, April 18, during a press conference in Casablanca...",
+        "link":"https://fr.le360.ma/economie/naoris-compagnie-us-a-la-pointe-de-la-cybersecurite-simplante-au-maroc_UNGIL74JPRFYLM6DR67IL4ATX4/"
+    },
+    {
+        "name": "Médias24",
+        "logo": "/assets/media24.png",
+        "description": "Naoris, a cybersecurity company, is launching its operations in Morocco...",
+        "link":"https://medias24.com/2024/04/13/naoris-compagnie-specialisee-en-cybersecurite-lance-ses-operations-au-maroc/"
+    },
+    {
+        "name": "Challenge",
+        "logo": "/assets/challenge.png",
+        "description": "Naoris Consulting, a leader in the field of decentralization and cybersecurity, officially announced the commencement of its operations in Morocco...",
+        "link":"https://www.challenge.ma/cybersecurite-lamericain-naoris-lance-ses-operations-au-maroc-279775/"
+    },
+    {
+        "name": "L’opinion",
+        "logo": "/assets/opinion.png",
+        "description": "Interview with the CEO of Naoris Consulting: How the American leader aims to conquer the cybersecurity market in Morocco...",
+        "link":"https://www.lopinion.ma/Interview-avec-le-DG-de-Naoris-Consulting-Comment-le-leader-americain-veut-conquerir-le-marche-de-la-cybersecurite-au_a53025.html"
+    },
+    {
+        "name": "La vie éco",
+        "logo": "/assets/eco.png",
+        "description": "Naoris Consulting, operator in decentralization and cybersecurity, has officially inaugurated its operations in Morocco. This initiative underscores the company's contribution to Morocco's ambitions...",
+        "link":"https://www.lavieeco.com/affaires/cybersecurite-lamericain-naoris-simplante-au-maroc/"
+    },
+    {
+        "name": "LesEco.ma",
+        "logo": "/assets/leseco.png",
+        "description": "Cybersecurity Services: Strategic Alliance between BDO Advisory and Naoris Consulting...",
+        "link":"https://leseco.ma/maroc/services-en-matiere-de-cybersecurite-alliance-strategique-entre-bdo-advisory-et-naoris-consulting.html"
+    },
+    {
+        "name": "Iktissadkom.ma",
+        "logo": "/assets/iktissadkom.png",
+        "description": "The company Naoris, an American leading company in cybersecurity, blockchain, and artificial intelligence, announced the official launch of its activities in Morocco...",
+        "link":"https://iktissadkom.ma/last-news-maroc/%D9%86%D8%A7%D9%88%D8%B1%D8%B3-naoris-%D8%AA%D8%AF%D8%B4%D9%86-%D8%A3%D9%86%D8%B4%D8%B7%D8%AA%D9%87%D8%A7-%D9%84%D8%AA%D8%B9%D8%B2%D9%8A%D8%B2-%D8%A7%D9%84%D8%A3%D9%85%D9%86-%D8%A7%D9%84%D8%B3%D9%8A%D8%A8%D8%B1%D8%A7%D9%86%D9%8A-%D9%88%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A-%D8%A8%D8%A7%D9%84%D9%85%D8%BA%D8%B1%D8%A8"
+    },
+    {
+        "name": "Assureur.ma",
+        "logo": "/assets/assureur.png",
+        "description": "BDO Advisory Partners with Naoris Consulting to Strengthen Cybersecurity in Africa...",
+        "link":"https://assureur.ma/bdo-advisory-sassocie-a-naoris-consulting-pour-renforcer-la-cybersecurite-en-afrique/"
+    },
+    {
+        "name": "H24 Info",
+        "logo": "/assets/h24.png",
+        "description": "Naoris launches its operations in Morocco, a major advancement for cybersecurity in Africa...",
+        "link":"https://www.h24info.ma/naoris-inaugure-ses-operations-au-maroc-une-avancee-majeure-pour-la-cybersecurite-en-afrique/"
+    },
+    {
+        "name": "Le Temps Mag",
+        "logo": "/assets/letemps.png",
+        "description": "The American leader Naoris is deploying its expertise in cybersecurity in Morocco...",
+        "link":"https://letempsmag.ma/?p=28140"
+    },
+    {
+        "name": "Telquel",
+        "logo": "/assets/telquel.png",
+        "description": "Cybersecurity: \"Naoris\" announces the official launch of its operations in Morocco...",
+        "link":"https://ar.telquel.ma/%D8%A7%D9%84%D8%A3%D9%85%D9%86-%D8%A7%D9%84%D8%B3%D9%8A%D8%A8%D8%B1%D8%A7%D9%86%D9%8A-naoris-%D8%AA%D8%B9%D9%84%D9%86-%D8%A7%D9%86%D8%B7%D9%84%D8%A7%D9%82%D8%A9-%D8%B9%D9%85%D9%84%D9%87%D8%A7/"
+    }
+]

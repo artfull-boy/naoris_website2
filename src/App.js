@@ -1,19 +1,27 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import React, {useEffect} from "react";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./Sections/Navbar/Navbar";
-
 import Lenis from '@studio-freight/lenis';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 import Footer from "./Sections/Footer/Footer";
-
 import './App.css';
 import CaseStudies from "./Pages/CaseStudies/CaseStudies";
 import Media from "./Pages/Media/Media";
 import Home from "./Pages/Home/Home";
 
 function App() {
+   // Reset scrolling when route changes
+   const ScrollToTop = () => {
+    const { pathname } = useLocation();
+    console.log(pathname)
+    useEffect(() => {
+      document.documentElement.scrollTo({ top:0, left:0, behavior: "instant" });
+    }, [pathname]);
+  
+    return null;
+  }
+
   const lenis = new Lenis();
   
   lenis.on('scroll', ScrollTrigger.update);
@@ -51,15 +59,12 @@ function App() {
       }
     }
   };
-  
-  
-    
-  
 
   return (
     <Router>
-      <Navbar sections={sections} scrollToSection={scrollToSection} />
-      
+    <ScrollToTop />
+
+      <Navbar sections={sections} scrollToSection={scrollToSection} />    
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="case_studies" element={<CaseStudies />}>
@@ -68,8 +73,8 @@ function App() {
         </Route>
       </Routes>
       <Footer scrollToSection={scrollToSection} />
-        
     </Router>
+      
   );
 }
 

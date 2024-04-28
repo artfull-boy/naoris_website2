@@ -28,7 +28,6 @@ const Home = () => {
         <img src={`${process.env.PUBLIC_URL}/assets/mesh1.png`} className="absolute top-0 z-0 p-0 w-full" style={{"height": "-webkit-fill-available"}}/>
         <div className="relative flex flex-col gap-[54px]" id="home">
           <HeroSection />
-          <Partners />
         </div>
           
         <div id="about" className="relative flex flex-col gap-[100px]">
@@ -45,6 +44,7 @@ const Home = () => {
           <Advisors />
         </div>
         <div id="faq" className="relative flex flex-col gap-[54px] z-[2]">
+          <Partners />
           <FAQ />
         </div>
         <div id="contact" className="relative flex flex-col gap-[54px] z-[2]">

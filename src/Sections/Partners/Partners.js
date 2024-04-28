@@ -1,5 +1,9 @@
 import React from "react";
+import {motion} from "framer-motion"
 import Marquee from "react-fast-marquee";
+import {
+  headingVariants
+} from "../../animations";
 
 import "./partners.css";
 
@@ -44,9 +48,20 @@ const logo30 = `${process.env.PUBLIC_URL}/assets/logos/30.png`;
 
     <div className="container relative slider-container">
       <div className="flex justify-center items-center flex-col w-full overflow-hidden gap-[50px]">
-        <p className="font-sans font-bold text-[50px] text-white vsm:text-[35px]">
-          They Trust Us
-        </p>
+      <motion.div
+          className="heading relative w-fit"
+          variants={headingVariants}
+          initial="hidden"
+          whileInView="visible"
+          transition={{
+            duration: 0.5,
+          }}
+          viewport={{ once: true }}
+        >
+          <p className="text-[50px] font-bold text-white text-center vsm:text-[35px]">
+            They Trust Us
+          </p>
+        </motion.div>
         <Marquee
           direction="right"
           speed={100}
