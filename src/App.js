@@ -39,7 +39,6 @@ function App() {
     { id: 'team', name: 'Team' },
     { id: 'faq', name: 'FAQ' },
     { id: 'contact', name: 'Contact Us' },
-    { id: 'case_studies', name: 'Case Studies'},
     { id: 'media', name: 'Media'},
   ];
 
@@ -67,8 +66,8 @@ function App() {
       <Navbar sections={sections} scrollToSection={scrollToSection} />    
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="case_studies" element={<CaseStudies />}>
-        </Route>
+        {/*<Route path="case_studies" element={<CaseStudies />}>
+        </Route>*/}
         <Route path="media" element={<Media />}>
         </Route>
       </Routes>

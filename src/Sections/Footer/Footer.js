@@ -57,14 +57,14 @@ const Footer = ({ scrollToSection }) => {
                 Contact Us
               </Link>
             </div>
-            <div className="px-3">
-              <Link to={"/media"}
+            {/*<div className="px-3">
+              <Link to={"/case_studies"}
                 onClick={() => scrollToSection("case_studies")}
                 className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
               >
                 Case Studies
               </Link>
-            </div>
+  </div>*/}
             <div className="px-3">
               <Link to={"/media"}
                 onClick={() => scrollToSection("media")}
@@ -124,14 +124,14 @@ const Footer = ({ scrollToSection }) => {
               Contact Us
             </Link>
           </div>
-          <div className="px-3 border-r vsm:border-none">
+          {/*<div className="px-3 border-r vsm:border-none">
               <Link to={"/case_studies"}
                 onClick={() => scrollToSection("case_studies")}
                 className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
               >
                 Case Studies
               </Link>
-            </div>
+</div>*/}
             <div className="px-3">
               <Link to={"/media"}
                 onClick={() => scrollToSection("media")}

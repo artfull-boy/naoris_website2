@@ -67,8 +67,11 @@ const About = () => {
             viewport={{ once: true }}
             className="font-semibold text-[30px] medium:text-[27px] vsm:text-[20px] text-white"
           >
-            Naoris is an American company founded under a mandate from the North
-            Atlantic Treaty Organization (NATO), whose protocol represents a key
+            Naoris is an American company founded under a mandate from the North Atlantic Treaty Organization (NATO)
+
+Hello All, this phrase on the website we need to change it to:
+
+Naoris is an American company founded under a mandate from previous leaders of the North Atlantic Treaty Organization (NATO), whose protocol represents a key
             solution for sustainable, scalable, interoperable, and secure
             digitalization suited to future challenges. With several European
             cities as references, such as Dublin, Rijeka, Zurich, and Vienna

@@ -40,7 +40,7 @@ const Media = () => {
       </div>
       <div className="flex flex-col gap-7 z-[2] w-full">
         <video
-          style={{ width: "100%", height: "100vh" }}
+          style={{ width: "100%"}}
           loop={true}
           autoPlay
           muted
@@ -49,7 +49,7 @@ const Media = () => {
           className="object-cover w-full"
         >
           <source
-            src={`${process.env.PUBLIC_URL}/assets/videoplayback.mp4`}
+            src={`${process.env.PUBLIC_URL}/assets/naorisconsulting.mp4`}
             type="video/mp4"
           />
           Your browser does not support the video tag.
