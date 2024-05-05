@@ -158,7 +158,7 @@ const Footer = ({ scrollToSection }) => {
           </div>
         </div>
       </div>
-      <p className="text-[16px] text-white font-bold vsm:text-[14px] z-[2]">© 2024 Naoris Consulting. All rights reserved.</p>
+      <p className="text-[16px] text-white font-bold vsm:text-[14px] z-[2] pb-5">© 2024 Naoris Consulting. All rights reserved.</p>
       <img src={`${process.env.PUBLIC_URL}/assets/bottom.png`} className="absolute bottom-0 mt-[50px] left-0 z-[1]" />
       <div className="ending absolute bottom-0 left-0 z-[0]"></div>
 

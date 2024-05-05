@@ -17,7 +17,7 @@ const Media = () => {
   }, []);
 
   return (
-    <div id="media" className="media overflow-hidden flex flex-col w-full relative items-center gap-8 container h-fit z-[2] mb-60">
+    <div id="media" className="media overflow-hidden flex flex-col w-full relative items-center gap-8 container h-fit z-[2] mb-60 pb-10">
       <img
         src={`${process.env.PUBLIC_URL}/assets/BACKGROUND_media.png`}
         className="absolute top-0 left-0 z-[2] w-[100%] object-cover h-[100%]"
@@ -55,9 +55,7 @@ const Media = () => {
           Your browser does not support the video tag.
         </video>
         <p className="text-white font-bold text-[30px] tracking-[2px]">
-          Naoris announces the inauguration of its operations in Morocco with a
-          presentation to national media, scheduled for April 18th at the
-          Marriott Hotel Casablanca...
+        Naoris announced the launch of its operations in Morocco with a presentation to the national media, which took place on April 18th at the Marriott Hotel in Casablanca.
         </p>
       </div>
       <div className="flex  flex-wrap gap-[140px] w-full items-center justify-center z-[2]">
