@@ -115,9 +115,9 @@ const Team = () => {
                 className="relative top-0 right-0 z-0 rounded-[8px]"
               />
               <div className="card_background rounded-[8px] w-full h-[500px] absolute bottom-[-60%] right-0 z-[1]"></div>
-              <div className={`card_content rounded-[8px] absolute ${member.name === "Réda Belkassem Tamssamani" ? "bottom-[-60%]": "bottom-[-78%]"} left-0 w-full h-full p-[6px] z-[1] flex flex-col gap-3`}>
+              <div className={`card_content rounded-[8px] absolute ${member.name === "Reda Temsamani" ? "bottom-[-70%]": "bottom-[-78%]"} left-0 w-full h-full p-[6px] z-[1] flex flex-col gap-3`}>
                 <div className="flex flex-col gap-1">
-                  {member.name === "Réda Belkassem Tamssamani" ? (
+                  {member.name === "Reda Temsamani" ? (
                     <p className="text-[30px] font-bold text-white leading-none whitespace-normal">
                       {member.name}
                     </p>
