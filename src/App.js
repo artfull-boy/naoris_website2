@@ -40,6 +40,7 @@ function App() {
     { id: 'faq', name: 'FAQ' },
     { id: 'contact', name: 'Contact Us' },
     { id: 'media', name: 'Media'},
+    { id: 'case_studies', name: 'Use Cases'},
   ];
 
   const scrollToSection = (sectionId) => {
