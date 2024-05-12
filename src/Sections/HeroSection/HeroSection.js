@@ -43,7 +43,7 @@ const HeroSection = () => {
           visible: { opacity: 1, scale: 1 },
           hidden: { opacity: 0, scale: 0 },
         }}
-        className="container flex gap-0 justify-center  items-center relative"
+        className="container flex gap-0 justify-center  items-center relative vsm:pt-12"
       >
         {isMobile ? (
           <p className="font-sans hero_text lg:text-[60px] md:text-[50px] sm:text-[42px] text-[36px] font-bold text-center">

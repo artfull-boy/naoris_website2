@@ -50,7 +50,7 @@ const Navbar = ({ sections, scrollToSection }) => {
     setIsOpen(!isOpen);
   };
   return (
-    <div className="navbar sticky top-0 z-10 bg-[#05017296] 2xl:px-24 xl:px-20 lg:px-16 md:px-14 sm:px-8 px-[10px]">
+    <div className="navbar fixed bg-[#0112236e] top-0 z-10 2xl:px-24 xl:px-20 lg:px-16 md:px-14 sm:px-8 px-[10px]">
       <div className="navbar-start">
         <div className="dropdown" ref={dropdownRef}>
           <div
@@ -111,7 +111,7 @@ const Navbar = ({ sections, scrollToSection }) => {
           )}
         </div>
         <a href="/">
-          <img src={`${process.env.PUBLIC_URL}/assets/logo.png`} alt="Naoris Consulting Logo" width={140} />
+          <img src={`${process.env.PUBLIC_URL}/assets/logo.png`} alt="Naoris Consulting Logo" width={140} className='relative z-10' />
         </a>
       </div>
       <div className="navbar-center hidden lg:flex h-fit">

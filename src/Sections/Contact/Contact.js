@@ -82,7 +82,7 @@ const Contact = () => {
     reset();
   };
   return (
-    <div className="container flex justify-between">
+    <div className="container flex justify-between relative z-[2] pb-20">
       <div className="flex justify-center items-center flex-col w-full overflow-hidden gap-[50px]">
         <motion.div
           className="heading relative w-fit"
@@ -274,7 +274,7 @@ const Contact = () => {
               ref={form}
               whileInView="visible"
               viewport={{ once: true }}
-              className={`flex flex-wrap gap-[35px] justify-start w-[48%]`}
+              className={`flex flex-wrap gap-[35px] justify-start w-[48%] relative z-[2]`}
             >
               <div className="flex flex-col gap-[5px] md:w-[45%] w-[100%]">
                 <label

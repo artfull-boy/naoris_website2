@@ -1,0 +1,14 @@
+.solution {
+    position: relative;
+    width: fit-content;
+}
+.solution::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, rgba(0, 255, 163, 1), rgba(103, 41, 250, 1));
+    left: 0;
+    bottom: -3px;
+    border-radius: 30%;
+}

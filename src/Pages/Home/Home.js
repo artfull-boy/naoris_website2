@@ -24,8 +24,8 @@ const Home = () => {
         }
       }, []);
   return (
-    <div className="flex flex-col relative gap-[54px] overflow-x-hidden pb-10">
-        <img src={`${process.env.PUBLIC_URL}/assets/mesh1.png`} className="absolute top-0 z-0 p-0 w-full" style={{"height": "-webkit-fill-available"}}/>
+    <div className="flex flex-col relative gap-[54px] overflow-hidden pb-10">
+        <img src={`${process.env.PUBLIC_URL}/assets/bg_home.png`} className="absolute top-0 z-[0]  w-full h-full"/>
         <div className="relative flex flex-col gap-[54px]" id="home">
           <HeroSection />
         </div>
@@ -50,7 +50,7 @@ const Home = () => {
         <div id="contact" className="relative flex flex-col gap-[54px] z-[2]">
           <Contact />
         </div>
-
+        <div className="absolute bottom-[-90px] left-[-20px] z-[0] w-full last_hope"></div>
       </div>
   )
 }

@@ -8,6 +8,9 @@
   }
 }
 @layer utilities {
+  .object {
+    object-position: 0px -150px;
+  }
   .mask-gradient {
     -webkit-mask-image: linear-gradient(
       to right,
@@ -28,7 +31,7 @@
 
 body {
   margin: 0;
-  background-color: #040172;
+  
   z-index: 0;
 }
 * {

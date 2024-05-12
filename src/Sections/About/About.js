@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 
 import "./about.css";
 import "../Testimonials/David.css";
+import { headingVariants } from "../../animations";
 
 const About = () => {
   const [isMobile, setIsMobile] = React.useState(
@@ -54,9 +55,23 @@ const About = () => {
   return (
     <div className="relative flex-col" suppressHydrationWarning={true}>
       <div
-        className="flex flex-col gap-20 relative z-[1]"
+        className="flex flex-col items-center gap-20 relative z-[1]"
         suppressHydrationWarning={true}
       >
+        <motion.div
+          className="heading relative w-fit"
+          variants={headingVariants}
+          initial="hidden"
+          whileInView="visible"
+          transition={{
+            duration: 0.5,
+          }}
+          viewport={{ once: true }}
+        >
+          <p className="text-[50px] font-bold text-white text-center vsm:text-[35px]">
+            About Us
+          </p>
+        </motion.div>
         <div className="container">
           <motion.p
             initial={{
@@ -69,7 +84,7 @@ const About = () => {
               x: 0,
             }}
             viewport={{ once: true }}
-            className="font-semibold text-[30px] medium:text-[27px] vsm:text-[20px] text-white"
+            className="font-semibold text-[30px] medium:text-[27px] vsm:text-[20px] text-justify text-white vsm:text-center"
           >
             Naoris is an American company founded under a mandate from previous
             leaders of the North Atlantic Treaty Organization (NATO), whose
@@ -134,22 +149,20 @@ const About = () => {
         )}
       </div>
       <motion.img
-        src={`${process.env.PUBLIC_URL}/assets/about_element.png`}
+        src={`${process.env.PUBLIC_URL}/assets/PLANET.png`}
         alt="World Shape"
         initial={{
           opacity: 0,
           scale: 0,
-          rotate: 180,
         }}
         whileInView={{
           opacity: 1,
           scale: 1,
-          rotate: 180,
         }}
         transition={spring}
-        width={600}
+        width={400}
         viewport={{ once: true }}
-        className="absolute rotate-180 left-[-10%] lg:bottom-[-40%] vsm:w-[400px] vsm:hidden md:bottom-3"
+        className="absolute left-[-10%] lg:bottom-[-35%] vsm:w-[400px] vsm:hidden md:bottom-3"
       ></motion.img>
     </div>
   );

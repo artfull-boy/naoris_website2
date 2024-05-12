@@ -4,7 +4,7 @@ import "./footer.css";
 
 const Footer = ({ scrollToSection }) => {
   return (
-    <div className="container flex flex-col relative justify-between items-center w-full z-[1]">
+    <div className="container flex flex-col relative justify-between items-center w-full z-[1] overflow-hidden  pt-[160px]">
       <div className="flex w-full flex-row relative justify-between items-center medium:flex-col medium:gap-12 z-[2]">
         <div className="hidden vsm:flex justify-between items-center w-full order-3">
           <img src={`${process.env.PUBLIC_URL}/assets/logo_footer.png`} width={180} className="medium:order-6" alt="Logo Footer"></img>
@@ -57,14 +57,14 @@ const Footer = ({ scrollToSection }) => {
                 Contact Us
               </Link>
             </div>
-            {/*<div className="px-3">
+            <div className="px-3">
               <Link to={"/case_studies"}
                 onClick={() => scrollToSection("case_studies")}
                 className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
               >
                 Case Studies
               </Link>
-  </div>*/}
+  </div>
             <div className="px-3">
               <Link to={"/media"}
                 onClick={() => scrollToSection("media")}
@@ -124,15 +124,8 @@ const Footer = ({ scrollToSection }) => {
               Contact Us
             </Link>
           </div>
-          {/*<div className="px-3 border-r vsm:border-none">
-              <Link to={"/case_studies"}
-                onClick={() => scrollToSection("case_studies")}
-                className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
-              >
-                Case Studies
-              </Link>
-</div>*/}
-            <div className="px-3">
+         
+            <div className="px-3 border-r vsm:border-none">
               <Link to={"/media"}
                 onClick={() => scrollToSection("media")}
                 className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
@@ -140,6 +133,14 @@ const Footer = ({ scrollToSection }) => {
                 Media
               </Link>
             </div>
+            <div className="px-3 ">
+              <Link to={"/case_studies"}
+                onClick={() => scrollToSection("case_studies")}
+                className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
+              >
+                Use Cases
+              </Link>
+</div>
         </div>
         <div className="text-white flex flex-col gap-3 w-[26%] medium:w-[100%] medium:order-1">
           <p className="font-normal text-[40px] ">
@@ -159,8 +160,9 @@ const Footer = ({ scrollToSection }) => {
         </div>
       </div>
       <p className="text-[16px] text-white font-bold vsm:text-[14px] z-[2] pb-5">© 2024 Naoris Consulting. All rights reserved.</p>
-      <img src={`${process.env.PUBLIC_URL}/assets/bottom.png`} className="absolute bottom-0 mt-[50px] left-0 z-[1]" />
-      <div className="ending absolute bottom-0 left-0 z-[0]"></div>
+      <img src={`${process.env.PUBLIC_URL}/assets/footer.png`} className="absolute top-[-80px] left-0 z-[1] w-full cards:h-full cards:top-0" />
+      <img src={`${process.env.PUBLIC_URL}/assets/clip_footer.png`} className="absolute top-[150px] left-0 z-[1] cards:top-0 cards:h-full cards:w-full" />
+    
 
     </div>
   );

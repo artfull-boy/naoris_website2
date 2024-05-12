@@ -84,7 +84,7 @@ const Services = () => {
                       {service.title}
                     </p>
                   </div>
-                  <p className="font-normal text-white text-[20px]  inline-block w-full ">
+                  <p className="font-normal text-white text-[20px]  inline-block w-full text-justify vsm:text-left">
                     {service.desc}
                   </p>
                 </motion.div>
@@ -117,7 +117,7 @@ const Services = () => {
                         {service.title}
                       </p>
                     </div>
-                    <p className="font-normal text-white text-[30px]  inline-block w-full ">
+                    <p className="font-normal text-white text-[30px]  inline-block w-full text-justify vsm:text-left">
                       {service.desc}
                     </p>
                   </motion.div>
@@ -174,7 +174,7 @@ const Services = () => {
                         {service.title}
                       </p>
                     </div>
-                    <p className="font-normal text-white text-[30px]  inline-block w-full ">
+                    <p className="font-normal text-white text-[30px]  inline-block w-full text-justify vsm:text-center vsm:text-center">
                       {service.desc}
                     </p>
                   </motion.div>

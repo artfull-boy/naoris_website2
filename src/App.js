@@ -9,6 +9,7 @@ import './App.css';
 import CaseStudies from "./Pages/CaseStudies/CaseStudies";
 import Media from "./Pages/Media/Media";
 import Home from "./Pages/Home/Home";
+import UseCase from './Pages/UseCase/UseCase'
 
 function App() {
    // Reset scrolling when route changes
@@ -67,11 +68,14 @@ function App() {
       <Navbar sections={sections} scrollToSection={scrollToSection} />    
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        {/*<Route path="case_studies" element={<CaseStudies />}>
-        </Route>*/}
+        <Route path="case_studies" element={<CaseStudies />}>
+        </Route>
         <Route path="media" element={<Media />}>
         </Route>
+        <Route path="case_studies/:id" element={<UseCase />}>
+        </Route>
       </Routes>
+      
       <Footer scrollToSection={scrollToSection} />
     </Router>
       
