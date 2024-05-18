@@ -6,7 +6,7 @@ const Navbar = ({ sections, scrollToSection }) => {
   
   const [activeSection, setActiveSection] = React.useState("home");
 
-  React.useEffect(() => {
+  /*React.useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 100; 
       const sectionIds = sections.map((section) => section.id);
@@ -30,7 +30,7 @@ const Navbar = ({ sections, scrollToSection }) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [sections]);
+  }, [sections]);*/
   const [isOpen, setIsOpen] = React.useState(false);
   const dropdownRef = React.useRef(null);
 

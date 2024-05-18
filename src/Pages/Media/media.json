@@ -43,13 +43,13 @@
     },
     {
         "name": "La vie éco",
-        "logo": "/assets/media/lavieeco.png",
+        "logo": "/assets/media/lavieeco",
         "description": "Naoris Consulting, operator in decentralization and cybersecurity, has officially inaugurated its operations in Morocco. This initiative underscores the company's contribution to Morocco's ambitions...",
         "link":"https://www.lavieeco.com/affaires/cybersecurite-lamericain-naoris-simplante-au-maroc/"
     },
     {
         "name": "LesEco.ma",
-        "logo": "/assets/media/leseco.png",
+        "logo": "/assets/media/leseco",
         "description": "Cybersecurity Services: Strategic Alliance between BDO Advisory and Naoris Consulting...",
         "link":"https://leseco.ma/maroc/services-en-matiere-de-cybersecurite-alliance-strategique-entre-bdo-advisory-et-naoris-consulting.html"
     },
@@ -73,7 +73,7 @@
     },
     {
         "name": "Le Temps Mag",
-        "logo": "/assets/media/letemps.png",
+        "logo": "/assets/media/letemps",
         "description": "The American leader Naoris is deploying its expertise in cybersecurity in Morocco...",
         "link":"https://letempsmag.ma/?p=28140"
     },

@@ -39,9 +39,9 @@ function App() {
     { id: 'services', name: 'Services' },
     { id: 'team', name: 'Team' },
     { id: 'faq', name: 'FAQ' },
-    { id: 'contact', name: 'Contact Us' },
     { id: 'media', name: 'Media'},
     { id: 'case_studies', name: 'Use Cases'},
+    { id: 'contact', name: 'Contact Us' },
   ];
 
   const scrollToSection = (sectionId) => {
