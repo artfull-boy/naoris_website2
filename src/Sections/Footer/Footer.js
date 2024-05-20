@@ -4,7 +4,7 @@ import "./footer.css";
 
 const Footer = ({ scrollToSection }) => {
   return (
-    <div className="container flex flex-col relative justify-between items-center w-full z-[1] overflow-hidden  pt-[160px]">
+    <div className="container flex flex-col relative justify-between items-center w-full z-[1] overflow-hidden  pt-[160px] bg-[#011223]">
       <div className="flex w-full flex-row relative justify-between items-center medium:flex-col medium:gap-12 z-[2]">
         <div className="hidden vsm:flex justify-between items-center w-full order-3">
           <img src={`${process.env.PUBLIC_URL}/assets/logo_footer.png`} width={180} className="medium:order-6" alt="Logo Footer"></img>
@@ -160,8 +160,8 @@ const Footer = ({ scrollToSection }) => {
         </div>
       </div>
       <p className="text-[16px] text-white font-bold vsm:text-[14px] z-[2] pb-5">© 2024 Naoris Consulting. All rights reserved.</p>
-      <img src={`${process.env.PUBLIC_URL}/assets/footer.png`} className="absolute top-[-80px] left-0 z-[1] w-full cards:h-full cards:top-0" />
-      <img src={`${process.env.PUBLIC_URL}/assets/clip_footer.png`} className="absolute top-[150px] left-0 z-[1] cards:top-0 cards:h-full cards:w-full" />
+      
+      <img src={`${process.env.PUBLIC_URL}/assets/clip_footer.png`} className="absolute top-0 left-0 z-[1] cards:top-0 cards:h-full cards:w-full" />
     
 
     </div>

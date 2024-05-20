@@ -45,14 +45,15 @@ const Media = () => {
       id="media"
       className="media overflow-hidden flex flex-col w-full relative items-center gap-[150px] container h-fit z-[2] pb-96 vsm:pb-60 pt-24"
     >
-      <img
+      {/*<img
         src={`${process.env.PUBLIC_URL}/assets/bg_use.png`}
         className="absolute top-[-68px] left-0 z-[2]  w-full h-full cards:hidden block"
       ></img>
       <img
         src={`${process.env.PUBLIC_URL}/assets/bg_useM.png`}
         className="absolute top-[-68px] left-0 z-[2]  w-full h-full cards:block hidden"
-      ></img>
+  ></img>*/}
+  <img src={`${process.env.PUBLIC_URL}/assets/bg_home.png`} className="absolute top-0 z-[0]  w-full h-full"/>
 
       <div className="flex w-full justify-between items-center z-[2] ">
         <div className="border-lef border-l-[5px] border-[#00FFA3]">
@@ -334,10 +335,17 @@ const Media = () => {
                     <div className="media_card flex flex-col w-[220px] h-[330px] bg-transparent rounded-[24px] border-0 border-b-4 border-[#00FFA3] pt-[75px]">
                       <div className="flex flex-col">
                         <div className="size-[216px] flex ">
+                        {media.name == "Cointelegraph" ? 
+                            <img
+                              src={`${process.env.PUBLIC_URL}${media.logo}.png`}
+                              className="w-[100%] transition-all duration-[0.3s] ease-in-out m-auto filter brightness-0 invert"
+                            ></img>
+                            :
                             <img
                               src={`${process.env.PUBLIC_URL}${media.logo}`}
                               className="w-[100%] transition-all duration-[0.3s] ease-in-out m-auto filter brightness-0 invert"
                             ></img>
+                        }
                         </div>
                         <p className="text-white text-[25px]  w-full text-center">
                           {media.name}
@@ -404,7 +412,7 @@ const Media = () => {
               Awards
             </p>
           </div>
-          <div className="flex  flex-wrap gap-y-[100px] gap-x-[100px] w-full items-center justify-center z-[2]">
+          <div className="flex  flex-wrap gap-y-[100px] gap-x-[50px] w-full items-center justify-center z-[2]">
             {rewards.map(reward => (
               <div className="flex flex-col gap-[38px] items-center justify-center w-[290px]">
               <img src={`${process.env.PUBLIC_URL}${reward.img}`}></img>
@@ -433,7 +441,7 @@ const Media = () => {
             ))}
         </div>}
       </div>
-      <div className="absolute bottom-[-90px] left-[-20px] z-[0] w-full last_hope"></div>
+      
     </div>
   );
 };
