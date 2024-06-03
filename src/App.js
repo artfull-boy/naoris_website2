@@ -9,6 +9,8 @@ import './App.css';
 import CaseStudies from "./Pages/CaseStudies/CaseStudies";
 import Media from "./Pages/Media/Media";
 import Home from "./Pages/Home/Home";
+import { I18nextProvider } from 'react-i18next';
+import i18n from './i18n';
 import UseCase from './Pages/UseCase/UseCase'
 
 function App() {
@@ -62,6 +64,7 @@ function App() {
   };
 
   return (
+    <I18nextProvider i18n={i18n}>
     <Router>
     <ScrollToTop />
 
@@ -77,7 +80,8 @@ function App() {
       </Routes>
       
       <Footer scrollToSection={scrollToSection} />
-    </Router>
+    </Router>  
+    </I18nextProvider>
       
   );
 }

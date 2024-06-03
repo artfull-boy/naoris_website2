@@ -1,8 +1,10 @@
 import React from 'react';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Navbar = ({ sections, scrollToSection }) => {
+  const { t, i18n } = useTranslation();
   
   const [activeSection, setActiveSection] = React.useState("home");
 
@@ -49,6 +51,12 @@ const Navbar = ({ sections, scrollToSection }) => {
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
+
+
   return (
     <div className="navbar fixed bg-[#0112236e] top-0 z-10 2xl:px-24 xl:px-20 lg:px-16 md:px-14 sm:px-8 px-[10px]">
       <div className="navbar-start">
@@ -92,15 +100,15 @@ const Navbar = ({ sections, scrollToSection }) => {
                 >
                   {section.id === "case_studies" ?
               <>
-              <Link onClick={() => setActiveSection("case_studies")} className="hover:text-[#00FFA3] hover:bg-transparent" to={section.id}>{section.name}</Link>
+              <Link onClick={() => setActiveSection("case_studies")} className="hover:text-[#00FFA3] hover:bg-transparent" to={section.id}>{t(section.name)}</Link>
               </>
             : section.id === "media" ?
             <>
-              <Link onClick={() => setActiveSection("media")} className="hover:text-[#00FFA3] hover:bg-transparent" to={section.id}>{section.name}</Link>
+              <Link onClick={() => setActiveSection("media")} className="hover:text-[#00FFA3] hover:bg-transparent" to={section.id}>{t(section.name)}</Link>
               </>
               :
             <Link to={`/#${section.id}`} onClick={() => setActiveSection(section.id)} className="hover:text-[#00FFA3] hover:bg-transparent">
-                {section.name}
+                {t(section.name)}
               </Link>
             
             }
@@ -124,15 +132,15 @@ const Navbar = ({ sections, scrollToSection }) => {
             >
               {section.id === "case_studies" ?
               <>
-              <Link onClick={() => setActiveSection("case_studies")} className={` hover:text-[#00FFA3] hover:bg-transparent bg-none h-full 2xl:text-[18px]`} to={section.id}>{section.name}</Link>
+              <Link onClick={() => setActiveSection("case_studies")} className={` hover:text-[#00FFA3] hover:bg-transparent bg-none h-full 2xl:text-[18px]`} to={section.id}>{t(section.name)}</Link>
               </>
             : section.id === "media" ?
             <>
-              <Link onClick={() => setActiveSection("media")} className={` hover:text-[#00FFA3] hover:bg-transparent bg-none h-full 2xl:text-[18px]`} to={section.id}>{section.name}</Link>
+              <Link onClick={() => setActiveSection("media")} className={` hover:text-[#00FFA3] hover:bg-transparent bg-none h-full 2xl:text-[18px]`} to={section.id}>{t(section.name)}</Link>
               </>
               :
             <Link to={`/#${section.id}`} onClick={() => setActiveSection(section.id)} className={`active:bg-transparent active:text-[#00FFA3] hover:text-[#00FFA3] hover:bg-transparent bg-none h-full 2xl:text-[18px]`}>
-                {section.name}
+                {t(section.name)}
               </Link>
             
             }
@@ -150,13 +158,13 @@ const Navbar = ({ sections, scrollToSection }) => {
               <summary>Language</summary>
               <ul className="p-2 w-[100%]">
                 <li>
-                  <a className="text-[#00FFA3]">
+                  <a className={`${i18n.language == "en" ? "text-[#00FFA3]" : ""}`} onClick={() => changeLanguage('en')}>
                     {" "}
                     <img src={`${process.env.PUBLIC_URL}/assets/us.png`} alt='US flag'/> Ang
                   </a>
                 </li>
                 <li>
-                  <a>
+                  <a className={`${i18n.language == "fr" ? "text-[#00FFA3]" : ""}`} onClick={() => changeLanguage('fr')}>
                     {" "}
                     <img src={`${process.env.PUBLIC_URL}/assets/Fr.png`} alt='FR flag' /> Fr
                   </a>

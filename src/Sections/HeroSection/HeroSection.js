@@ -1,10 +1,11 @@
 "use client";
 import React, { useState, useEffect } from "react";
-
+import { useTranslation } from 'react-i18next';
 import { motion } from "framer-motion";
 import "./herosection.css";
 
 const HeroSection = () => {
+  const { t, i18n } = useTranslation();
   const [isMobile, setIsMobile] = useState(
     typeof window !== "undefined" && window.innerWidth <= 420
   );
@@ -47,15 +48,15 @@ const HeroSection = () => {
       >
         {isMobile ? (
           <p className="font-sans hero_text lg:text-[60px] md:text-[50px] sm:text-[42px] text-[36px] font-bold text-center">
-            UNLEASHING THE FUTURE: LEADING THE WEB 3.0 REVOLUTION
+            {t("UNLEASHING THE FUTURE: LEADING THE WEB 3.0 REVOLUTION")}
           </p>
         ) : (
           <p className="font-sans hero_text lg:text-[60px] md:text-[50px] sm:text-[42px] text-[30px] font-bold text-center">
-            UNLEASHING THE FUTURE:
+            {t("UNLEASHING THE FUTURE:")}
             <br />
-            LEADING THE WEB 3.0
+            {t("LEADING THE WEB 3.0")}
             <br />
-            REVOLUTION
+            {t("REVOLUTION")}
           </p>
         )}
       </motion.div>

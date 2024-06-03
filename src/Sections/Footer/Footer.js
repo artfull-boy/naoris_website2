@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
 import "./footer.css";
 
 const Footer = ({ scrollToSection }) => {
+  const { t, i18n } = useTranslation()
   return (
     <div className="container flex flex-col relative justify-between items-center w-full z-[1] overflow-hidden  pt-[160px] bg-[#011223]">
       <div className="flex w-full flex-row relative justify-between items-center medium:flex-col medium:gap-12 z-[2]">
@@ -14,7 +16,7 @@ const Footer = ({ scrollToSection }) => {
                 onClick={() => scrollToSection("home")}
                 className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
               >
-                Home
+                {t("Home")}
               </Link>
             </div>
             <div className="border-r vsm:border-none px-3">
@@ -22,7 +24,7 @@ const Footer = ({ scrollToSection }) => {
                 onClick={() => scrollToSection("about")}
                 className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
               >
-                About Us
+                {t("About Us")}
               </Link>
             </div>
             <div className="border-r vsm:border-none px-3">
@@ -30,7 +32,7 @@ const Footer = ({ scrollToSection }) => {
                 onClick={() => scrollToSection("services")}
                 className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
               >
-                Services
+                {t("Services")}
               </Link>
             </div>
             <div className="border-r vsm:border-none px-3">
@@ -38,7 +40,7 @@ const Footer = ({ scrollToSection }) => {
                 onClick={() => scrollToSection("team")}
                 className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
               >
-                Team
+                {t("Team")}
               </Link>
             </div>
             <div className="border-r vsm:border-none px-3">
@@ -46,7 +48,7 @@ const Footer = ({ scrollToSection }) => {
                 onClick={() => scrollToSection("faq")}
                 className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
               >
-                FAQ
+                {t("FAQ")}
               </Link>
             </div>
             <div className="px-3">
@@ -54,7 +56,7 @@ const Footer = ({ scrollToSection }) => {
                 onClick={() => scrollToSection("contact")}
                 className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
               >
-                Contact Us
+                {t("Contact Us")}
               </Link>
             </div>
             <div className="px-3">
@@ -62,7 +64,7 @@ const Footer = ({ scrollToSection }) => {
                 onClick={() => scrollToSection("case_studies")}
                 className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
               >
-                Case Studies
+                {t("Use Cases")}
               </Link>
   </div>
             <div className="px-3">
@@ -70,7 +72,7 @@ const Footer = ({ scrollToSection }) => {
                 onClick={() => scrollToSection("media")}
                 className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
               >
-                Media
+                {t("Media")}
               </Link>
             </div>
           </div>
@@ -82,7 +84,7 @@ const Footer = ({ scrollToSection }) => {
               onClick={() => scrollToSection("home")}
               className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
             >
-              Home
+              {t("Home")}
             </Link>
           </div>
           <div className="border-r vsm:border-none px-3">
@@ -90,7 +92,7 @@ const Footer = ({ scrollToSection }) => {
               onClick={() => scrollToSection("about")}
               className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
             >
-              About Us
+              {t("About Us")}
             </Link>
           </div>
           <div className="border-r vsm:border-none px-3">
@@ -98,7 +100,7 @@ const Footer = ({ scrollToSection }) => {
               onClick={() => scrollToSection("services")}
               className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
             >
-              Services
+              {t("Services")}
             </Link>
           </div>
           <div className="border-r vsm:border-none px-3">
@@ -106,7 +108,7 @@ const Footer = ({ scrollToSection }) => {
               onClick={() => scrollToSection("team")}
               className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
             >
-              Team
+              {t("Team")}
             </Link>
           </div>
           <div className="border-r vsm:border-none px-3">
@@ -114,14 +116,14 @@ const Footer = ({ scrollToSection }) => {
               onClick={() => scrollToSection("faq")}
               className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
             >
-              FAQ
+              {t("FAQ")}
             </Link>
           </div>
           <div className="px-3 border-r vsm:border-none">
             <Link to={"/#contact"}
               className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
             >
-              Contact Us
+              {t("Contact Us")}
             </Link>
           </div>
          
@@ -130,7 +132,7 @@ const Footer = ({ scrollToSection }) => {
                 onClick={() => scrollToSection("media")}
                 className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
               >
-                Media
+                {t("Media")}
               </Link>
             </div>
             <div className="px-3 ">
@@ -138,28 +140,28 @@ const Footer = ({ scrollToSection }) => {
                 onClick={() => scrollToSection("case_studies")}
                 className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
               >
-                Use Cases
+                {t("Use Cases")}
               </Link>
 </div>
         </div>
         <div className="text-white flex flex-col gap-3 w-[26%] medium:w-[100%] medium:order-1">
           <p className="font-normal text-[40px] ">
-            Subscribe to Our <br className="medium:hidden" />{" "}
-            <span className="font-semibold">NewsLetter</span>
+            {t("Subscribe to Our")} <br className="medium:hidden" />{" "}
+            <span className="font-semibold">{t("NewsLetter")}</span>
           </p>
           <div className="flex flex-col gap-2 w-full">
             <input
               type="text"
-              placeholder="Enter your email address"
+              placeholder={`${t("Enter your email address")}`}
               className="h-[50px] bg-white text-black rounded-[10px] px-3"
             ></input>
             <button className="submit_subscription h-[50px] rounded-[10px]">
-              Subscribe
+              {t("Subscribe")}
             </button>
           </div>
         </div>
       </div>
-      <p className="text-[16px] text-white font-bold vsm:text-[14px] z-[2] pb-5">© 2024 Naoris Consulting. All rights reserved.</p>
+      <p className="text-[16px] text-white font-bold vsm:text-[14px] z-[2] pb-5">© 2024 Naoris Consulting. {t("All rights reserved")}.</p>
       
       <img src={`${process.env.PUBLIC_URL}/assets/clip_footer.png`} className="absolute top-0 left-0 z-[1] cards:top-0 cards:h-full cards:w-full" />
     
