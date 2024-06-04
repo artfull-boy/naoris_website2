@@ -1,9 +1,11 @@
 import React, {useState, useEffect} from "react";
 import {motion} from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 import "./David.css";
 
 const David = () => {
+  const {t, i18n} = useTranslation()
   const [isMobile, setIsMobile] = useState( typeof window !== 'undefined'&& window.innerWidth <= 508);
 
   useEffect(() => {
@@ -54,7 +56,7 @@ const David = () => {
               “
             </span>
             <p className="quote text-white font-sans 2xl:text-[50px] xl:text-[45px] lg:text-[40px] xl:whitespace-nowrap text-[35px] lg:text-left text-justify vsm:text-center">
-              As IoT grows, the vulnerabilities grow with it, not linearly, but exponentially. Decentralized Quantum Resistance is a must now, to ensure all secrets and all computing is kept safe into the future
+              {t("As IoT grows, the vulnerabilities grow with it, not linearly, but exponentially. Decentralized Quantum Resistance is a must now, to ensure all secrets and all computing is kept safe into the future")}
             </p>
             <span className="text-[#00FFA3] 2xl:text-[200px] xl:text-[170px] lg:text-[150px] font-normal transform rotate-180 leading-[0] text-[120px]">
               “
@@ -69,7 +71,7 @@ const David = () => {
               “
             </span>
             <p className="quote text-white font-sans 2xl:text-[40px] xl:text-[30px] lg:text-[36px] xl:whitespace text-[30px] lg:text-left text-justify vsm:text-center">
-            As IoT grows, the vulnerabilities grow with it, not linearly, but exponentially. Decentralized Quantum Resistance is a must now, to ensure all secrets and all computing is kept safe into the future
+            {t("As IoT grows, the vulnerabilities grow with it, not linearly, but exponentially. Decentralized Quantum Resistance is a must now, to ensure all secrets and all computing is kept safe into the future")}
             </p>
             <span className="text-white 2xl:text-[200px] xl:text-[170px] lg:text-[150px] font-normal transform rotate-180 leading-[0] text-[120px]">
               “

@@ -1,9 +1,11 @@
 import React, {useState, useEffect} from "react";
 import {motion} from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 import "./David.css";
 
 const Kjell = () => {
+  const {t, i18n} = useTranslation()
   const [isMobile, setIsMobile] = useState( typeof window !== 'undefined'&& window.innerWidth <= 508);
 
   useEffect(() => {
@@ -79,7 +81,7 @@ const Kjell = () => {
               “
             </span>
             <p className="quote text-white font-sans 2xl:text-[50px] xl:text-[45px] lg:text-[40px] xl:whitespace-normal text-[35px] lg:text-left text-justify vsm:text-center">
-            The centralized model where the hacking of a single device that could compromise an entire network is categorically flawed. This needs to change. We don’t need to play a better game against cyber-criminals, we need to play a different game. With Naoris Protocol, there is no single point of failure. Naoris Protocol uses Blockchain technology so that no single device exists in a silo.
+            {t("The centralized model where the hacking of a single device that could compromise an entire network is categorically flawed. This needs to change. We don’t need to play a better game against cyber-criminals, we need to play a different game. With Naoris Protocol, there is no single point of failure. Naoris Protocol uses Blockchain technology so that no single device exists in a silo.")}
             </p>
             <span className="text-white 2xl:text-[200px] xl:text-[170px] lg:text-[150px] font-normal transform rotate-180 leading-[0] text-[120px]">
               “
@@ -94,7 +96,7 @@ const Kjell = () => {
               “
             </span>
             <p className="quote text-white font-sans 2xl:text-[35px] xl:text-[30px] lg:text-[36px] text-[30px] lg:text-left text-justify vsm:text-center">
-            The centralized model where the hacking of a single device that could compromise an entire network is categorically flawed. This needs to change. We don’t need to play a better game against cyber-criminals, we need to play a different game. With Naoris Protocol, there is no single point of failure. Naoris Protocol uses Blockchain technology so that no single device exists in a silo.
+            {t("The centralized model where the hacking of a single device that could compromise an entire network is categorically flawed. This needs to change. We don’t need to play a better game against cyber-criminals, we need to play a different game. With Naoris Protocol, there is no single point of failure. Naoris Protocol uses Blockchain technology so that no single device exists in a silo.")}
             </p>
             <span className="text-white 2xl:text-[200px] xl:text-[170px] lg:text-[150px] font-normal transform rotate-180 leading-[0] text-[120px]">
               “

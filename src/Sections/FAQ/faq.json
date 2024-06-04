@@ -15,11 +15,6 @@
         "reponse": "Naoris Consulting represents the commercial wing that offers bespoke solutions encapsulating blockchain’s transformative potential, Swarm AI, and top-tier cybersecurity. It is committed to crafting custom solutions for diverse organizations to spur innovation, operational efficiency,and growth."
     },
     {
-        "id": 4,
-        "question": "Who can benefit from Naoris Consulting's services?",
-        "reponse": "A broad spectrum of entities, including governments, educational institutions, healthcare providers, non-profits, and private companies, can leverage Naoris Consulting. From enhancing national security and streamlining operations to protecting sensitive data and ensuring transactional transparency, the applications are extensive."
-    },
-    {
         "id": 5,
         "question": "How does integration of Naoris technology function with existing systems?",
         "reponse": "Naoris technology is adeptly crafted for seamless integration across various technological layers,such as hardware, firmware, and software. This facilitates the reinforcement of device security,the incorporation of security features into firmware, and the embedding of advanced protocols into software."
@@ -27,7 +22,7 @@
     {
         "id": 6,
         "question": "What kind of organizations can benefit from Naoris Consulting?",
-        "reponse": "Naoris Consulting can assist a wide range of organizations including:<ul><li><strong>Governments</strong>: Enhancing national security, streamlining public services, and supporting smart governance models.</li><li><strong>Educational Institutions</strong>: Securing personal and research data, improving operational efficiencies.</li><li><strong>Healthcare Providers</strong>: Protecting sensitive health data and optimizing service delivery.</li><li><strong>Non-Profit Organizations</strong>: Ensuring transparency and trust in transactions and donations.</li><li><strong>Private Corporations</strong>: Protecting intellectual property, ensuring operational resilience, and leveraging blockchain for supply chain management</li></ul>"
+        "reponse": "Naoris Consulting can assist a wide range of organizations including: Governments: Enhancing national security, streamlining public services, and supporting smart governance models.Educational Institutions: Securing personal and research data, improving operational efficiencies.Healthcare Providers: Protecting sensitive health data and optimizing service delivery.Non-Profit Organizations: Ensuring transparency and trust in transactions and donations.Private Corporations: Protecting intellectual property, ensuring operational resilience, and leveraging blockchain for supply chain management"
       },      
     {
         "id":7,

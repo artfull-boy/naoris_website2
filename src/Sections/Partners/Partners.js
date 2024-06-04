@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee";
 import {
   headingVariants
 } from "../../animations";
-
+import { useTranslation } from "react-i18next";
 import "./partners.css";
 
 
@@ -42,7 +42,7 @@ const logo30 = `${process.env.PUBLIC_URL}/assets/logos/30.png`;
   const logos = [
     logo1,logo2,logo3,logo4,logo5,logo6,logo7,logo8,logo9,logo10,logo11,logo12,logo13,logo14,logo15,logo16,logo17,logo18,logo19,logo20,logo21,logo22,logo23,logo24,logo25,logo26,logo27,logo28,logo29,logo30
   ];
-
+const {t, i18n} = useTranslation();
   return (
     <div className="relative">
 
@@ -59,7 +59,7 @@ const logo30 = `${process.env.PUBLIC_URL}/assets/logos/30.png`;
           viewport={{ once: true }}
         >
           <p className="text-[50px] font-bold text-white text-center vsm:text-[35px]">
-            They Trust Us
+            {t("They Trust Us")}
           </p>
         </motion.div>
         <Marquee

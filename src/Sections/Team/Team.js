@@ -16,10 +16,12 @@ import {
   CarouselPrevious,
 } from "../../components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay"
+import { useTranslation } from "react-i18next";
 
 
 const Team = () => {
   const [isMobile, setIsMobile] = useState( typeof window !== 'undefined'&& window.innerWidth <= 1080);
+  const {t, i18n} = useTranslation()
 
   useEffect(() => {
     const handleResize = () => {
@@ -42,7 +44,7 @@ const Team = () => {
         viewport={{ once: true }}
       >
         <p className="text-[50px] font-bold text-white text-center vsm:text-[35px]">
-          Meet Our Team
+          {t("Meet Our Team")}
         </p>
       </motion.div>
       {isMobile ? (

@@ -4,8 +4,10 @@ import { useParams } from 'react-router-dom'
 import { Player } from "@lottiefiles/react-lottie-player";
 import useCases from '../CaseStudies/cases.json'
 import './usecase.css'
+import { useTranslation } from 'react-i18next';
 
 const UseCase = () => {
+  const {t, i18n} = useTranslation()
     const {id} = useParams()
     const usecase_elem = useCases.find(item => item.id == id)
   return (
@@ -23,7 +25,7 @@ const UseCase = () => {
         <div className="flex gap-2 items-center">
             <Link className='vsm:w-[60px]' to={'/case_studies'}><img src={`${process.env.PUBLIC_URL}/assets/Line.png`} className='vsm:w-[60px]'></img></Link>
           <p className="text-white uppercase vsm:text-[25px] font-bold text-[40px] pl-[37px] leading-normal tracking-[16px] vsm:tracking-wider">
-            {usecase_elem.title}
+            {t(`${usecase_elem.title}`)}
           </p>
         </div>
         <div className="animation vsm:hidden">
@@ -38,18 +40,18 @@ const UseCase = () => {
       <div className='flex flex-col z-[2] gap-[120px]'>
         {usecase_elem.title == "IntelliChain Inventory System" && 
         <div className='flex flex-col gap-[46px]'>
-            <p className='solution text-white uppercase font-bold text-[34px] vsm:text-[30px] leading-[40px]'>IDENTIFY AND COMBAT STATIC STOCKS WITHIN A FACTORY:</p>
-            <p className='pl-[25px] text-[25px] vsm:text-[18px] text-white '>IoT sensors and cameras supported by AI can be used to identify static stocks over a certain period of time within a factory. The goal of such an initiative is to address static inventory.</p>
+            <p className='solution text-white uppercase font-bold text-[34px] vsm:text-[30px] leading-[40px]'>{t("IDENTIFY AND COMBAT STATIC STOCKS WITHIN A FACTORY:")}</p>
+            <p className='pl-[25px] text-[25px] vsm:text-[18px] text-white '>{t("IoT sensors and cameras supported by AI can be used to identify static stocks over a certain period of time within a factory. The goal of such an initiative is to address static inventory.")}</p>
         </div>
         
         }
         <div className='flex flex-col gap-[46px]'>
             <p className='solution text-white uppercase font-bold text-[34px] vsm:text-[30px] leading-[40px]'>Solution</p>
-            <p className='pl-[25px] text-[25px] vsm:text-[18px] text-white '>{usecase_elem.solution}</p>
+            <p className='pl-[25px] text-[25px] vsm:text-[18px] text-white '>{t(`${usecase_elem.solution}`)}</p>
         </div>
         <div className='flex flex-col gap-[46px]'>
-            <p className='solution text-white uppercase font-bold text-[34px] vsm:text-[30px] leading-[40px]'>Results</p>
-            <p className='pl-[25px] text-[25px] text-white vsm:text-[18px] '>{usecase_elem.results}</p>
+            <p className='solution text-white uppercase font-bold text-[34px] vsm:text-[30px] leading-[40px]'>{t("Results")}</p>
+            <p className='pl-[25px] text-[25px] text-white vsm:text-[18px] '>{t(`${usecase_elem.results}`)}</p>
         </div>
       </div>
       <div className="absolute bottom-[-90px] left-[-20px] w-full last_hope"></div>

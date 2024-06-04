@@ -4,8 +4,10 @@ import { motion } from "framer-motion";
 import { headingVariants } from "../../animations";
 import serviceData from "./services.json";
 import "./services.css";
+import { useTranslation } from "react-i18next";
 
 const Services = () => {
+  const {t, i18n} = useTranslation()
   const [isMobile, setIsMobile] = useState( typeof window !== 'undefined'&& window.innerWidth <= 1150);
 
   useEffect(() => {
@@ -65,7 +67,7 @@ const Services = () => {
         viewport={{ once: true }}
       >
         <p className="text-[50px] font-bold text-white text-center vsm:text-[35px]">
-          Our Services
+          {t("Our Services")}
         </p>
       </motion.div>
       {isMobile
@@ -81,11 +83,11 @@ const Services = () => {
                 >
                   <div className="heading relative w-fit">
                     <p className="font-bold text-[30px] text-white">
-                      {service.title}
+                      {t(`${service.title}`)}
                     </p>
                   </div>
                   <p className="font-normal text-white text-[20px]  inline-block w-full text-justify vsm:text-left">
-                    {service.desc}
+                    {t(`${service.desc}`)}
                   </p>
                 </motion.div>
 
@@ -114,11 +116,11 @@ const Services = () => {
                   >
                     <div className="heading relative w-fit">
                       <p className="font-bold text-[40px] text-white">
-                        {service.title}
+                        {t(`${service.title}`)}
                       </p>
                     </div>
                     <p className="font-normal text-white text-[30px]  inline-block w-full text-justify vsm:text-left">
-                      {service.desc}
+                      {t(`${service.desc}`)}
                     </p>
                   </motion.div>
                   <motion.div
@@ -171,11 +173,11 @@ const Services = () => {
                   >
                     <div className="heading relative w-fit">
                       <p className="font-bold text-[40px] text-white">
-                        {service.title}
+                        {t(`${service.title}`)}
                       </p>
                     </div>
                     <p className="font-normal text-white text-[30px]  inline-block w-full text-justify vsm:text-center vsm:text-center">
-                      {service.desc}
+                      {t(`${service.desc}`)}
                     </p>
                   </motion.div>
                 </div>

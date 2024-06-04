@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 import './caseStudies.css'
 import { Player } from "@lottiefiles/react-lottie-player";
 import CaseStudiesJson from "./cases.json";
+import { useTranslation } from "react-i18next";
 
 const CaseStudies = () => {
+  const {t, i18n} = useTranslation()
   const [isMobile, setIsMobile] = useState(
     typeof window !== "undefined" && window.innerWidth <= 700
   );
@@ -31,7 +33,7 @@ const CaseStudies = () => {
       <div className="flex w-full justify-between items-center z-[2]">
         <div className="border-lef border-l-[5px] border-[#00FFA3]">
           <p className="text-white uppercase vsm:text-[25px] font-bold text-[40px] pl-[37px] leading-normal tracking-[16px]">
-            Use Cases
+            {t("Use Cases")}
           </p>
         </div>
         <div className="animation">
@@ -49,8 +51,8 @@ const CaseStudies = () => {
           <div className="flex relative flex-col w-[681px] h-[433px] gap-[13px] cards:w-[100%] ">
             <img src={`${process.env.PUBLIC_URL}/assets/media/logo.png`} className="w-[70px] absolute left-[27px] top-[27px]"></img>
             <img src={`${process.env.PUBLIC_URL}/assets/${usecase.cover}.png`} className="w-full h-[317px] object-cover object-top group-hover:object transition-all duration-1000 ease-in-out rounded-[20px] cards:object-left-top"></img>
-            <p className="text-[32px] font-[700] text-white cards:text-[24px]">{usecase.title}</p>
-            <p className="usecase_link text-[24px] cards:text-[18px] tracking-[2.4px] text-white font-normal group-hover:font-bold transition-all duration-1w00  ease-in-out" >VIEW DETAILS <span className="text-[32px] text-[#00ffa3]">&#8594;</span></p>
+            <p className="text-[32px] font-[700] text-white cards:text-[24px]">{t(`${usecase.title}`)}</p>
+            <p className="usecase_link text-[24px] cards:text-[18px] tracking-[2.4px] text-white font-normal group-hover:font-bold transition-all duration-1w00  ease-in-out" >{t('VIEW DETAILS')} <span className="text-[32px] text-[#00ffa3]">&#8594;</span></p>
           </div></Link>
         ))}
       </div>

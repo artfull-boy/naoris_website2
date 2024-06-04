@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import {useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-
+import { useTranslation } from "react-i18next";
 import {
   cardContainerVariants,
   cardVariants,
@@ -11,6 +11,7 @@ import "./faq.css";
 import FaqData from "./faq.json";
 
 const FAQ = () => {
+  const {t, i18n} = useTranslation();
   const controls = useAnimation();
   const [ref, inView] = useInView();
   useEffect(() => {
@@ -54,7 +55,7 @@ const FAQ = () => {
           ref={ref}
         >
           <p className="text-[50px] font-bold text-white text-center vsm:text-[35px]">
-            Frequently Asked Questions
+            {t("Frequently Asked Questions")}
           </p>
         </motion.div>
         <motion.div
@@ -79,7 +80,7 @@ const FAQ = () => {
             >
               <div className="flex w-full justify-between items-center">
                 <p className="text-white font-bold text-[30px] vsm:text-[23px]">
-                  {faq.question}
+                  {t(`${faq.question}`)}
                 </p>
                 <img
                   className="h-[24px]"
@@ -91,7 +92,8 @@ const FAQ = () => {
                 />
               </div>
               <div className="max-h-0 overflow-hidden answer duration-[0.4s]" suppressHydrationWarning={true}>
-                <p className="text-white font-normal text-[20px] leading-[1.6] vsm:text-[18px]" dangerouslySetInnerHTML={{__html: faq.reponse}}>
+                <p className="text-white font-normal text-[20px] leading-[1.6] vsm:text-[18px]">
+                {t(`${faq.reponse}`)}
                 </p>
               </div>
             </motion.div>
