@@ -9,7 +9,7 @@ const Footer = ({ scrollToSection }) => {
     <div className="container flex flex-col relative justify-between items-center w-full z-[1] overflow-hidden  pt-[160px] bg-[#011223]">
       <div className="flex w-full flex-row relative justify-between items-center medium:flex-col medium:gap-12 z-[2]">
         <div className="hidden vsm:flex justify-between items-center w-full order-3">
-          <img src={`${process.env.PUBLIC_URL}/assets/logo_footer.png`} width={180} className="medium:order-6" alt="Logo Footer"></img>
+          <img src={`${process.env.PUBLIC_URL}/assets/footer_logo.png`} width={90} className="medium:order-6" alt="Logo Footer"></img>
           <div className="flex gap-2 w-fit h-fit medium:order-3 vsm:flex-col vsm:items-start">
             <div className="border-r vsm:border-none px-3">
               <Link to={"/"}
@@ -77,7 +77,7 @@ const Footer = ({ scrollToSection }) => {
             </div>
           </div>
         </div>
-        <img src={`${process.env.PUBLIC_URL}/assets/logo_footer.png`} width={250} className="medium:order-6 vsm:hidden" alt="Logo Footer"></img>
+        <img src={`${process.env.PUBLIC_URL}/assets/footer_logo.png`} width={100} className="medium:order-6 vsm:hidden" alt="Logo Footer"></img>
         <div className="vsm:hidden flex gap-2 w-fit h-fit medium:order-3 vsm:flex-col vsm:items-start">
           <div className="border-r vsm:border-none px-3">
             <Link to={"/"}

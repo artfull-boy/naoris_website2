@@ -48,7 +48,7 @@ const Kjell = () => {
   return (
     <div className="relative flex-col lg:mt-4 mt-12" suppressHydrationWarning={true}>
         
-      <div className="flex xl:flex-row-reverse flex-col w-full relative items-center gap-8" suppressHydrationWarning={true}>
+      <div className="flex xl:flex-row-reverse flex-col w-full relative items-center gap-8  lg:items-end" suppressHydrationWarning={true}>
       {isMobile ?
         <div className="flex flex-col gap-0 items-end justify-center w-[100%] order-1"
         >

@@ -18,7 +18,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="overflow-hidden w-[100%] h-[100vh] flex flex-col justify-center pb-[280px] relative items-center gap-4">
+    <div className="overflow-hidden w-[100%] h-[100vh] flex flex-col justify-center relative items-center gap-4">
       <img
         src={`${process.env.PUBLIC_URL}/assets/eclipse_red.png`}
         alt="eclipse"
@@ -44,7 +44,7 @@ const HeroSection = () => {
           visible: { opacity: 1, scale: 1 },
           hidden: { opacity: 0, scale: 0 },
         }}
-        className="container flex gap-0 justify-center  items-center relative vsm:pt-12"
+        className="container flex gap-0 justify-center  items-center relative vsm:pt-12 h-[100%]"
       >
         {isMobile ? (
           <p className="font-sans hero_text lg:text-[60px] md:text-[50px] sm:text-[42px] text-[36px] font-bold text-center">

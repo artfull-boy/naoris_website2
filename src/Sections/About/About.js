@@ -96,16 +96,16 @@ const About = () => {
             <div className="testimonials2 relative vsm:w-[100%] z-[1]">
               <div className="flex lg:flex-row vsm:flex-col vsm:gap-0 md:gap-10 items-center justify-end pr-4 width-[100%] h-full">
                 <div className=" relative z-[1]">
-                  <p className="font-bold 2xl:text-[40px] xl:text-[35px] lg:text-[28px] text-[22px] text-white whitespace-nowrap">
+                  <p className={`font-bold ${i18n.language == "fr" ? "2xl:text[30px] xl:text-[28px] lg:text-[26px] text-[22px]" :'2xl:text-[40px] xl:text-[35px] lg:text-[28px] text-[22px]'}  text-white whitespace-nowrap`}>
                     {t("key figures")}
                   </p>
                 </div>
                 <div className="relative vsm:hidden z-[1] w-[3px] h-[70%] origin-top-left bg-white"></div>
                 <div className=" relative z-[1] ">
-                  <p className="2xl:text-[30px] xl:text-[25px] lg:text-[20px] text-[18px] text-white whitespace-nowrap vsm:whitespace-normal vsm:text-center">
+                  <p className={`${i18n.language == "fr" ? "2xl:text-[25px] xl:text-[23px] lg:text-[18px] text-[18px]" : "2xl:text-[30px] xl:text-[25px] lg:text-[20px] text-[18px]"}  text-white whitespace-nowrap vsm:whitespace-normal vsm:text-center`}>
                     {t("A team of more than 100 people around the world")}{" "}
                   </p>
-                  <p className="2xl:text-[30px] xl:text-[25px] lg:text-[20px] text-[18px] text-white whitespace-nowrap vsm:whitespace-normal vsm:text-center">
+                  <p className={`${i18n.language == "fr" ? "2xl:text-[25px] xl:text-[23px] lg:text-[18px] text-[18px]" : "2xl:text-[30px] xl:text-[25px] lg:text-[20px] text-[18px]"} text-white whitespace-nowrap vsm:whitespace-normal vsm:text-center`}>
                     {t("Offices in 3 Continents, 5 Countries")}{" "}
                   </p>
                 </div>
@@ -123,16 +123,16 @@ const About = () => {
             <div className="testimonials relative vsm:w-[100%]">
               <div className="flex lg:flex-row vsm:flex-col vsm:gap-0 md:gap-10 gap-2 pl-2 items-center justify-end pr-4 width-[100%] h-full">
                 <div className=" relative z-[1]">
-                  <p className="font-bold 2xl:text-[40px] xl:text-[35px] lg:text-[28px] text-[22px] text-white whitespace-nowrap">
+                  <p className={`font-bold ${i18n.language == "fr" ? "2xl:text[30px] xl:text-[28px] lg:text-[26px] text-[22px]" :'2xl:text-[40px] xl:text-[35px] lg:text-[28px] text-[22px]'} text-white whitespace-nowrap`}>
                     {t("key figures")}
                   </p>
                 </div>
                 <div className="relative vsm:hidden z-[1] w-[3px] h-[70%] origin-top-left bg-white"></div>
                 <div className=" relative z-[1] ">
-                  <p className="2xl:text-[30px] xl:text-[25px] lg:text-[20px] text-[18px] text-white  vsm:whitespace-normal vsm:text-center leading-loose">
+                  <p className={`${i18n.language == "fr" ? "2xl:text-[25px] xl:text-[23px] lg:text-[18px] text-[18px]" : "2xl:text-[30px] xl:text-[25px] lg:text-[20px] text-[18px]"} text-white  vsm:whitespace-normal vsm:text-center leading-loose`}>
                     {t("A team of more than 100 people around the world")}
                   </p>
-                  <p className="2xl:text-[30px] xl:text-[25px] lg:text-[20px] text-[18px] text-white whitespace-nowrap vsm:whitespace-normal vsm:text-center leading-loose">
+                  <p className={`${i18n.language == "fr" ? "2xl:text-[25px] xl:text-[23px] lg:text-[18px] text-[18px]" : "2xl:text-[30px] xl:text-[25px] lg:text-[20px] text-[18px]"} text-white whitespace-nowrap vsm:whitespace-normal vsm:text-center leading-loose`}>
                     {t("Offices in 3 Continents, 5 Countries")}
                   </p>
                 </div>

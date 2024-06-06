@@ -1,5 +1,5 @@
 
-
+import { useTranslation } from "react-i18next";
 import React, { useState, useEffect, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
@@ -8,6 +8,7 @@ import "./contact.css";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const {t, i18n} = useTranslation()
   const [isMobile, setIsMobile] = useState(
     typeof window !== "undefined" && window.innerWidth <= 1150
   );
@@ -95,7 +96,7 @@ const Contact = () => {
           viewport={{ once: true }}
         >
           <p className="text-[50px] font-bold text-white text-center vsm:text-[35px]">
-            Contact Us
+            {t("Contact Us")}
           </p>
         </motion.div>
         {isMobile ? (
@@ -281,7 +282,7 @@ const Contact = () => {
                   className="text-white font-semibold leading-[18px] text-[16px]"
                   htmlFor="first_name"
                 >
-                  Full Name{" "}
+                  {t("Full Name")}{" "}
                   <span className="text-red-600 text-[16px] font-semibold leading-[18px] ">
                     *
                   </span>
@@ -337,7 +338,7 @@ const Contact = () => {
                   className="text-[#fff] font-semibold leading-[18px] text-[16px]"
                   htmlFor="phone"
                 >
-                  Phone number{" "}
+                  {t("Phone number")}{" "}
                 </label>
                 <input
                   className="bg-white p-[10px] rounded-[6px] w-full h-[50px]  transition-outline duration-300 outline-none text-black"
@@ -360,7 +361,7 @@ const Contact = () => {
                   className="text-white font-semibold leading-[18px] text-[16px]"
                   htmlFor="subject"
                 >
-                  Subject{" "}
+                  {t("Subject")}{" "}
                   <span className="text-red-600 text-[16px] font-semibold leading-[18px] ">
                     *
                   </span>
@@ -386,7 +387,7 @@ const Contact = () => {
                   className="text-[#fff] font-semibold  leading-[18px] text-[16px]"
                   htmlFor="msg"
                 >
-                  Message
+                  {("Message")}
                   <span className="text-red-600 text-[16px] font-semibold leading-[18px] ">
                     *
                   </span>

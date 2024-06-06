@@ -45,10 +45,10 @@ const CaseStudies = () => {
           ></Player>
         </div>
       </div>
-      <div className="flex w-full flex-wrap z-[2] items-center gap-[100px] justify-center ">
+      <div className="flex w-full flex-wrap z-[2] items-start gap-x-[100px] gap-y-[100px] justify-center ">
         {CaseStudiesJson.map(usecase => (
-          <Link className="group cards:w-[90%]" to={`${usecase.id}`}>
-          <div className="flex relative flex-col w-[681px] h-[433px] gap-[13px] cards:w-[100%] ">
+          <Link className="group usecase_size:w-[90%] w-[45%]" to={`${usecase.id}`}>
+          <div className="flex relative flex-col w-[100%] gap-[13px] ">
             <img src={`${process.env.PUBLIC_URL}/assets/media/logo.png`} className="w-[70px] absolute left-[27px] top-[27px]"></img>
             <img src={`${process.env.PUBLIC_URL}/assets/${usecase.cover}.png`} className="w-full h-[317px] object-cover object-top group-hover:object transition-all duration-1000 ease-in-out rounded-[20px] cards:object-left-top"></img>
             <p className="text-[32px] font-[700] text-white cards:text-[24px]">{t(`${usecase.title}`)}</p>

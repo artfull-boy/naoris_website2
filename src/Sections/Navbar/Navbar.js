@@ -119,7 +119,7 @@ const Navbar = ({ sections, scrollToSection }) => {
           )}
         </div>
         <a href="/">
-          <img src={`${process.env.PUBLIC_URL}/assets/logo.png`} alt="Naoris Consulting Logo" width={140} className='relative z-10' />
+          <img src={`${process.env.PUBLIC_URL}/assets/footer_logo.png`} alt="Naoris Consulting Logo" width={60} className='relative z-10' />
         </a>
       </div>
       <div className="navbar-center hidden lg:flex h-fit">

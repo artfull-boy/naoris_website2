@@ -13,8 +13,10 @@ import {
   CarouselPrevious,
 } from "../../components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay"
+import { useTranslation } from "react-i18next";
 
 const Media = () => {
+  const {t, i18n} = useTranslation()
   const [isMobile, setIsMobile] = useState(
     typeof window !== "undefined" && window.innerWidth <= 719
   );
@@ -57,8 +59,8 @@ const Media = () => {
 
       <div className="flex w-full justify-between items-center z-[2] ">
         <div className="border-lef border-l-[5px] border-[#00FFA3]">
-          <p className="text-white font-bold text-[40px] pl-[37px] leading-normal tracking-[16px]">
-            MEDIA
+          <p className="text-white font-bold text-[40px] pl-[37px] leading-normal tracking-[16px] uppercase">
+            {t("MEDIA")}
           </p>
         </div>
         <div className="animation mr-[-100px] vsm:mr-0">
@@ -110,9 +112,7 @@ const Media = () => {
               </video>
             )}
             <p className={`text-white font-normal text-[18px] tracking-[0px] text-justify vsm:text-left absolute left-[17px] bottom-[22px] z-[2] w-[100%] media:w-[50%] pr-[25px] ${showVideo ? "hidden" : "block"} ${isMobile ? "hidden" : "block"}`}>
-              Naoris announced the launch of its operations in Morocco with a
-              presentation to the national media, which took place on April 18th
-              at the Marriott Hotel in Casablanca.
+              {t("Naoris announced the launch of its operations in Morocco with a  presentation to the national media, which took place on April 18th at the Marriott Hotel in Casablanca.")}
             </p>
           </div>
           {isMobile2 && 
@@ -233,7 +233,7 @@ const Media = () => {
                           className="botona w-[175px] h-[30px] text-white self-center"
                           href={media.link}
                         >
-                          Learn More
+                          {t("Learn More")}
                         </button>
                       </a>
                     </div>
@@ -396,7 +396,7 @@ const Media = () => {
                           className="botona w-[175px] h-[30px] text-white self-center"
                           href={media.link}
                         >
-                          Learn More
+                          {t("Learn More")}
                         </button>
                       </a>
                     </div>
@@ -409,7 +409,7 @@ const Media = () => {
           <div className="flex flex-col gap-28 z-[2] w-full">
           <div className="heading relative z-[2] w-fit m-auto">
             <p className="text-[50px] font-bold text-white text-center vsm:text-[35px]">
-              Awards
+              {t("Awards")}
             </p>
           </div>
           <div className="flex  flex-wrap gap-y-[100px] gap-x-[50px] w-full items-center justify-center z-[2]">

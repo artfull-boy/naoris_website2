@@ -3,6 +3,7 @@
     "Home": "Accueil",
     "About Us": "À propos de nous",
     "Services": "Nos services",
+    "Our Services":"Nos services",
     "Team": "Équipe",
     "FAQ": "FAQ",
     "Media": "Médias",
@@ -21,7 +22,7 @@
     "As IoT grows, the vulnerabilities grow with it, not linearly, but exponentially. Decentralized Quantum Resistance is a must now, to ensure all secrets and all computing is kept safe into the future" : "À mesure que l'Internet des objets (IoT) se développe, les vulnérabilités augmententde manière exponentielle, et non linéaire. La résistance quantique décentralisée estdésormais indispensable pour garantir la sécurité de tous les secrets et de tous lescalculs dans le futur.",
     "Naoris is an American company founded under a mandate from previous leaders of the North Atlantic Treaty Organization (NATO), whose protocol represents a key solution for sustainable, scalable, interoperable, and secure digitalization suited to future challenges. With several European cities as references, such as Dublin, Rijeka, Zurich, and Vienna under the Smart Cities Initiative, and the telecommunications giant T-Mobile, the company merges blockchain and artificial intelligence (AI) to revolutionize the digital world while offering advanced protection, including against post-quantum threats." : "Naoris est une entreprise américaine fondée sous le mandat d'anciens dirigeants deL’Organisation du Traité de l'Atlantique Nord (OTAN). Son protocole représente unesolution clé pour une numérisation durable, évolutive, interopérable et sécurisée,adaptée aux défis futurs. Avec plusieurs villes européennes comme références, tellesque Dublin, Rijeka, Zurich et Vienne dans le cadre de l'Initiative des villes intelligentes,ainsi que le géant des télécommunications T-Mobile, l'entreprise combine la blockchainet l'intelligence artificielle décentralisée Swarm (DSwarmAI) afin de révolutionner lemonde numérique tout en offrant une protection avancée, y compris contre les menacespost-quantiques.",
     "key figures":"Chiffres clés :",
-    "A team of more than 100 people around the world":"Une équipe de plus de 100 personnes à travers le monde",
+    "A team of more than 100 people around the world":"Une équipe de plus de 100 personnes dans le monde",
     "Offices in 3 Continents, 5 Countries":"Bureaux sur 3 continents, dans 5 pays",
     "Audits and Evaluations":"Audits et Évaluations :",
     "Naoris Consulting specializes in conducting comprehensive audits of information systems and cybersecurity. Our approach leverages the Naoris Protocol to assess the current state, identify areas for improvement, and ensure secure operations. By utilizing blockchain and Swarm AI, we provide quantum-resistant security measures and instant threat detection, establishing a foundation for trust and transparency in your digital environment.":"Naoris Consulting se spécialise dans la réalisation d'audits complets des systèmesd'information et de la cybersécurité. Notre approche utilise le protocole Naoris pourévaluer l'état actuel, identifier les domaines à améliorer et garantir des opérationssécurisées. En utilisant la blockchain et l'IA en essaim, nous fournissons des mesuresde sécurité résistantes aux menaces quantiques et une détection instantanée desmenaces, établissant une base de confiance et de transparence dans votreenvironnement numérique.",
@@ -79,7 +80,14 @@
     "By integrating these technologies, factories can maintain an efficient and transparent inventory system. Automated alerts inform managers of static items, suggesting overstocking or maintenance needs. Data analysis aids decision-making, warehouse space optimization, and equipment maintenance. Blockchain brings increased security and transparency, allowing all parties access to inventory data. Swarm AI enhances the ability to forecast and adapt to changes in inventory needs, ensuring that resources are efficiently allocated in real-time.":"En intégrant ces technologies, les usines peuvent maintenir un système d'inventaireefficace et transparent. Des alertes automatisées informent les gestionnaires desarticles statiques, suggérant des surplus de stock ou des besoins de maintenance.L'analyse des données aide à la prise de décision, à l'optimisation de l'espaced'entrepôt et à la maintenance des équipements. La blockchain apporte une sécurité etune transparence accrues, permettant à toutes les parties d'accéder aux donnéesd'inventaire. Le Swarm AI amelioré la capacité à prévoir et à s'adapter auxchangements des besoins en inventaire, garantissant que les ressources sont allouéesefficacement en temps réel.",
     "IoT sensors and cameras supported by AI can be used to identify static stocks over a certain period of time within a factory. The goal of such an initiative is to address static inventory.":"Des capteurs IoT et des caméras soutenus par l'IA peuvent être utilisés pour identifierles stocks statiques sur une certaine période au sein d'une usine. L'objectif d'une telleinitiative est de s'attaquer à l'inventaire statique",
     "IDENTIFY AND COMBAT STATIC STOCKS WITHIN A FACTORY:":"IDENTIFIER ET COMBATTRE LES STOCKS STATIQUES DANS UNE USINE",
-    "Results":"RÉSULTATS"
+    "Results":"RÉSULTATS",
+    "Naoris announced the launch of its operations in Morocco with a  presentation to the national media, which took place on April 18th at the Marriott Hotel in Casablanca.":"Naoris a annoncé le lancement de ses opérations au Maroc avec un présentation aux médias nationaux, qui a eu lieu le 18 avril à l'hôtel Marriott de Casablanca.",
+    "Learn More":"Savoir plus",
+    "MEDIA":"Médias",
+    "Awards":"Prix",
+    "Full Name":"Nom Complet",
+    "Subject":"Sujet",
+    "Phone number":"Téléphone "
     
   }
   
