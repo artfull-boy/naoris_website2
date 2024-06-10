@@ -1,11 +1,11 @@
-import React from 'react';
-import './Navbar.css';
-import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+import React from "react";
+import "./Navbar.css";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Navbar = ({ sections, scrollToSection }) => {
   const { t, i18n } = useTranslation();
-  
+
   const [activeSection, setActiveSection] = React.useState("home");
 
   /*React.useEffect(() => {
@@ -56,7 +56,6 @@ const Navbar = ({ sections, scrollToSection }) => {
     i18n.changeLanguage(lng);
   };
 
-
   return (
     <div className="navbar fixed bg-[#0112236e] top-0 z-10 2xl:px-24 xl:px-20 lg:px-16 md:px-14 sm:px-8 px-[10px]">
       <div className="navbar-start">
@@ -73,9 +72,7 @@ const Navbar = ({ sections, scrollToSection }) => {
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              style={{width: "25px",
-                height: "25px",
-                color: "white"}}
+              style={{ width: "25px", height: "25px", color: "white" }}
             >
               <path
                 strokeLinecap="round"
@@ -98,28 +95,47 @@ const Navbar = ({ sections, scrollToSection }) => {
                   }
                   onClick={() => scrollToSection(section.id)}
                 >
-                  {section.id === "case_studies" ?
-              <>
-              <Link onClick={() => setActiveSection("case_studies")} className="hover:text-[#00FFA3] hover:bg-transparent" to={section.id}>{t(section.name)}</Link>
-              </>
-            : section.id === "media" ?
-            <>
-              <Link onClick={() => setActiveSection("media")} className="hover:text-[#00FFA3] hover:bg-transparent" to={section.id}>{t(section.name)}</Link>
-              </>
-              :
-            <Link to={`/#${section.id}`} onClick={() => setActiveSection(section.id)} className="hover:text-[#00FFA3] hover:bg-transparent">
-                {t(section.name)}
-              </Link>
-            
-            }
+                  {section.id === "case_studies" ? (
+                    <>
+                      <Link
+                        onClick={() => setActiveSection("case_studies")}
+                        className="hover:text-[#00FFA3] hover:bg-transparent"
+                        to={section.id}
+                      >
+                        {t(section.name)}
+                      </Link>
+                    </>
+                  ) : section.id === "media" ? (
+                    <>
+                      <Link
+                        onClick={() => setActiveSection("media")}
+                        className="hover:text-[#00FFA3] hover:bg-transparent"
+                        to={section.id}
+                      >
+                        {t(section.name)}
+                      </Link>
+                    </>
+                  ) : (
+                    <Link
+                      to={`/#${section.id}`}
+                      onClick={() => setActiveSection(section.id)}
+                      className="hover:text-[#00FFA3] hover:bg-transparent"
+                    >
+                      {t(section.name)}
+                    </Link>
+                  )}
                 </li>
               ))}
-              
             </ul>
           )}
         </div>
         <a href="/">
-          <img src={`${process.env.PUBLIC_URL}/assets/footer_logo.png`} alt="Naoris Consulting Logo" width={60} className='relative z-10' />
+          <img
+            src={`${process.env.PUBLIC_URL}/assets/logo_main.png`}
+            alt="Naoris Consulting Logo"
+            width={60}
+            className="relative z-10"
+          />
         </a>
       </div>
       <div className="navbar-center hidden lg:flex h-fit">
@@ -127,28 +143,44 @@ const Navbar = ({ sections, scrollToSection }) => {
           {sections.map((section) => (
             <li
               key={section.id}
-              className={activeSection === section.id ? "active_section" : "not_active_section"}
+              className={
+                activeSection === section.id
+                  ? "active_section"
+                  : "not_active_section"
+              }
               onClick={() => scrollToSection(section.id)}
             >
-              {section.id === "case_studies" ?
-              <>
-              <Link onClick={() => setActiveSection("case_studies")} className={` hover:text-[#00FFA3] hover:bg-transparent bg-none h-full 2xl:text-[18px]`} to={section.id}>{t(section.name)}</Link>
-              </>
-            : section.id === "media" ?
-            <>
-              <Link onClick={() => setActiveSection("media")} className={` hover:text-[#00FFA3] hover:bg-transparent bg-none h-full 2xl:text-[18px]`} to={section.id}>{t(section.name)}</Link>
-              </>
-              :
-            <Link to={`/#${section.id}`} onClick={() => setActiveSection(section.id)} className={`active:bg-transparent active:text-[#00FFA3] hover:text-[#00FFA3] hover:bg-transparent bg-none h-full 2xl:text-[18px]`}>
-                {t(section.name)}
-              </Link>
-            
-            }
-              
-
+              {section.id === "case_studies" ? (
+                <>
+                  <Link
+                    onClick={() => setActiveSection("case_studies")}
+                    className={` hover:text-[#00FFA3] hover:bg-transparent bg-none h-full 2xl:text-[18px]`}
+                    to={section.id}
+                  >
+                    {t(section.name)}
+                  </Link>
+                </>
+              ) : section.id === "media" ? (
+                <>
+                  <Link
+                    onClick={() => setActiveSection("media")}
+                    className={` hover:text-[#00FFA3] hover:bg-transparent bg-none h-full 2xl:text-[18px]`}
+                    to={section.id}
+                  >
+                    {t(section.name)}
+                  </Link>
+                </>
+              ) : (
+                <Link
+                  to={`/#${section.id}`}
+                  onClick={() => setActiveSection(section.id)}
+                  className={`active:bg-transparent active:text-[#00FFA3] hover:text-[#00FFA3] hover:bg-transparent bg-none h-full 2xl:text-[18px]`}
+                >
+                  {t(section.name)}
+                </Link>
+              )}
             </li>
           ))}
-          
         </ul>
       </div>
       <div className="navbar-end">
@@ -158,15 +190,33 @@ const Navbar = ({ sections, scrollToSection }) => {
               <summary>Language</summary>
               <ul className="p-2 w-[100%]">
                 <li>
-                  <a className={`${i18n.language == "en" ? "text-[#00FFA3]" : ""}`} onClick={() => changeLanguage('en')}>
+                  <a
+                    className={`${
+                      i18n.language == "en" ? "text-[#00FFA3]" : ""
+                    }`}
+                    onClick={() => changeLanguage("en")}
+                  >
                     {" "}
-                    <img src={`${process.env.PUBLIC_URL}/assets/us.png`} alt='US flag'/> Ang
+                    <img
+                      src={`${process.env.PUBLIC_URL}/assets/us.png`}
+                      alt="US flag"
+                    />{" "}
+                    Ang
                   </a>
                 </li>
                 <li>
-                  <a className={`${i18n.language == "fr" ? "text-[#00FFA3]" : ""}`} onClick={() => changeLanguage('fr')}>
+                  <a
+                    className={`${
+                      i18n.language == "fr" ? "text-[#00FFA3]" : ""
+                    }`}
+                    onClick={() => changeLanguage("fr")}
+                  >
                     {" "}
-                    <img src={`${process.env.PUBLIC_URL}/assets/Fr.png`} alt='FR flag' /> Fr
+                    <img
+                      src={`${process.env.PUBLIC_URL}/assets/Fr.png`}
+                      alt="FR flag"
+                    />{" "}
+                    Fr
                   </a>
                 </li>
               </ul>
