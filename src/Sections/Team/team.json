@@ -1,51 +1,51 @@
 [
     {
         "name": "David Carvalho",
-        "position":"President",
-        "desc":"Advisor to several states on cyberwar, cyberterrorism, and cyberespionage, architect of several national-scale digital transformation projects, ethical hacker for over 25 years, and also the founder, chief scientist, and president of Naoris.",
-        "img":"david.png",
-        "linkedin":"https://www.linkedin.com/in/david-joao-vieira-carvalho-4479b8103/"
-},
-{
-    "name": "Youssef El Maddarsi",
-    "position":"CEO",
-    "desc":"Experienced entrepreneur skilled in strategic alliances and development. Holds a Business Administration degree from Regent University, an MBA from Wharton with specializations in FinTech and AI, and certifications from INSEAD, Duke University, Yale, and École Polytechnique. Strong background in asset management with international companies.",
-    "img":"youssef.png",
-    "linkedin":"https://www.linkedin.com/in/youssef-el-maddarsi/"
-},
-{
-    "name": "David Holtzman",
-    "position":"Strategy Director",
-    "desc":"Technological advisor to the White House under three presidential terms, former Global Chief of Innovation at IBM, architect of the DNS server, and author.",
-    "img":"david_hotlzman.png",
-    "linkedin":"https://www.linkedin.com/in/david-h-holtzman-6686005/"
-},
-{
-    "name": "Sumit Chauhan",
-    "position":"CTO",
-    "desc":"Technical Director specialized in technology, speaker, reviewer of publications, and author in the blockchain domain. Advisor with over 19 years of experience in designing and implementing enterprise solutions focused on global growth and digital transformation using Blockchain and AI for cybersecurity, IoT, and FinTech.",
-    "img":"sumit.png",
-    "linkedin":"https://www.linkedin.com/in/sumit-chauhan-34151416/"
-},
-{
-    "name": "Mourad Tagmouti",
-    "position":"Commercial Director",
-    "desc":"With over a decade of experience in consulting and business development, he holds an MBA in Business Management from the European University, as well as a Bachelor's degree in European Business Management. This experience has allowed him to develop an open-minded and versatile mindset.",
-    "img":"mourad.png",
-    "linkedin":"https://www.linkedin.com/in/mourad-tagmouti-ba6887121/"
-},
-{
-    "name": "Reda Temsamani",
-    "position":"Business Developement Associate",
-    "desc":"A Marrakech Superior School of Commerce graduate, Réda excels in financial management, innovation, entrepreneurship, event organization, and multilingual proficiency. His energy and strategic mindset make him a valuable team member.",
-    "img":"reda.png",
-    "linkedin":"https://www.linkedin.com/in/reda-belkassem-temssamani-4a004567/"
-},
-{
-    "name": "Scott McAndrew",
-    "position":"Cheif Financial Officier",
-    "desc":"Experienced Portfolio Manager and Equities Trader with 25 years in finance, specializing in tech, finance, and natural resources. Expert in technical and fundamental analysis, Scott is known for his ethical approach, sharp focus, and effective communication skills. His expertise spans global and Canadian markets, showcasing deep industry knowledge.",
-    "img":"scott.png",
-    "linkedin":"https://www.linkedin.com/in/scottmacandrew/"
-}
+        "position": "President",
+        "desc": "Advisor to several states on cyberwar, cyberterrorism, and cyberespionage, architect of several national-scale digital transformation projects, ethical hacker for over 25 years, and also the founder, chief scientist, and president of Naoris.",
+        "img": "david.png",
+        "linkedin": "https://www.linkedin.com/in/david-joao-vieira-carvalho-4479b8103/"
+    },
+    {
+        "name": "Youssef El Maddarsi",
+        "position": "CEO",
+        "desc": "Experienced entrepreneur skilled in strategic alliances and development. Holds a Business Administration degree from Regent University, an MBA from Wharton with specializations in FinTech and AI, and certifications from INSEAD, Duke University, Yale, and École Polytechnique. Strong background in asset management with international companies.",
+        "img": "youssef.png",
+        "linkedin": "https://www.linkedin.com/in/youssef-el-maddarsi/"
+    },
+    {
+        "name": "David Holtzman",
+        "position": "Strategy Director",
+        "desc": "Technological advisor to the White House under three presidential terms, former Global Chief of Innovation at IBM, architect of the DNS server, and author.",
+        "img": "david_hotlzman.png",
+        "linkedin": "https://www.linkedin.com/in/david-h-holtzman-6686005/"
+    },
+    {
+        "name": "Sumit Chauhan",
+        "position": "CTO",
+        "desc": "Technical Director specialized in technology, speaker, reviewer of publications, and author in the blockchain domain. Advisor with over 19 years of experience in designing and implementing enterprise solutions focused on global growth and digital transformation using Blockchain and AI for cybersecurity, IoT, and FinTech.",
+        "img": "sumit.png",
+        "linkedin": "https://www.linkedin.com/in/sumit-chauhan-34151416/"
+    },
+    {
+        "name": "Mourad Tagmouti",
+        "position": "Commercial Director",
+        "desc": "With over a decade of experience in consulting and business development, he holds an MBA in Business Management from the European University, as well as a Bachelor's degree in European Business Management. This experience has allowed him to develop an open-minded and versatile mindset.",
+        "img": "mourad.png",
+        "linkedin": "https://www.linkedin.com/in/mourad-tagmouti-ba6887121/"
+    },
+    {
+        "name": "Réda Belkassem Tamssamani",
+        "position": "Business Developement Associate",
+        "desc": "A Marrakech Superior School of Commerce graduate, Réda excels in financial management, innovation, entrepreneurship, event organization, and multilingual proficiency. His energy and strategic mindset make him a valuable team member.",
+        "img": "reda.png",
+        "linkedin": "https://www.linkedin.com/in/reda-belkassem-temssamani-4a004567/"
+    },
+    {
+        "name": "Scott McAndrew",
+        "position": "Cheif Financial Officier",
+        "desc": "Experienced Portfolio Manager and Equities Trader with 25 years in finance, specializing in tech, finance, and natural resources. Expert in technical and fundamental analysis, Scott is known for his ethical approach, sharp focus, and effective communication skills. His expertise spans global and Canadian markets, showcasing deep industry knowledge.",
+        "img": "scott.png",
+        "linkedin": "https://www.linkedin.com/in/scottmacandrew/"
+    }
 ]

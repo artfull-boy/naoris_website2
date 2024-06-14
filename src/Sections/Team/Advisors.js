@@ -15,11 +15,11 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "../../components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay"
+import Autoplay from "embla-carousel-autoplay";
 import { useTranslation } from "react-i18next";
 
 const Advisors = () => {
-  const {t, i18n} = useTranslation()
+  const { t, i18n } = useTranslation();
   const [isMobile, setIsMobile] = React.useState(
     typeof window !== "undefined" && window.innerWidth <= 1080
   );
@@ -49,7 +49,9 @@ const Advisors = () => {
         </p>
       </motion.div>
       {isMobile ? (
-        <Carousel className="w-[100%] rounded-box" opts={{
+        <Carousel
+          className="w-[100%] rounded-box"
+          opts={{
             align: "start",
             loop: true,
           }}
@@ -57,7 +59,8 @@ const Advisors = () => {
             Autoplay({
               delay: 2000,
             }),
-          ]}>
+          ]}
+        >
           <CarouselContent>
             {advisorsJson.map((member) => (
               <CarouselItem>
@@ -84,7 +87,10 @@ const Advisors = () => {
                         href={member.linkedin}
                         className="ml-auto "
                       >
-                        <img src={`${process.env.PUBLIC_URL}/team/linkedin.png`} alt="LinkedIn logo" />
+                        <img
+                          src={`${process.env.PUBLIC_URL}/team/linkedin.png`}
+                          alt="LinkedIn logo"
+                        />
                       </a>
                     </div>
                   </div>
@@ -111,7 +117,7 @@ const Advisors = () => {
           {advisorsJson.map((member) => (
             <motion.div
               variants={cardContainerVariants}
-              className="card focus:outline-none rounded-[8px] relative h-[414px] w-[330px] overflow-hidden "
+              className="card focus:outline-none rounded-[8px] relative w-[417.5px] h-[500px] overflow-hidden "
             >
               <img
                 src={`${process.env.PUBLIC_URL}/team/${member.img}`}
@@ -123,18 +129,21 @@ const Advisors = () => {
                 }`}
               />
               <div className="card_background rounded-[8px] w-full h-[500px] absolute bottom-[-60%] right-0 z-[1]"></div>
-              <div className="card_content rounded-[8px] absolute bottom-[-35%] left-0 w-full h-full p-3 z-[1] flex flex-col gap-3 justify-end ">
+              <div className="card_content rounded-[8px] absolute bottom-[-23%] left-0 w-full h-full p-3 z-[1] flex flex-col gap-3 justify-end ">
                 <div className="flex flex-col gap-1">
-                  <p className="text-[28px] font-bold text-white leading-none whitespace-nowrap">
+                  <p className="text-[28px] font-bold text-black leading-none whitespace-nowrap">
                     {member.name}
                   </p>
                 </div>
                 <p
-                  className="text-[16px] font-medium text-white"
+                  className="text-[16px] font-medium text-black"
                   dangerouslySetInnerHTML={{ __html: member.desc }}
                 ></p>
                 <a target="_blank" href={member.linkedin} className="ml-auto ">
-                  <img src={`${process.env.PUBLIC_URL}/team/linkedin.png`} alt="LinkedIn Logo" />
+                  <img
+                    src={`${process.env.PUBLIC_URL}/team/linkedin.png`}
+                    alt="LinkedIn Logo"
+                  />
                 </a>
               </div>
             </motion.div>

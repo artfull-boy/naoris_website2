@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 @layer components {
   .container {
     @apply flex min-w-full flex-col 2xl:px-24 xl:px-20 lg:px-16 md:px-14 sm:px-8 px-[10px] gap-7 justify-center content-center;
@@ -11,29 +11,10 @@
   .object {
     object-position: 0px -150px;
   }
-  .mask-gradient {
-    -webkit-mask-image: linear-gradient(
-      to right,
-      hsl(0 0% 0% / 0),
-      hsl(0 0% 0% / 1) 10%,
-      hsl(0 0% 0% / 1) 90%,
-      hsl(0 0% 0% / 0)
-    );
-    mask-image: linear-gradient(
-      to right,
-      hsl(0 0% 0% / 0),
-      hsl(0 0% 0% / 1) 10%,
-      hsl(0 0% 0% / 1) 90%,
-      hsl(0 0% 0% / 0)
-    );
-  }
 }
 
-body {
-  margin: 0;
-  
-  z-index: 0;
-}
 * {
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
+  margin: 0;
+  padding: 0;
 }

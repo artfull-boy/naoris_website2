@@ -57,7 +57,7 @@ const Navbar = ({ sections, scrollToSection }) => {
   };
 
   return (
-    <div className="navbar fixed bg-[#0112236e] top-0 z-10 2xl:px-24 xl:px-20 lg:px-16 md:px-14 sm:px-8 px-[10px]">
+    <div className="navbar fixed bg-[#1D232880] top-0 z-10 2xl:px-24 xl:px-20 lg:px-16 md:px-14 sm:px-8 px-[10px]">
       <div className="navbar-start">
         <div className="dropdown" ref={dropdownRef}>
           <div
@@ -131,9 +131,9 @@ const Navbar = ({ sections, scrollToSection }) => {
         </div>
         <a href="/">
           <img
-            src={`${process.env.PUBLIC_URL}/assets/logo_main.png`}
+            src={`${process.env.PUBLIC_URL}/assets/footer_logo.png`}
             alt="Naoris Consulting Logo"
-            width={60}
+            width={200}
             className="relative z-10"
           />
         </a>
@@ -170,6 +170,16 @@ const Navbar = ({ sections, scrollToSection }) => {
                     {t(section.name)}
                   </Link>
                 </>
+              ) : section.id === "contact" ? (
+                <>
+                  <Link
+                    to={`/#${section.id}`}
+                    onClick={() => setActiveSection(section.id)}
+                    className={`active:bg-transparent active:text-[#00FFA3] hover:text-[#00FFA3] hover:bg-transparent bg-none h-full 2xl:text-[18px] bg-[#171616] rounded-[20px] border-b-2 border-[#00FFA3] p-[10px] `}
+                  >
+                    {t(section.name)}
+                  </Link>
+                </>
               ) : (
                 <Link
                   to={`/#${section.id}`}
@@ -182,12 +192,15 @@ const Navbar = ({ sections, scrollToSection }) => {
             </li>
           ))}
         </ul>
-      </div>
-      <div className="navbar-end">
         <ul className="menu menu-horizontal text-white relative z-10 ">
           <li>
             <details>
-              <summary>Language</summary>
+              <summary>
+                <img
+                  src={`${process.env.PUBLIC_URL}/assets/icon_world.png`}
+                ></img>
+                Language
+              </summary>
               <ul className="p-2 w-[100%]">
                 <li>
                   <a

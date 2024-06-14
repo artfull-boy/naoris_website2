@@ -15,13 +15,14 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "../../components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay"
+import Autoplay from "embla-carousel-autoplay";
 import { useTranslation } from "react-i18next";
 
-
 const Team = () => {
-  const [isMobile, setIsMobile] = useState( typeof window !== 'undefined'&& window.innerWidth <= 1080);
-  const {t, i18n} = useTranslation()
+  const [isMobile, setIsMobile] = useState(
+    typeof window !== "undefined" && window.innerWidth <= 1080
+  );
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     const handleResize = () => {
@@ -48,45 +49,49 @@ const Team = () => {
         </p>
       </motion.div>
       {isMobile ? (
-        <Carousel className="w-[100%] rounded-box"
-        opts={{
-          align: "start",
-          loop: true,
-        }}
-        plugins={[
-          Autoplay({
-            delay: 2000,
-          }),
-        ]}
+        <Carousel
+          className="w-[100%] rounded-box"
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          plugins={[
+            Autoplay({
+              delay: 2000,
+            }),
+          ]}
         >
           <CarouselContent>
             {teamJson.map((member, index) => (
-              <CarouselItem key={index}
-              
-              >
- 
-                  <div className="card rounded-[8px] relative w-[100%] overflow-hidden">
-                    <img
-                      src={`${process.env.PUBLIC_URL}/team/${member.img}`}
-                      alt="Team member image"
-                      className="relative top-0 right-0 z-0 rounded-[8px]"
-                    />
-                    <div className="card_background w-full h-[500px] absolute bottom-[0%] right-0 z-[1]"></div>
-                    <div className="card_content absolute bottom-[0%] left-0 w-full h-full p-3 z-[1] flex flex-col gap-3 justify-end ">
-                      <div className="flex flex-col gap-1">
-                        <p className="text-[30px] font-bold text-white leading-none whitespace-nowrap vsm:text-[23px]">
-                          {member.name}
-                        </p>
-                        <p className="text-[23px] vsm:text-[15px] font-medium text-white">
-                          {member.desc}
-                        </p>
-                      </div>
-                      <a target="_blank" href={member.linkedin} className="ml-auto ">
-                        <img src={`${process.env.PUBLIC_URL}/team/linkedin.png`} alt="Linkedin logo" />
-                      </a>
+              <CarouselItem key={index}>
+                <div className="card rounded-[8px] relative w-[100%] overflow-hidden">
+                  <img
+                    src={`${process.env.PUBLIC_URL}/team/${member.img}`}
+                    alt="Team member image"
+                    className="relative top-0 right-0 z-0 rounded-[8px]"
+                  />
+                  <div className="card_background w-full h-[500px] absolute bottom-[0%] right-0 z-[1]"></div>
+                  <div className="card_content absolute bottom-[0%] left-0 w-full h-full p-3 z-[1] flex flex-col gap-3 justify-end ">
+                    <div className="flex flex-col gap-1">
+                      <p className="text-[30px] font-bold text-black leading-none whitespace-nowrap vsm:text-[23px]">
+                        {member.name}
+                      </p>
+                      <p className="text-[23px] vsm:text-[15px] font-medium text-black">
+                        {member.desc}
+                      </p>
                     </div>
+                    <a
+                      target="_blank"
+                      href={member.linkedin}
+                      className="ml-auto "
+                    >
+                      <img
+                        src={`${process.env.PUBLIC_URL}/team/linkedin.png`}
+                        alt="Linkedin logo"
+                      />
+                    </a>
                   </div>
-
+                </div>
               </CarouselItem>
             ))}
           </CarouselContent>
@@ -108,35 +113,44 @@ const Team = () => {
         >
           {teamJson.map((member) => (
             <motion.div
-              className="card focus:outline-none rounded-[8px] relative w-[300px] overflow-hidden"
+              className="card focus:outline-none w-[417.5px] h-[500px] rounded-[8px] relative  overflow-hidden"
               variants={cardContainerVariants}
             >
               <img
                 src={`${process.env.PUBLIC_URL}/team/${member.img}`}
                 alt="Team member image"
-                className="relative top-0 right-0 z-0 rounded-[8px]"
+                className="relative top-0 right-0 z-0 rounded-[8px] "
               />
-              <div className="card_background rounded-[8px] w-full h-[500px] absolute bottom-[-60%] right-0 z-[1]"></div>
-              <div className={`card_content rounded-[8px] absolute ${member.name === "Reda Temsamani" ? "bottom-[-70%]": "bottom-[-78%]"} left-0 w-full h-full p-[6px] z-[1] flex flex-col gap-3`}>
+              <div className="card_background rounded-[8px] w-full h-[500px] absolute bottom-[-40%] right-0 z-[1]"></div>
+              <div
+                className={`card_content rounded-[8px] absolute ${
+                  member.name === "Réda Belkassem Tamssamani"
+                    ? "bottom-[-82%]"
+                    : "bottom-[-82%]"
+                } left-0 w-full h-full p-[6px] z-[1] flex flex-col gap-3`}
+              >
                 <div className="flex flex-col gap-1">
-                  {member.name === "Reda Temsamani" ? (
-                    <p className="text-[30px] font-bold text-white leading-none whitespace-normal">
+                  {member.name === "Réda Belkassem Tamssamani" ? (
+                    <p className="text-[28px] font-bold text-black leading-none whitespace-normal">
                       {member.name}
                     </p>
                   ) : (
-                    <p className="text-[30px] font-bold text-white leading-none whitespace-nowrap">
+                    <p className="text-[30px] font-bold text-black leading-none whitespace-nowrap">
                       {member.name}
                     </p>
                   )}
-                  <p className="text-[23px] font-medium text-white">
+                  <p className={`font-medium text-black text-[23px]`}>
                     {member.position}
                   </p>
                 </div>
-                <p className="text-[15px] font-medium text-white ">
+                <p className="text-[15px] font-medium text-black ">
                   {member.desc}
                 </p>
                 <a target="_blank" href={member.linkedin} className="ml-auto ">
-                  <img src={`${process.env.PUBLIC_URL}/team/linkedin.png`} alt="linkedin logo" />
+                  <img
+                    src={`${process.env.PUBLIC_URL}/team/linkedin.png`}
+                    alt="linkedin logo"
+                  />
                 </a>
               </div>
             </motion.div>
