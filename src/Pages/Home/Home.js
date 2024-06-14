@@ -90,15 +90,27 @@ const Home = () => {
       </div>
       <div
         id="faq"
-        className="relative flex flex-col gap-[54px] z-[2] bg-[#0A0D17]"
+        className="relative flex flex-col gap-[160px] z-[2] bg-[#0A0D17] pt-[160px]"
       >
+        <img
+          src={`${process.env.PUBLIC_URL}/assets/Stars6.svg`}
+          alt="World Shape"
+          className="absolute left-0 top-[2%]"
+        ></img>
         <Partners />
         <FAQ />
       </div>
       <div
         id="contact"
-        className="relative flex flex-col gap-[54px] z-[2] bg-[#0A0D17]"
+        className="relative flex flex-col gap-[54px] z-[2] bg-[#0A0D17] pt-[160px]"
       >
+        <div className="absolute size-[134px] bg-[#763AF5] rounded-[50%] right-[5%] top-[20%] opacity-[80%] blur-[110px]"></div>
+        <img
+          src={`${process.env.PUBLIC_URL}/assets/eclipse_contact.svg`}
+          alt="World Shape"
+          className="absolute left-0 top-[2%] opacity-80"
+          width={220}
+        ></img>
         <Contact />
       </div>
       <div className="absolute bottom-[-90px] left-[-20px] z-[0] w-full last_hope"></div>

@@ -33,7 +33,11 @@ const Advisors = () => {
   }, []);
 
   return (
-    <div className="container flex-col items-center justify-center gap-[50px]">
+    <div className="container flex-col items-center justify-center gap-[50px] relative">
+      <img
+        src={`${process.env.PUBLIC_URL}/assets/stars4.svg`}
+        className="absolute right-0 top-[10%]"
+      ></img>
       <motion.div
         className="heading relative w-fit"
         variants={headingVariants}
@@ -129,7 +133,14 @@ const Advisors = () => {
                 }`}
               />
               <div className="card_background rounded-[8px] w-full h-[500px] absolute bottom-[-60%] right-0 z-[1]"></div>
-              <div className="card_content rounded-[8px] absolute bottom-[-23%] left-0 w-full h-full p-3 z-[1] flex flex-col gap-3 justify-end ">
+              <div
+                className={`card_content2 rounded-[8px] absolute  left-0 w-full h-full p-3 z-[1] flex flex-col gap-3 justify-end ${
+                  member.name == "Zakaria Fahim" ||
+                  member.name == "Khalid Bouksib"
+                    ? "bottom-[-28%]"
+                    : "bottom-[-23%]"
+                } `}
+              >
                 <div className="flex flex-col gap-1">
                   <p className="text-[28px] font-bold text-black leading-none whitespace-nowrap">
                     {member.name}

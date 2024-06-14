@@ -1,4 +1,3 @@
-
 import { useTranslation } from "react-i18next";
 import React, { useState, useEffect, useRef } from "react";
 import { useForm } from "react-hook-form";
@@ -8,7 +7,7 @@ import "./contact.css";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
-  const {t, i18n} = useTranslation()
+  const { t, i18n } = useTranslation();
   const [isMobile, setIsMobile] = useState(
     typeof window !== "undefined" && window.innerWidth <= 1150
   );
@@ -24,10 +23,12 @@ const Contact = () => {
   const form = useRef();
 
   const sendEmail = () => {
-
     emailjs
-      .sendForm("service_jj7c3ek", "template_4b6vli9", form.current,
-        "guau5nKsvxHpLqJV2",
+      .sendForm(
+        "service_jj7c3ek",
+        "template_4b6vli9",
+        form.current,
+        "guau5nKsvxHpLqJV2"
       )
       .then(
         () => {
@@ -84,7 +85,7 @@ const Contact = () => {
   };
   return (
     <div className="container flex justify-between relative z-[2] pb-20">
-      <div className="flex justify-center items-center flex-col w-full overflow-hidden gap-[50px]">
+      <div className="flex relative justify-center items-center flex-col w-full overflow-hidden gap-[50px]">
         <motion.div
           className="heading relative w-fit"
           variants={headingVariants}
@@ -99,8 +100,11 @@ const Contact = () => {
             {t("Contact Us")}
           </p>
         </motion.div>
+
         {isMobile ? (
-          <div className={`flex items-center flex-col gap-8`}>
+          <div
+            className={`flex relative items-center flex-col gap-8 bg-[#FEFFFF04] border-[2.41px] border-[#0A0D1705] rounded-[15px] border-solid px-[70px] py-[50px]`}
+          >
             <motion.img
               initial={{ opacity: 0, x: 300 }}
               transition={{ type: "spring", stiffness: 100, damping: 20 }}
@@ -130,7 +134,7 @@ const Contact = () => {
                   </span>
                 </label>
                 <input
-                  className="p-[10px] bg-white rounded-[10px] w-full h-[50px]  transition-outline duration-300 outline-none text-black"
+                  className="p-[10px] text-[#ffffff60] bg-[#FEFFFF05] border-[1px] border-[#ffffff20] rounded-[10px] w-full h-[50px]  transition-outline duration-300 outline-none "
                   {...register("first_name", {
                     required: "Full Name is Required",
                   })}
@@ -158,7 +162,7 @@ const Contact = () => {
                   </span>
                 </label>
                 <input
-                  className="bg-white p-[10px] rounded-[6px] w-full h-[50px]  transition-outline duration-300 outline-none text-black"
+                  className="text-[#ffffff60] bg-[#FEFFFF05] border-[1px] border-[#ffffff20] rounded-[6px] w-full h-[50px]  transition-outline duration-300 outline-none text-black"
                   {...register("email", {
                     required: "Email is Required",
                   })}
@@ -183,7 +187,7 @@ const Contact = () => {
                   Phone number{" "}
                 </label>
                 <input
-                  className="bg-white p-[10px] rounded-[6px] w-full h-[50px]  transition-outline duration-300 outline-none text-black"
+                  className="bg-white p-[[#FEFFFF05] border-[1px] border-[#ffffff20]] rounded-[6px] w-full h-[50px]  transition-outline duration-300 outline-none text-black"
                   {...register("phone")}
                   type="number"
                   id="phone"
@@ -209,7 +213,7 @@ const Contact = () => {
                   </span>
                 </label>
                 <input
-                  className="p-[10px] bg-white rounded-[10px] w-full h-[50px]  transition-outline duration-300 outline-none text-black"
+                  className="p-[10px] bg-[#FEFFFF05] border-[1px] border-[#ffffff20] rounded-[10px] w-full h-[50px]  transition-outline duration-300 outline-none text-black"
                   {...register("subject", { required: "Subject is Required" })}
                   type="text"
                   id="subject"
@@ -267,7 +271,9 @@ const Contact = () => {
             </motion.form>
           </div>
         ) : (
-          <div className={`flex   items-center justify-between flex-row`}>
+          <div
+            className={`flex relative   items-center justify-between flex-row bg-[#FEFFFF04] border-[2.41px] border-[#0A0D1705] rounded-[15px] border-solid px-[70px] py-[50px]`}
+          >
             <motion.form
               onSubmit={handleSubmit(onSubmiting)}
               variants={fadeLeft}
@@ -288,7 +294,7 @@ const Contact = () => {
                   </span>
                 </label>
                 <input
-                  className="p-[10px] bg-white rounded-[10px] w-full h-[50px]  transition-outline duration-300 outline-none text-black"
+                  className="p-[10px] text-[#ffffff60] bg-[#FEFFFF05] border-[1px] border-[#ffffff20] rounded-[10px] w-full h-[50px]  transition-outline duration-300 outline-none text-black"
                   {...register("first_name", {
                     required: "Full Name is Required",
                   })}
@@ -316,7 +322,7 @@ const Contact = () => {
                   </span>
                 </label>
                 <input
-                  className="bg-white p-[10px] rounded-[6px] w-full h-[50px]  transition-outline duration-300 outline-none text-black"
+                  className="text-[#ffffff60] bg-[#FEFFFF05] border-[1px] border-[#ffffff20] rounded-[6px] w-full h-[50px]  transition-outline duration-300 outline-none text-black"
                   {...register("email", {
                     required: "Email is Required",
                   })}
@@ -341,7 +347,7 @@ const Contact = () => {
                   {t("Phone number")}{" "}
                 </label>
                 <input
-                  className="bg-white p-[10px] rounded-[6px] w-full h-[50px]  transition-outline duration-300 outline-none text-black"
+                  className="text-[#ffffff60] bg-[#FEFFFF05] border-[1px] border-[#ffffff20] rounded-[6px] w-full h-[50px]  transition-outline duration-300 outline-none text-black"
                   {...register("phone")}
                   type="number"
                   id="phone"
@@ -367,7 +373,7 @@ const Contact = () => {
                   </span>
                 </label>
                 <input
-                  className="p-[10px] bg-white rounded-[10px] w-full h-[50px]  transition-outline duration-300 outline-none text-black"
+                  className="p-[10px] text-[#ffffff60] bg-[#FEFFFF05] border-[1px] border-[#ffffff20] rounded-[10px] w-full h-[50px]  transition-outline duration-300 outline-none text-black"
                   {...register("subject", { required: "Subject is Required" })}
                   type="text"
                   id="subject"
@@ -387,14 +393,14 @@ const Contact = () => {
                   className="text-[#fff] font-semibold  leading-[18px] text-[16px]"
                   htmlFor="msg"
                 >
-                  {("Message")}
+                  {"Message"}
                   <span className="text-red-600 text-[16px] font-semibold leading-[18px] ">
                     *
                   </span>
                 </label>
                 <textarea
                   rows="4" // Set the number of visible lines
-                  className="bg-white text-black p-[10px] rounded-[6px] w-full   transition-outline duration-300 outline-none"
+                  className="text-[#ffffff60] bg-[#FEFFFF05] border-[1px] border-[#ffffff20] p-[10px] rounded-[6px] w-full   transition-outline duration-300 outline-none"
                   {...register("msg", { required: "Message is Required" })}
                   type="text"
                   id="msg"
@@ -410,7 +416,7 @@ const Contact = () => {
                 )}
               </div>
               <button
-                className={`m-auto botona text-white py-[10px] font-semibold hover:bg-[#3661c8] transition-colors duration-300 h-[50px] ${
+                className={`m-auto botona text-white py-[10px] font-semibold hover:bg-[#3661c8] transition-colors duration-300 h-[50px] flex gap-2 justify-center items-center w-full ${
                   isSuccess ? "bg-success" : "bg-[#336AEA]"
                 }`}
                 type="submit"
@@ -421,16 +427,16 @@ const Contact = () => {
                   : isSuccess
                   ? "Successfully Sent"
                   : "Send Message"}
+                <img src={`${process.env.PUBLIC_URL}/assets/rocket.svg`}></img>
               </button>
             </motion.form>
-            <motion.div className="seperator 2xl:h-[500px] lg:h-[600px] ml-[40px]"></motion.div>
             <motion.img
               variants={fadeRight}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              src={`${process.env.PUBLIC_URL}/assets/map.png`}
-              className={`w-[48%] ml-auto `}
+              src={`${process.env.PUBLIC_URL}/assets/map.svg`}
+              className={`w-[50%] ml-auto `}
               alt="World Map"
             ></motion.img>
           </div>

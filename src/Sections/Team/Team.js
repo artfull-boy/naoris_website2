@@ -34,6 +34,11 @@ const Team = () => {
 
   return (
     <div className="container flex-col items-center justify-center gap-[50px]">
+      <img
+        src={`${process.env.PUBLIC_URL}/assets/Stars3.svg`}
+        className="absolute right-0 top-[10%]"
+      ></img>
+
       <motion.div
         className="heading relative w-fit"
         variants={headingVariants}
