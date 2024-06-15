@@ -41,7 +41,7 @@ function App() {
     { id: 'services', name: 'Services' },
     { id: 'team', name: 'Team' },
     { id: 'faq', name: 'FAQ' },
-    { id: 'media', name: 'Media'},
+    { id: 'media', name: 'They Spoke About Us'},
     { id: 'case_studies', name: 'Use Cases'},
     { id: 'contact', name: 'Contact Us' },
   ];

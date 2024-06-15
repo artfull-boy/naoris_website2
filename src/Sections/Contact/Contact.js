@@ -110,8 +110,8 @@ const Contact = () => {
               transition={{ type: "spring", stiffness: 100, damping: 20 }}
               viewport={{ once: true }}
               whileInView={{ opacity: 1, x: 0 }}
-              src={`${process.env.PUBLIC_URL}/assets/map.png`}
-              className={`w-[100%] ml-10`}
+              src={`${process.env.PUBLIC_URL}/assets/map.svg`}
+              className={`w-[100%]`}
               alt="World Map"
             ></motion.img>
             <motion.form
@@ -187,7 +187,7 @@ const Contact = () => {
                   Phone number{" "}
                 </label>
                 <input
-                  className="bg-white p-[[#FEFFFF05] border-[1px] border-[#ffffff20]] rounded-[6px] w-full h-[50px]  transition-outline duration-300 outline-none text-black"
+                  className="text-[#ffffff60] bg-[#FEFFFF05] border-[1px] border-[#ffffff20] rounded-[6px] w-full h-[50px]  transition-outline duration-300 outline-none text-black"
                   {...register("phone")}
                   type="number"
                   id="phone"
@@ -240,7 +240,7 @@ const Contact = () => {
                 </label>
                 <textarea
                   rows="4" // Set the number of visible lines
-                  className="bg-white text-black p-[10px] rounded-[6px] w-full   transition-outline duration-300 outline-none"
+                  className="text-[#ffffff60] bg-[#FEFFFF05] border-[1px] border-[#ffffff20] p-[10px] rounded-[6px] w-full   transition-outline duration-300 outline-none"
                   {...register("msg", { required: "Message is Required" })}
                   type="text"
                   id="msg"
@@ -256,7 +256,7 @@ const Contact = () => {
                 )}
               </div>
               <button
-                className={`m-auto botona text-white py-[10px] font-semibold hover:bg-[#3661c8] transition-colors duration-300 h-[50px] ${
+                className={`m-auto flex gap-2 justify-center items-center botona text-white py-[10px] font-semibold hover:bg-[#3661c8] transition-colors duration-300 h-[50px] ${
                   isSuccess ? "bg-success" : "bg-[#336AEA]"
                 }`}
                 type="submit"
@@ -267,6 +267,7 @@ const Contact = () => {
                   : isSuccess
                   ? "Successfully Sent"
                   : "Send Message"}
+                <img src={`${process.env.PUBLIC_URL}/assets/rocket.svg`}></img>
               </button>
             </motion.form>
           </div>

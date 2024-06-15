@@ -1,20 +1,12 @@
 .usecase_link {
-    position: relative;
+  position: relative;
 }
 .usecase_link::after {
-    content: "";
-    position: absolute;
-    bottom: -3px;
-    height: 2px;
-    width: 64px;
-    left: 0;
-    background-color: #00ffa3 ;
-}
-.last_hope {
-    background: linear-gradient(270deg, #043262 9.36%, #022141 83.33%);
-filter: blur(20px);
-width: 120%;
-margin: auto;
-height: 190px;
-z-index: 4;
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  height: 2px;
+  width: 64px;
+  left: 0;
+  background-color: #00ffa3;
 }

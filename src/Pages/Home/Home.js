@@ -113,7 +113,6 @@ const Home = () => {
         ></img>
         <Contact />
       </div>
-      <div className="absolute bottom-[-90px] left-[-20px] z-[0] w-full last_hope"></div>
     </div>
   );
 };

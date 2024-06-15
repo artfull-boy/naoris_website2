@@ -6,195 +6,149 @@ import "./footer.css";
 const Footer = ({ scrollToSection }) => {
   const { t, i18n } = useTranslation();
   return (
-    <div className="container flex flex-col relative justify-between items-center w-full z-[1] overflow-hidden  pt-[160px] bg-[#011223]">
-      <div className="flex w-full flex-row relative justify-between items-center medium:flex-col medium:gap-12 z-[2]">
-        <div className="hidden vsm:flex justify-between items-center w-full order-3">
-          <img
-            src={`${process.env.PUBLIC_URL}/assets/footer_logo.png`}
-            width={90}
-            className="medium:order-6"
-            alt="Logo Footer"
-          ></img>
-          <div className="flex gap-2 w-fit h-fit medium:order-3 vsm:flex-col vsm:items-start">
-            <div className="border-r vsm:border-none px-3">
-              <Link
-                to={"/"}
-                onClick={() => scrollToSection("home")}
-                className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
-              >
-                {t("Home")}
-              </Link>
-            </div>
-            <div className="border-r vsm:border-none px-3">
-              <Link
-                to={"/#about"}
-                onClick={() => scrollToSection("about")}
-                className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
-              >
-                {t("About Us")}
-              </Link>
-            </div>
-            <div className="border-r vsm:border-none px-3">
-              <Link
-                to={"/#services"}
-                onClick={() => scrollToSection("services")}
-                className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
-              >
-                {t("Services")}
-              </Link>
-            </div>
-            <div className="border-r vsm:border-none px-3">
-              <Link
-                to={"/#team"}
-                onClick={() => scrollToSection("team")}
-                className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
-              >
-                {t("Team")}
-              </Link>
-            </div>
-            <div className="border-r vsm:border-none px-3">
-              <Link
-                to={"/#faq"}
-                onClick={() => scrollToSection("faq")}
-                className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
-              >
-                {t("FAQ")}
-              </Link>
-            </div>
-            <div className="px-3">
-              <Link
-                to={"/#contact"}
-                onClick={() => scrollToSection("contact")}
-                className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
-              >
-                {t("Contact Us")}
-              </Link>
-            </div>
-            <div className="px-3">
-              <Link
-                to={"/case_studies"}
-                onClick={() => scrollToSection("case_studies")}
-                className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
-              >
-                {t("Use Cases")}
-              </Link>
-            </div>
-            <div className="px-3">
-              <Link
-                to={"/media"}
-                onClick={() => scrollToSection("media")}
-                className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
-              >
-                {t("Media")}
-              </Link>
-            </div>
-          </div>
-        </div>
+    <div className="container flex flex-col relative justify-start items-center w-full z-[1] overflow-hidden gap-14  py-[40px] bg-[#0A0D17]">
+      <div className="flex w-full flex-row relative justify-between items-start z-[2] flex-wrap gap-10 vsm:justify-center">
         <img
           src={`${process.env.PUBLIC_URL}/assets/footer_logo.png`}
           width={250}
-          className="medium:order-6 vsm:hidden"
           alt="Logo Footer"
         ></img>
-        <div className="vsm:hidden flex gap-2 w-fit h-fit medium:order-3 vsm:flex-col vsm:items-start">
-          <div className="border-r vsm:border-none px-3">
-            <Link
-              to={"/"}
-              onClick={() => scrollToSection("home")}
-              className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
-            >
-              {t("Home")}
-            </Link>
-          </div>
-          <div className="border-r vsm:border-none px-3">
-            <Link
-              to={"/#about"}
-              onClick={() => scrollToSection("about")}
-              className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
-            >
-              {t("About Us")}
-            </Link>
-          </div>
-          <div className="border-r vsm:border-none px-3">
-            <Link
-              to={"/#services"}
-              onClick={() => scrollToSection("services")}
-              className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
-            >
-              {t("Services")}
-            </Link>
-          </div>
-          <div className="border-r vsm:border-none px-3">
-            <Link
-              to={"/#team"}
-              onClick={() => scrollToSection("team")}
-              className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
-            >
-              {t("Team")}
-            </Link>
-          </div>
-          <div className="border-r vsm:border-none px-3">
-            <Link
-              to={"/#faq"}
-              onClick={() => scrollToSection("faq")}
-              className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
-            >
-              {t("FAQ")}
-            </Link>
-          </div>
-          <div className="px-3 border-r vsm:border-none">
-            <Link
-              to={"/#contact"}
-              className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
-            >
-              {t("Contact Us")}
-            </Link>
-          </div>
-
-          <div className="px-3 border-r vsm:border-none">
-            <Link
-              to={"/media"}
-              onClick={() => scrollToSection("media")}
-              className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
-            >
-              {t("Media")}
-            </Link>
-          </div>
-          <div className="px-3 ">
-            <Link
-              to={"/case_studies"}
-              onClick={() => scrollToSection("case_studies")}
-              className="font-normal cursor-pointer text-[18px] text-[#00FFA3]"
-            >
-              {t("Use Cases")}
-            </Link>
-          </div>
+        <div className="flex flex-col gap-4 items-start w-[240px] vsm:w-full vsm:items-center">
+          <p className="font-bold text-[16px] text-white">Our Services</p>
+          <Link
+            to={"/"}
+            onClick={() => scrollToSection("services")}
+            className="font-normal cursor-pointer text-[14px] text-[#ffffff80] hover:text-[#00FFA3]"
+          >
+            {t("Audits and Evaluations")}
+          </Link>
+          <Link
+            to={"/"}
+            onClick={() => scrollToSection("services")}
+            className="font-normal cursor-pointer text-[14px] text-[#ffffff80] hover:text-[#00FFA3]"
+          >
+            {t("Digital Strategy and Cybersecurity")}
+          </Link>
+          <Link
+            to={"/"}
+            onClick={() => scrollToSection("services")}
+            className="font-normal cursor-pointer text-[14px] text-[#ffffff80] hover:text-[#00FFA3]"
+          >
+            {t("Risk Management and Compliance")}
+          </Link>
+          <Link
+            to={"/"}
+            onClick={() => scrollToSection("services")}
+            className="font-normal cursor-pointer text-[14px] text-[#ffffff80] hover:text-[#00FFA3]"
+          >
+            {t("Solutions Architecture")}
+          </Link>
+          <Link
+            to={"/"}
+            onClick={() => scrollToSection("services")}
+            className="font-normal cursor-pointer text-[14px] text-[#ffffff80] hover:text-[#00FFA3]"
+          >
+            {t("Infrastructure and Applications Optimization")}
+          </Link>
+          <Link
+            to={"/"}
+            onClick={() => scrollToSection("services")}
+            className="font-normal cursor-pointer text-[14px] text-[#ffffff80] hover:text-[#00FFA3]"
+          >
+            {t("Training and Awareness")}
+          </Link>
+          <Link
+            to={"/"}
+            onClick={() => scrollToSection("services")}
+            className="font-normal cursor-pointer text-[14px] text-[#ffffff80] hover:text-[#00FFA3]"
+          >
+            {t("Artificial Intelligence and Data Analysis")}
+          </Link>
         </div>
-        <div className="text-white flex flex-col gap-3 w-[24%] medium:w-[100%] medium:order-1">
-          <p className="font-normal text-[40px] ">
-            {t("Subscribe to Our")} <br className="medium:hidden" />{" "}
-            <span className="font-semibold">{t("NewsLetter")}</span>
+        <div className="flex flex-col gap-4 items-start w-[240px] vsm:w-full  vsm:items-center">
+          <p className="font-bold text-[16px] text-white">Use Cases</p>
+          <Link
+            to={"/case_studies/1"}
+            className="font-normal cursor-pointer text-[14px] text-[#ffffff80] hover:text-[#00FFA3]"
+          >
+            {t("Autonomous Fraud Detection System")}
+          </Link>
+          <Link
+            to={"/case_studies/2"}
+            className="font-normal cursor-pointer text-[14px] text-[#ffffff80] hover:text-[#00FFA3]"
+          >
+            {t("Secure Quantum Blockchain for Real-Time Fraud Detection")}
+          </Link>
+          <Link
+            to={"/case_studies/3"}
+            className="font-normal cursor-pointer text-[14px] text-[#ffffff80] hover:text-[#00FFA3]"
+          >
+            {t("Enhanced Cybersecurity Mesh for Enterprise Clients")}
+          </Link>
+          <Link
+            to={"/case_studies/4"}
+            className="font-normal cursor-pointer text-[14px] text-[#ffffff80] hover:text-[#00FFA3]"
+          >
+            {t("Personalized AI-Based Financial Advisory Services")}
+          </Link>
+          <Link
+            to={"/case_studies/5"}
+            className="font-normal cursor-pointer text-[14px] text-[#ffffff80] hover:text-[#00FFA3]"
+          >
+            {t("Infrastructure and Applications Optimization")}
+          </Link>
+          <Link
+            to={"/case_studies/6"}
+            className="font-normal cursor-pointer text-[14px] text-[#ffffff80] hover:text-[#00FFA3]"
+          >
+            {t("Transforming the Insurance Sector with AI and Blockchain")}
+          </Link>
+          <Link
+            to={"/case_studies/7"}
+            className="font-normal cursor-pointer text-[14px] text-[#ffffff80] hover:text-[#00FFA3]"
+          >
+            {t("Artificial Intelligence and Data Analysis")}
+          </Link>
+          <Link
+            to={"/case_studies/8"}
+            className="font-normal cursor-pointer text-[14px] text-[#ffffff80] hover:text-[#00FFA3]"
+          >
+            {t("IntelliChain Inventory System")}
+          </Link>
+        </div>
+        <div className="flex flex-col gap-4 items-start w-[240px] vsm:w-full  vsm:items-center">
+          <p className="font-bold text-[16px] text-white">
+            They Spoke About US
           </p>
-          <div className="flex flex-col gap-2 w-full">
-            <input
-              type="text"
-              placeholder={`${t("Enter your email address")}`}
-              className="h-[50px] bg-white text-black rounded-[10px] px-3"
-            ></input>
-            <button className="submit_subscription h-[50px] rounded-[10px]">
-              {t("Subscribe")}
-            </button>
-          </div>
+          <Link
+            to={"media"}
+            onClick={() => scrollToSection("naorisconsulting")}
+            className="font-normal cursor-pointer text-[14px] text-[#ffffff80] hover:text-[#00FFA3]"
+          >
+            Naoris Consulting
+          </Link>
+          <Link
+            to={"media"}
+            onClick={() => scrollToSection("naorisprotocol")}
+            className="font-normal cursor-pointer text-[14px] text-[#ffffff80] hover:text-[#00FFA3]"
+          >
+            Naoris Protocol
+          </Link>
+        </div>
+        <div className="flex flex-col gap-4 items-start w-[240px] vsm:w-full  vsm:items-center">
+          <p className="font-bold text-[16px] text-white">MultiMedia Library</p>
+          <Link
+            to={"multimedia"}
+            onClick={() => scrollToSection("gitex")}
+            className="font-normal cursor-pointer text-[14px] text-[#ffffff80] hover:text-[#00FFA3]"
+          >
+            Gitex Africa 2024
+          </Link>
         </div>
       </div>
-      <p className="text-[16px] text-white font-bold vsm:text-[14px] z-[2] pb-5">
+      <p className=" text-[#ffffff50] font-semibold text-[14px] z-[2]">
         © 2024 Naoris Consulting. {t("All rights reserved")}.
       </p>
-
-      <img
-        src={`${process.env.PUBLIC_URL}/assets/clip_footer.png`}
-        className="absolute top-0 left-0 z-[1] cards:top-0 cards:h-full cards:w-full"
-      />
     </div>
   );
 };
