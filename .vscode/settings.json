@@ -1,0 +1,72 @@
+{
+  "editor.fontLigatures": true,
+  "editor.renderLineHighlight": "gutter",
+  "workbench.startupEditor": "newUntitledFile",
+  "editor.lineHeight": 1.8,
+  "symbols.hidesExplorerArrows": false,
+  "editor.guides.indentation": true,
+  "workbench.iconTheme": "symbols",
+  "accessibility.signals.clear": {
+    "sound": "off"
+  },
+  "editor.mouseWheelZoom": true,
+  "editor.minimap.enabled": false,
+  "workbench.editor.labelFormat": "short",
+  "explorer.compactFolders": false,
+  "editor.semanticHighlighting.enabled": false,
+  "breadcrumbs.enabled": false,
+  "workbench.statusBar.visible": false,
+  "editor.wordWrap": "on",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.smoothScrolling": true,
+  "workbench.list.smoothScrolling": true,
+  "terminal.integrated.smoothScrolling": true,
+  "editor.cursorBlinking": "expand",
+  "apc.electron": {
+    "titleBarStyle": "hiddenInset",
+    "trafficLightPosition": {
+      "x": 11,
+      "y": 10
+    },
+    "frame": false
+  },
+  "apc.header": {
+    "height": 36
+  },
+  "apc.listRow": {
+    "height": 24
+  },
+  "apc.font.family": "Inter",
+  "apc.stylesheet": {
+    ".title-label > h2": "display: none",
+    ".editor-actions": "display: none",
+    ".nosidebar .inline-tabs-placeholder": "width: 75px",
+    ".pane-header": "padding: 0 8px",
+    ".pane-body": "padding: 8px",
+    ".split-view-view:first-child .pane-header": "display: none !important;",
+    ".monaco-list-row": "border-radius: 4px;",
+    ".monaco-workbench .monaco-list:not(.element-focused):focus:before": "display: none;"
+  },
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontFamily": "monospace",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "files.autoSave": "afterDelay",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "jupyter.askForKernelRestart": false,
+  "editor.largeFileOptimizations": false,
+  "explorer.confirmPasteNative": false,
+  "window.commandCenter": false,
+  "workbench.layoutControl.enabled": false,
+  "workbench.activityBar.location": "default",
+  "terminal.integrated.scrollback": 10000,
+  "github.copilot.editor.enableAutoCompletions": true,
+  "workbench.colorTheme": "Tokyo Night",
+  "prisma.showPrismaDataPlatformNotification": false,
+  "window.density.editorTabHeight": "compact",
+  "liveshare.accessibility.soundVolume": 0,
+  "accessibility.signalOptions": {
+    "volume": 0
+  }
+}

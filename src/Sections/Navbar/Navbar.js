@@ -160,10 +160,10 @@ const Navbar = ({ sections, scrollToSection }) => {
                     {t(section.name)}
                   </Link>
                 </>
-              ) : section.id === "media" ? (
+              ) : (section.id === "media" || section.id === "multimedia") ? (
                 <>
                   <Link
-                    onClick={() => setActiveSection("media")}
+                    onClick={() => setActiveSection(section.id)}
                     className={` hover:text-[#00FFA3] hover:bg-transparent bg-none h-full 2xl:text-[18px]`}
                     to={section.id}
                   >

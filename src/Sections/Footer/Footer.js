@@ -95,22 +95,10 @@ const Footer = ({ scrollToSection }) => {
             to={"/case_studies/5"}
             className="font-normal cursor-pointer text-[14px] text-[#ffffff80] hover:text-[#00FFA3]"
           >
-            {t("Infrastructure and Applications Optimization")}
-          </Link>
-          <Link
-            to={"/case_studies/6"}
-            className="font-normal cursor-pointer text-[14px] text-[#ffffff80] hover:text-[#00FFA3]"
-          >
             {t("Transforming the Insurance Sector with AI and Blockchain")}
           </Link>
           <Link
-            to={"/case_studies/7"}
-            className="font-normal cursor-pointer text-[14px] text-[#ffffff80] hover:text-[#00FFA3]"
-          >
-            {t("Artificial Intelligence and Data Analysis")}
-          </Link>
-          <Link
-            to={"/case_studies/8"}
+            to={"/case_studies/6"}
             className="font-normal cursor-pointer text-[14px] text-[#ffffff80] hover:text-[#00FFA3]"
           >
             {t("IntelliChain Inventory System")}
