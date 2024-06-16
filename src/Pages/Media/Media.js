@@ -23,14 +23,6 @@ const Media = () => {
   const [isMobile2, setIsMobile2] = useState(
     typeof window !== "undefined" && window.innerWidth <= 1420
   );
-  const [showVideo, setShowVideo] = useState(false);
-  const plugins = [];
-  if (isMobile) {
-    plugins.push(Autoplay({ delay: 2000 }));
-  }
-  const playVideo = () => {
-    setShowVideo(true);
-  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -56,7 +48,7 @@ const Media = () => {
         <img src={`${process.env.PUBLIC_URL}/assets/Stars6.svg`}></img>
       </div>
       <div className="flex w-full justify-between items-center z-[2] ">
-        <div className="border-lef border-l-[5px] border-[#00FFA3]">
+        <div className="border-left border-l-[5px] border-[#00FFA3]">
           <p className="text-white font-bold text-[40px] pl-[37px] leading-normal tracking-[16px] uppercase">
             {t("They Spoke About Us")}
           </p>
@@ -80,23 +72,26 @@ const Media = () => {
               Naoris Consulting
             </p>
           </div>
-          <div className="background_media flex flex-col justify-end gap-3 z-[2] w-full h-[600px] rounded-[20px] relative overflow-hidden pl-[60px] pb-[20px]">
+          <div className="background_media flex flex-col justify-end gap-3 z-[2] w-full h-[600px] rounded-[20px] relative overflow-hidden pl-[60px] pb-[20px] vsm:pl-[20px] vsm:pb-0 object-cover">
             <img
               src={`${process.env.PUBLIC_URL}/assets/media/comingsoon.png`}
-              className="absolute left-[60px] top-[40px]"
+              className="absolute left-[60px] top-[40px] cards:hidden"
             ></img>
-            <p className="font-bold text-[55px] text-white relative z-[2] uppercase">
+            <p className="font-bold text-[55px] text-white relative z-[2] uppercase cards:text-center cards:text-[40px]">
               Discover <br /> Our Future Tools!
             </p>
-            <div className="flex flex-row gap-3 items-center z-[2] relative">
+            <div className="flex flex-row gap-3 flex-wrap items-center z-[2] relative cards:flex-col cards:gap-5">
               <img
                 src={`${process.env.PUBLIC_URL}/assets/media/SentinelScan.png`}
+                className="vsm:w-[200px]"
               ></img>
               <img
                 src={`${process.env.PUBLIC_URL}/assets/media/webGuard.png`}
+                className="vsm:w-[200px]"
               ></img>
               <img
                 src={`${process.env.PUBLIC_URL}/assets/media/PhishBlock.png`}
+                className="vsm:w-[200px]"
               ></img>
               <Player
                 autoplay
@@ -113,7 +108,11 @@ const Media = () => {
                 align: "start",
                 loop: true,
               }}
-              plugins={plugins}
+              plugins={[
+                Autoplay({
+                  delay: 2000,
+                }),
+              ]}
             >
               <CarouselContent className="flex flex-row">
                 {socialMedia.map((post, index) => (
@@ -325,7 +324,11 @@ const Media = () => {
                 align: "start",
                 loop: true,
               }}
-              plugins={plugins}
+              plugins={[
+                Autoplay({
+                  delay: 2000,
+                }),
+              ]}
             >
               <CarouselContent className="flex flex-row">
                 {socialMedia.map((post, index) => (

@@ -87,6 +87,7 @@ const Home = () => {
         ></img>
         <Team />
         <Advisors />
+        <Partners />
       </div>
       <div
         id="faq"
@@ -97,7 +98,6 @@ const Home = () => {
           alt="World Shape"
           className="absolute left-0 top-[2%]"
         ></img>
-        <Partners />
         <FAQ />
       </div>
       <div

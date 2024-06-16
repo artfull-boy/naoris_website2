@@ -11,24 +11,35 @@ import {
   DialogFooter,
   DialogTrigger,
 } from "../../components/ui/dialog";
-
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "../../components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 const Multimedia = () => {
   const { t, i18n } = useTranslation();
   const [showVideo, setShowVideo] = useState(false);
   const [isMobile, setIsMobile] = useState(
-    typeof window !== "undefined" && window.innerWidth <= 700
+    typeof window !== "undefined" && window.innerWidth <= 719
+  );
+  const [isMobile2, setIsMobile2] = useState(
+    typeof window !== "undefined" && window.innerWidth <= 1420
   );
   const playVideo = () => {
     setShowVideo(!showVideo);
   };
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 700);
+      setIsMobile(window.innerWidth <= 719);
+      setIsMobile2(window.innerWidth <= 1420);
     };
 
     window.addEventListener("resize", handleResize);
   }, []);
-
+  const plugins = [];
   return (
     <div
       id="multimedia"
@@ -40,16 +51,19 @@ const Multimedia = () => {
       ></img>
       <div className="flex w-full justify-between items-center z-[2]">
         <div className="border-lef border-l-[5px] border-[#00FFA3]">
-          <p className="text-white uppercase vsm:text-[25px] font-bold text-[40px] pl-[37px] leading-normal tracking-[16px]">
+          <p className=" usecase_size:hidden text-white uppercase vsm:text-[20px] font-bold text-[40px] pl-[37px] leading-normal tracking-[16px]">
             {t("Multimedia Library")}
           </p>
+          <p className="hidden usecase_size:block text-white uppercase vsm:text-[20px] font-bold text-[40px] pl-[37px] leading-normal tracking-[16px]">
+            {t("Multi")} {t("media")} {t("Library")}
+          </p>
         </div>
-        <div className="mt-[-20px]">
+        <div className="mt-[-20px] vsm:mt-[-40px]">
           <Player
             autoplay
             loop
             src="https://lottie.host/b0c85c74-cf75-4d48-a7d0-6eef7163fd63/7tmOzKrVDP.json"
-            className="size-[300px] vsm:size-[200px]"
+            className="size-[300px] vsm:size-[130px]"
           ></Player>
         </div>
       </div>
@@ -69,13 +83,13 @@ const Multimedia = () => {
             29/05/2024 - 31/05/2024
           </p>
         </div>
-        <div className="w-full h-[750px]  px-[45px]">
+        <div className={`w-full   ${isMobile2 ? "px-[20px]" : "px-[45px]"}`}>
           {!showVideo && (
             <div className="w-full relative">
               <img
                 src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/thumbnail.png`}
                 alt="Cover Image"
-                className="w-full h-[750px] object-cover relative z-0"
+                className="w-full object-cover relative z-0"
                 onClick={playVideo}
               />
               <div className="bg-[#1212126c] absolute left-0 bottom-0 w-full z-[1] h-full rounded-[20px]"></div>
@@ -90,7 +104,7 @@ const Multimedia = () => {
             <video
               controls
               autoPlay
-              className="w-full h-[750px] rounded-[30px] object-cover"
+              className={`w-full  rounded-[30px] object-cover`}
               onEnded={() => setShowVideo(false)}
             >
               <source
@@ -101,286 +115,420 @@ const Multimedia = () => {
             </video>
           )}
         </div>
-        <div className="flex flex-row w-full justify-center items-center">
-          <Dialog className="w-full">
-            <DialogTrigger asChild>
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/1.png`}
-                className="relative border-[3px] border-[#E2E2E2] w-[280px] rotate-[-9deg] hover:rotate-0 hover:z-[3] hover:w-[320px] transition-all duration-[0.8] ease-in-out cursor-pointer"
-              ></img>
-            </DialogTrigger>
-            <DialogContent className="max-w-[40%]  p-[20px] gap-0">
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/1.png`}
-                className=" py-[20px] w-full"
-              ></img>
-              <DialogFooter
-                className={"flex justify-start sm:justify-start w-[150px]"}
-              >
-                <DialogClose asChild>
-                  <Button type="button" className="botona w-full text-white">
-                    Close
-                  </Button>
-                </DialogClose>
-              </DialogFooter>
-            </DialogContent>
-          </Dialog>
-          <Dialog className="w-full">
-            <DialogTrigger asChild>
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/2.png`}
-                className="relative border-[3px] border-[#E2E2E2] w-[280px] ml-[-50px] rotate-[4deg] hover:rotate-0 hover:z-[3] hover:w-[320px] transition-all duration-[0.8] ease-in-out cursor-pointer"
-              ></img>
-            </DialogTrigger>
-            <DialogContent className="max-w-[40%]  p-[20px] gap-0">
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/2.png`}
-                className=" py-[20px] w-full"
-              ></img>
-              <DialogFooter
-                className={"flex justify-start sm:justify-start w-[150px]"}
-              >
-                <DialogClose asChild>
-                  <Button type="button" className="botona w-full text-white">
-                    Close
-                  </Button>
-                </DialogClose>
-              </DialogFooter>
-            </DialogContent>
-          </Dialog>
-          <Dialog className="w-full">
-            <DialogTrigger asChild>
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/3.png`}
-                className="relative border-[3px] border-[#E2E2E2] w-[280px] ml-[-50px] rotate-[-5deg] hover:rotate-0 hover:z-[3] hover:w-[320px] transition-all duration-[0.8] ease-in-out cursor-pointer"
-              ></img>
-            </DialogTrigger>
-            <DialogContent className="max-w-[40%]  p-[20px] gap-0">
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/3.png`}
-                className=" py-[20px] w-full"
-              ></img>
-              <DialogFooter
-                className={"flex justify-start sm:justify-start w-[150px]"}
-              >
-                <DialogClose asChild>
-                  <Button type="button" className="botona w-full text-white">
-                    Close
-                  </Button>
-                </DialogClose>
-              </DialogFooter>
-            </DialogContent>
-          </Dialog>
-          <Dialog className="w-full">
-            <DialogTrigger asChild>
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/4.png`}
-                className="relative border-[3px] border-[#E2E2E2] w-[280px] ml-[-50px] rotate-3 hover:rotate-0 hover:z-[3] hover:w-[320px] transition-all duration-[0.8] ease-in-out cursor-pointer"
-              ></img>
-            </DialogTrigger>
-            <DialogContent className="max-w-[40%]  p-[20px] gap-0">
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/4.png`}
-                className=" py-[20px] w-full"
-              ></img>
-              <DialogFooter
-                className={"flex justify-start sm:justify-start w-[150px]"}
-              >
-                <DialogClose asChild>
-                  <Button type="button" className="botona w-full text-white">
-                    Close
-                  </Button>
-                </DialogClose>
-              </DialogFooter>
-            </DialogContent>
-          </Dialog>
-          <Dialog className="w-full">
-            <DialogTrigger asChild>
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/5.png`}
-                className="relative border-[3px] border-[#E2E2E2] w-[280px] ml-[-50px] rotate-[-5deg] hover:rotate-0 hover:z-[3] hover:w-[320px] transition-all duration-[0.8] ease-in-out cursor-pointer"
-              ></img>
-            </DialogTrigger>
-            <DialogContent className="max-w-[40%]  p-[20px] gap-0">
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/5.png`}
-                className=" py-[20px] w-full"
-              ></img>
-              <DialogFooter
-                className={"flex justify-start sm:justify-start w-[150px]"}
-              >
-                <DialogClose asChild>
-                  <Button type="button" className="botona w-full text-white">
-                    Close
-                  </Button>
-                </DialogClose>
-              </DialogFooter>
-            </DialogContent>
-          </Dialog>
-          <Dialog className="w-full">
-            <DialogTrigger asChild>
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/6.png`}
-                className="relative border-[3px] border-[#E2E2E2] w-[280px] ml-[-50px] rotate-3 hover:rotate-0 hover:z-[3] hover:w-[320px] transition-all duration-[0.8] ease-in-out cursor-pointer"
-              ></img>
-            </DialogTrigger>
-            <DialogContent className="max-w-[40%]  p-[20px] gap-0">
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/6.png`}
-                className=" py-[20px] w-full"
-              ></img>
-              <DialogFooter
-                className={"flex justify-start sm:justify-start w-[150px]"}
-              >
-                <DialogClose asChild>
-                  <Button type="button" className="botona w-full text-white">
-                    Close
-                  </Button>
-                </DialogClose>
-              </DialogFooter>
-            </DialogContent>
-          </Dialog>
-        </div>
-        <div className="flex flex-row w-full justify-center items-center">
-          <Dialog className="w-full">
-            <DialogTrigger asChild>
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/7.png`}
-                className="relative border-[3px] border-[#E2E2E2] w-[280px] rotate-[-9deg] hover:rotate-0 hover:z-[3] hover:w-[320px] transition-all duration-[0.8] ease-in-out cursor-pointer"
-              ></img>
-            </DialogTrigger>
-            <DialogContent className="max-w-[40%]  p-[20px] gap-0">
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/7.png`}
-                className=" py-[20px] w-full"
-              ></img>
-              <DialogFooter
-                className={"flex justify-start sm:justify-start w-[150px]"}
-              >
-                <DialogClose asChild>
-                  <Button type="button" className="botona w-full text-white">
-                    Close
-                  </Button>
-                </DialogClose>
-              </DialogFooter>
-            </DialogContent>
-          </Dialog>
-          <Dialog className="w-full">
-            <DialogTrigger asChild>
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/8.png`}
-                className="relative border-[3px] border-[#E2E2E2] w-[280px] ml-[-50px] rotate-[4deg] hover:rotate-0 hover:z-[3] hover:w-[320px] transition-all duration-[0.8] ease-in-out cursor-pointer"
-              ></img>
-            </DialogTrigger>
-            <DialogContent className="max-w-[40%]  p-[20px] gap-0">
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/8.png`}
-                className=" py-[20px] w-full"
-              ></img>
-              <DialogFooter
-                className={"flex justify-start sm:justify-start w-[150px]"}
-              >
-                <DialogClose asChild>
-                  <Button type="button" className="botona w-full text-white">
-                    Close
-                  </Button>
-                </DialogClose>
-              </DialogFooter>
-            </DialogContent>
-          </Dialog>
-          <Dialog className="w-full">
-            <DialogTrigger asChild>
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/9.png`}
-                className="relative border-[3px] border-[#E2E2E2] w-[280px] ml-[-50px] rotate-[-5deg] hover:rotate-0 hover:z-[3] hover:w-[320px] transition-all duration-[0.8] ease-in-out cursor-pointer"
-              ></img>
-            </DialogTrigger>
-            <DialogContent className="max-w-[40%]  p-[20px] gap-0">
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/9.png`}
-                className=" py-[20px] w-full"
-              ></img>
-              <DialogFooter
-                className={"flex justify-start sm:justify-start w-[150px]"}
-              >
-                <DialogClose asChild>
-                  <Button type="button" className="botona w-full text-white">
-                    Close
-                  </Button>
-                </DialogClose>
-              </DialogFooter>
-            </DialogContent>
-          </Dialog>
-          <Dialog className="w-full">
-            <DialogTrigger asChild>
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/10.png`}
-                className="relative border-[3px] border-[#E2E2E2] w-[280px] ml-[-50px] rotate-3 hover:rotate-0 hover:z-[3] hover:w-[320px] transition-all duration-[0.8] ease-in-out cursor-pointer"
-              ></img>
-            </DialogTrigger>
-            <DialogContent className="max-w-[40%]  p-[20px] gap-0">
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/10.png`}
-                className=" py-[20px] w-full"
-              ></img>
-              <DialogFooter
-                className={"flex justify-start sm:justify-start w-[150px]"}
-              >
-                <DialogClose asChild>
-                  <Button type="button" className="botona w-full text-white">
-                    Close
-                  </Button>
-                </DialogClose>
-              </DialogFooter>
-            </DialogContent>
-          </Dialog>
-          <Dialog className="w-full">
-            <DialogTrigger asChild>
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/11.png`}
-                className="relative border-[3px] border-[#E2E2E2] w-[280px] ml-[-50px] rotate-[-5deg] hover:rotate-0 hover:z-[3] hover:w-[320px] transition-all duration-[0.8] ease-in-out cursor-pointer"
-              ></img>
-            </DialogTrigger>
-            <DialogContent className="max-w-[40%]  p-[20px] gap-0">
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/11.png`}
-                className=" py-[20px] w-full"
-              ></img>
-              <DialogFooter
-                className={"flex justify-start sm:justify-start w-[150px]"}
-              >
-                <DialogClose asChild>
-                  <Button type="button" className="botona w-full text-white">
-                    Close
-                  </Button>
-                </DialogClose>
-              </DialogFooter>
-            </DialogContent>
-          </Dialog>
-          <Dialog className="w-full">
-            <DialogTrigger asChild>
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/12.png`}
-                className="relative border-[3px] border-[#E2E2E2] w-[280px] ml-[-50px] rotate-3 hover:rotate-0 hover:z-[3] hover:w-[320px] transition-all duration-[0.8] ease-in-out cursor-pointer"
-              ></img>
-            </DialogTrigger>
-            <DialogContent className="max-w-[40%]  p-[20px] gap-0">
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/12.png`}
-                className=" py-[20px] w-full"
-              ></img>
-              <DialogFooter
-                className={"flex justify-start sm:justify-start w-[150px]"}
-              >
-                <DialogClose asChild>
-                  <Button type="button" className="botona w-full text-white">
-                    Close
-                  </Button>
-                </DialogClose>
-              </DialogFooter>
-            </DialogContent>
-          </Dialog>
-        </div>
+        {isMobile2 ? (
+          <Carousel
+            className="relative z-[2] px-[20px]"
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            plugins={[
+              Autoplay({
+                delay: 2000,
+              }),
+            ]}
+          >
+            <CarouselContent className="flex flex-row ">
+              <CarouselItem className=" relative w-full">
+                <img
+                  src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/1.png`}
+                  className="relative cursor-pointer rounded-[20px]"
+                ></img>
+              </CarouselItem>
+              <CarouselItem className=" relative w-full">
+                <img
+                  src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/2.png`}
+                  className="relative cursor-pointer rounded-[20px]"
+                ></img>
+              </CarouselItem>
+              <CarouselItem className=" relative w-full">
+                <img
+                  src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/3.png`}
+                  className="relative cursor-pointer rounded-[20px]"
+                ></img>
+              </CarouselItem>
+              <CarouselItem className=" relative w-full">
+                <img
+                  src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/4.png`}
+                  className="relative cursor-pointer rounded-[20px]"
+                ></img>
+              </CarouselItem>
+              <CarouselItem className=" relative w-full">
+                <img
+                  src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/5.png`}
+                  className="relative cursor-pointer rounded-[20px]"
+                ></img>
+              </CarouselItem>
+              <CarouselItem className=" relative w-full">
+                <img
+                  src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/6.png`}
+                  className="relative cursor-pointer rounded-[20px]"
+                ></img>
+              </CarouselItem>
+              <CarouselItem className=" relative w-full">
+                <img
+                  src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/7.png`}
+                  className="relative cursor-pointer rounded-[20px]"
+                ></img>
+              </CarouselItem>
+              <CarouselItem className=" relative w-full">
+                <img
+                  src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/8.png`}
+                  className="relative cursor-pointer rounded-[20px]"
+                ></img>
+              </CarouselItem>
+              <CarouselItem className=" relative w-full">
+                <img
+                  src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/9.png`}
+                  className="relative cursor-pointer rounded-[20px]"
+                ></img>
+              </CarouselItem>
+              <CarouselItem className=" relative w-full">
+                <img
+                  src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/10.png`}
+                  className="relative cursor-pointer rounded-[20px]"
+                ></img>
+              </CarouselItem>
+              <CarouselItem className=" relative w-full">
+                <img
+                  src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/11.png`}
+                  className="relative cursor-pointer rounded-[20px]"
+                ></img>
+              </CarouselItem>
+              <CarouselItem className=" relative w-full">
+                <img
+                  src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/12.png`}
+                  className="relative cursor-pointer rounded-[20px]"
+                ></img>
+              </CarouselItem>
+            </CarouselContent>
+            {!isMobile && (
+              <>
+                <CarouselPrevious />
+                <CarouselNext />
+              </>
+            )}
+          </Carousel>
+        ) : (
+          <>
+            <div className="flex flex-row w-full justify-center items-center">
+              <Dialog className="w-full bg-black">
+                <DialogTrigger asChild>
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/1.png`}
+                    className="relative border-[3px] border-[#E2E2E2] w-[280px] rotate-[-9deg] hover:rotate-0 hover:z-[3] hover:w-[320px] transition-all duration-[0.8] ease-in-out cursor-pointer"
+                  ></img>
+                </DialogTrigger>
+                <DialogContent className="max-w-[40%]  p-[20px] gap-0 bg-[#141620] border-[2px] border-[#ffffff30]">
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/1.png`}
+                    className=" py-[20px] w-full"
+                  ></img>
+                  <DialogFooter
+                    className={"flex justify-start sm:justify-start w-[150px]"}
+                  >
+                    <DialogClose asChild>
+                      <Button
+                        type="button"
+                        className="botona w-full text-white"
+                      >
+                        Close
+                      </Button>
+                    </DialogClose>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
+              <Dialog className="w-full">
+                <DialogTrigger asChild>
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/2.png`}
+                    className="relative border-[3px] border-[#E2E2E2] w-[280px] ml-[-50px] rotate-[4deg] hover:rotate-0 hover:z-[3] hover:w-[320px] transition-all duration-[0.8] ease-in-out cursor-pointer"
+                  ></img>
+                </DialogTrigger>
+                <DialogContent className="max-w-[40%]  p-[20px] gap-0 bg-[#141620] border-[2px] border-[#ffffff30]">
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/2.png`}
+                    className=" py-[20px] w-full"
+                  ></img>
+                  <DialogFooter
+                    className={"flex justify-start sm:justify-start w-[150px]"}
+                  >
+                    <DialogClose asChild>
+                      <Button
+                        type="button"
+                        className="botona w-full text-white"
+                      >
+                        Close
+                      </Button>
+                    </DialogClose>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
+              <Dialog className="w-full">
+                <DialogTrigger asChild>
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/3.png`}
+                    className="relative border-[3px] border-[#E2E2E2] w-[280px] ml-[-50px] rotate-[-5deg] hover:rotate-0 hover:z-[3] hover:w-[320px] transition-all duration-[0.8] ease-in-out cursor-pointer"
+                  ></img>
+                </DialogTrigger>
+                <DialogContent className="max-w-[40%]  p-[20px] gap-0 bg-[#141620] border-[2px] border-[#ffffff30]">
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/3.png`}
+                    className=" py-[20px] w-full"
+                  ></img>
+                  <DialogFooter
+                    className={"flex justify-start sm:justify-start w-[150px]"}
+                  >
+                    <DialogClose asChild>
+                      <Button
+                        type="button"
+                        className="botona w-full text-white"
+                      >
+                        Close
+                      </Button>
+                    </DialogClose>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
+              <Dialog className="w-full">
+                <DialogTrigger asChild>
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/4.png`}
+                    className="relative border-[3px] border-[#E2E2E2] w-[280px] ml-[-50px] rotate-3 hover:rotate-0 hover:z-[3] hover:w-[320px] transition-all duration-[0.8] ease-in-out cursor-pointer"
+                  ></img>
+                </DialogTrigger>
+                <DialogContent className="max-w-[40%]  p-[20px] gap-0 bg-[#141620] border-[2px] border-[#ffffff30]">
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/4.png`}
+                    className=" py-[20px] w-full"
+                  ></img>
+                  <DialogFooter
+                    className={"flex justify-start sm:justify-start w-[150px]"}
+                  >
+                    <DialogClose asChild>
+                      <Button
+                        type="button"
+                        className="botona w-full text-white"
+                      >
+                        Close
+                      </Button>
+                    </DialogClose>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
+              <Dialog className="w-full">
+                <DialogTrigger asChild>
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/5.png`}
+                    className="relative border-[3px] border-[#E2E2E2] w-[280px] ml-[-50px] rotate-[-5deg] hover:rotate-0 hover:z-[3] hover:w-[320px] transition-all duration-[0.8] ease-in-out cursor-pointer"
+                  ></img>
+                </DialogTrigger>
+                <DialogContent className="max-w-[40%]  p-[20px] gap-0 bg-[#141620] border-[2px] border-[#ffffff30]">
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/5.png`}
+                    className=" py-[20px] w-full"
+                  ></img>
+                  <DialogFooter
+                    className={"flex justify-start sm:justify-start w-[150px]"}
+                  >
+                    <DialogClose asChild>
+                      <Button
+                        type="button"
+                        className="botona w-full text-white"
+                      >
+                        Close
+                      </Button>
+                    </DialogClose>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
+              <Dialog className="w-full">
+                <DialogTrigger asChild>
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/6.png`}
+                    className="relative border-[3px] border-[#E2E2E2] w-[280px] ml-[-50px] rotate-3 hover:rotate-0 hover:z-[3] hover:w-[320px] transition-all duration-[0.8] ease-in-out cursor-pointer"
+                  ></img>
+                </DialogTrigger>
+                <DialogContent className="max-w-[40%]  p-[20px] gap-0 bg-[#141620] border-[2px] border-[#ffffff30]">
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/6.png`}
+                    className=" py-[20px] w-full"
+                  ></img>
+                  <DialogFooter
+                    className={"flex justify-start sm:justify-start w-[150px]"}
+                  >
+                    <DialogClose asChild>
+                      <Button
+                        type="button"
+                        className="botona w-full text-white"
+                      >
+                        Close
+                      </Button>
+                    </DialogClose>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
+            </div>
+            <div className="flex flex-row w-full justify-center items-center">
+              <Dialog className="w-full bg-black">
+                <DialogTrigger asChild>
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/7.png`}
+                    className="relative border-[3px] border-[#E2E2E2] w-[280px] rotate-[-9deg] hover:rotate-0 hover:z-[3] hover:w-[320px] transition-all duration-[0.8] ease-in-out cursor-pointer"
+                  ></img>
+                </DialogTrigger>
+                <DialogContent className="max-w-[40%]  p-[20px] gap-0 bg-[#141620] border-[2px] border-[#ffffff30]">
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/7.png`}
+                    className=" py-[20px] w-full"
+                  ></img>
+                  <DialogFooter
+                    className={"flex justify-start sm:justify-start w-[150px]"}
+                  >
+                    <DialogClose asChild>
+                      <Button
+                        type="button"
+                        className="botona w-full text-white"
+                      >
+                        Close
+                      </Button>
+                    </DialogClose>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
+              <Dialog className="w-full">
+                <DialogTrigger asChild>
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/8.png`}
+                    className="relative border-[3px] border-[#E2E2E2] w-[280px] ml-[-50px] rotate-[4deg] hover:rotate-0 hover:z-[3] hover:w-[320px] transition-all duration-[0.8] ease-in-out cursor-pointer"
+                  ></img>
+                </DialogTrigger>
+                <DialogContent className="max-w-[40%]  p-[20px] gap-0 bg-[#141620] border-[2px] border-[#ffffff30]">
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/8.png`}
+                    className=" py-[20px] w-full"
+                  ></img>
+                  <DialogFooter
+                    className={"flex justify-start sm:justify-start w-[150px]"}
+                  >
+                    <DialogClose asChild>
+                      <Button
+                        type="button"
+                        className="botona w-full text-white"
+                      >
+                        Close
+                      </Button>
+                    </DialogClose>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
+              <Dialog className="w-full">
+                <DialogTrigger asChild>
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/9.png`}
+                    className="relative border-[3px] border-[#E2E2E2] w-[280px] ml-[-50px] rotate-[-5deg] hover:rotate-0 hover:z-[3] hover:w-[320px] transition-all duration-[0.8] ease-in-out cursor-pointer"
+                  ></img>
+                </DialogTrigger>
+                <DialogContent className="max-w-[40%]  p-[20px] gap-0 bg-[#141620] border-[2px] border-[#ffffff30]">
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/9.png`}
+                    className=" py-[20px] w-full"
+                  ></img>
+                  <DialogFooter
+                    className={"flex justify-start sm:justify-start w-[150px]"}
+                  >
+                    <DialogClose asChild>
+                      <Button
+                        type="button"
+                        className="botona w-full text-white"
+                      >
+                        Close
+                      </Button>
+                    </DialogClose>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
+              <Dialog className="w-full">
+                <DialogTrigger asChild>
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/10.png`}
+                    className="relative border-[3px] border-[#E2E2E2] w-[280px] ml-[-50px] rotate-3 hover:rotate-0 hover:z-[3] hover:w-[320px] transition-all duration-[0.8] ease-in-out cursor-pointer"
+                  ></img>
+                </DialogTrigger>
+                <DialogContent className="max-w-[40%]  p-[20px] gap-0 bg-[#141620] border-[2px] border-[#ffffff30]">
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/10.png`}
+                    className=" py-[20px] w-full"
+                  ></img>
+                  <DialogFooter
+                    className={"flex justify-start sm:justify-start w-[150px]"}
+                  >
+                    <DialogClose asChild>
+                      <Button
+                        type="button"
+                        className="botona w-full text-white"
+                      >
+                        Close
+                      </Button>
+                    </DialogClose>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
+              <Dialog className="w-full">
+                <DialogTrigger asChild>
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/11.png`}
+                    className="relative border-[3px] border-[#E2E2E2] w-[280px] ml-[-50px] rotate-[-5deg] hover:rotate-0 hover:z-[3] hover:w-[320px] transition-all duration-[0.8] ease-in-out cursor-pointer"
+                  ></img>
+                </DialogTrigger>
+                <DialogContent className="max-w-[40%]  p-[20px] gap-0 bg-[#141620] border-[2px] border-[#ffffff30]">
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/11.png`}
+                    className=" py-[20px] w-full"
+                  ></img>
+                  <DialogFooter
+                    className={"flex justify-start sm:justify-start w-[150px]"}
+                  >
+                    <DialogClose asChild>
+                      <Button
+                        type="button"
+                        className="botona w-full text-white"
+                      >
+                        Close
+                      </Button>
+                    </DialogClose>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
+              <Dialog className="w-full">
+                <DialogTrigger asChild>
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/12.png`}
+                    className="relative border-[3px] border-[#E2E2E2] w-[280px] ml-[-50px] rotate-3 hover:rotate-0 hover:z-[3] hover:w-[320px] transition-all duration-[0.8] ease-in-out cursor-pointer"
+                  ></img>
+                </DialogTrigger>
+                <DialogContent className="max-w-[40%]  p-[20px] gap-0 bg-[#141620] border-[2px] border-[#ffffff30]">
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/multimedia/gitex/12.png`}
+                    className=" py-[20px] w-full"
+                  ></img>
+                  <DialogFooter
+                    className={"flex justify-start sm:justify-start w-[150px]"}
+                  >
+                    <DialogClose asChild>
+                      <Button
+                        type="button"
+                        className="botona w-full text-white"
+                      >
+                        Close
+                      </Button>
+                    </DialogClose>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

@@ -63,7 +63,7 @@ const Navbar = ({ sections, scrollToSection }) => {
           <div
             tabIndex={0}
             role="button"
-            className="btn btn-ghost lg:hidden"
+            className="btn btn-ghost xl:hidden"
             onClick={toggleDropdown}
           >
             <svg
@@ -105,10 +105,10 @@ const Navbar = ({ sections, scrollToSection }) => {
                         {t(section.name)}
                       </Link>
                     </>
-                  ) : section.id === "media" ? (
+                  ) : section.id === "media" || section.id === "multimedia" ? (
                     <>
                       <Link
-                        onClick={() => setActiveSection("media")}
+                        onClick={() => setActiveSection(section.id)}
                         className="hover:text-[#00FFA3] hover:bg-transparent"
                         to={section.id}
                       >
@@ -138,7 +138,7 @@ const Navbar = ({ sections, scrollToSection }) => {
           />
         </a>
       </div>
-      <div className="navbar-center hidden lg:flex h-fit">
+      <div className="navbar-center hidden xl:flex h-fit">
         <ul className="menu menu-horizontal px-1 text-white h-full  gap-1">
           {sections.map((section) => (
             <li
@@ -154,17 +154,17 @@ const Navbar = ({ sections, scrollToSection }) => {
                 <>
                   <Link
                     onClick={() => setActiveSection("case_studies")}
-                    className={` hover:text-[#00FFA3] hover:bg-transparent bg-none h-full 2xl:text-[18px]`}
+                    className={` hover:text-[#00FFA3] hover:bg-transparent bg-none h-full `}
                     to={section.id}
                   >
                     {t(section.name)}
                   </Link>
                 </>
-              ) : (section.id === "media" || section.id === "multimedia") ? (
+              ) : section.id === "media" || section.id === "multimedia" ? (
                 <>
                   <Link
                     onClick={() => setActiveSection(section.id)}
-                    className={` hover:text-[#00FFA3] hover:bg-transparent bg-none h-full 2xl:text-[18px]`}
+                    className={` hover:text-[#00FFA3] hover:bg-transparent bg-none h-full`}
                     to={section.id}
                   >
                     {t(section.name)}
@@ -175,7 +175,7 @@ const Navbar = ({ sections, scrollToSection }) => {
                   <Link
                     to={`/#${section.id}`}
                     onClick={() => setActiveSection(section.id)}
-                    className={`active:bg-transparent active:text-[#00FFA3] hover:text-[#00FFA3] hover:bg-transparent bg-none h-full 2xl:text-[18px] bg-[#171616] rounded-[20px] border-b-2 border-[#00FFA3] p-[10px] `}
+                    className={`active:bg-transparent active:text-[#00FFA3] hover:text-[#00FFA3] hover:bg-transparent bg-none h-full  bg-[#171616] rounded-[20px] border-b-2 border-[#00FFA3] p-[10px] `}
                   >
                     {t(section.name)}
                   </Link>
@@ -184,7 +184,7 @@ const Navbar = ({ sections, scrollToSection }) => {
                 <Link
                   to={`/#${section.id}`}
                   onClick={() => setActiveSection(section.id)}
-                  className={`active:bg-transparent active:text-[#00FFA3] hover:text-[#00FFA3] hover:bg-transparent bg-none h-full 2xl:text-[18px]`}
+                  className={`active:bg-transparent active:text-[#00FFA3] hover:text-[#00FFA3] hover:bg-transparent bg-none h-full `}
                 >
                   {t(section.name)}
                 </Link>
