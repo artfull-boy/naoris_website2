@@ -79,10 +79,10 @@ const Advisors = () => {
                     <div className="card_background w-full h-[500px] absolute bottom-[-20%] right-0 z-[1]"></div>
                     <div className="card_content absolute bottom-[0%] left-0 w-full h-full p-3 z-[1] flex flex-col gap-3 justify-end ">
                       <div className="flex flex-col gap-1">
-                        <p className="text-[30px] font-bold text-white leading-none ">
+                        <p className="text-[30px] font-bold text-black leading-none ">
                           {member.name}
                         </p>
-                        <p className="text-[23px] font-medium text-white ">
+                        <p className="text-[23px] font-medium text-black ">
                           {member.position}
                         </p>
                       </div>

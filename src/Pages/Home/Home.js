@@ -45,13 +45,13 @@ const Home = () => {
 
       <div
         id="services"
-        className="relative flex flex-col gap-[54px] bg-[#0A0D17] pt-[500px]"
+        className="relative flex flex-col gap-[54px] bg-[#0A0D17] pt-[500px] vsm:pt-[100px]"
       >
         <img
           src={`${process.env.PUBLIC_URL}/assets/planet.svg`}
           alt="World Shape"
           width={600}
-          className="absolute left-0 top-[-8%]"
+          className="absolute left-0 top-[-8%] vsm:hidden"
         ></img>
         <img
           src={`${process.env.PUBLIC_URL}/assets/shape.svg`}
@@ -77,7 +77,7 @@ const Home = () => {
           src={`${process.env.PUBLIC_URL}/assets/team_back.svg`}
           alt="World Shape"
           width={800}
-          className="absolute right-[0%] top-[-20%]"
+          className="absolute right-[0%] top-[-20%] vsm:top-[-10%]"
         ></img>
         <img
           src={`${process.env.PUBLIC_URL}/assets/big_stars.svg`}

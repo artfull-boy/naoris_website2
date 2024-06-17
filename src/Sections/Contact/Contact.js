@@ -103,7 +103,7 @@ const Contact = () => {
 
         {isMobile ? (
           <div
-            className={`flex relative items-center flex-col gap-8 bg-[#FEFFFF04] border-[2.41px] border-[#0A0D1705] rounded-[15px] border-solid px-[70px] py-[50px]`}
+            className={`flex relative items-center flex-col gap-8 bg-[#FEFFFF04] border-[2.41px] border-[#0A0D1705] rounded-[15px] border-solid px-[20px] py-[30px]`}
           >
             <motion.img
               initial={{ opacity: 0, x: 300 }}

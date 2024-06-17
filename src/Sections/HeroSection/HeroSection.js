@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import "./herosection.css";
 
@@ -19,22 +19,20 @@ const HeroSection = () => {
 
   return (
     <div className="overflow-hidden w-[100%] h-[100vh] flex flex-col justify-center relative items-center gap-4">
-      <img
-        src={`${process.env.PUBLIC_URL}/assets/eclipse_red.png`}
-        alt="eclipse"
-        className="absolute w-[650px] object-fit right-0 top-0"
-      />
       <video
-      style={{ width: "100%", height: "100vh" }}
-      loop={true}
-      autoPlay
-      muted
-      playsInline 
-      className="absolute left-0 top-[0px] object-cover w-full z-0 opacity-70"
-    >
-      <source src={`${process.env.PUBLIC_URL}/assets/videoplayback.mp4`} type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
+        style={{ width: "100%", height: "100vh" }}
+        loop={true}
+        autoPlay
+        muted
+        playsInline
+        className="absolute left-0 top-[0px] object-cover w-full z-0 opacity-70"
+      >
+        <source
+          src={`${process.env.PUBLIC_URL}/assets/videoplayback.mp4`}
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
       <motion.div
         initial="hidden"
         whileInView="visible"
