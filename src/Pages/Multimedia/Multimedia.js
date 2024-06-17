@@ -52,7 +52,7 @@ const Multimedia = () => {
       <div className="flex w-full justify-between items-center z-[2]">
         <div className="border-lef border-l-[5px] border-[#00FFA3]">
           <p className=" usecase_size:hidden text-white uppercase vsm:text-[20px] font-bold text-[40px] pl-[37px] leading-normal tracking-[16px]">
-            {t("Multimedia Library")}
+            {t("MultiMedia Library")}
           </p>
           <p className="hidden usecase_size:block text-white uppercase vsm:text-[20px] font-bold text-[40px] pl-[37px] leading-normal tracking-[16px]">
             {t("Multi")} {t("media")} {t("Library")}

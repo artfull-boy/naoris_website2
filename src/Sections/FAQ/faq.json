@@ -23,20 +23,20 @@
         "id": 6,
         "question": "What kind of organizations can benefit from Naoris Consulting?",
         "reponse": "Naoris Consulting can assist a wide range of organizations including: Governments: Enhancing national security, streamlining public services, and supporting smart governance models.Educational Institutions: Securing personal and research data, improving operational efficiencies.Healthcare Providers: Protecting sensitive health data and optimizing service delivery.Non-Profit Organizations: Ensuring transparency and trust in transactions and donations.Private Corporations: Protecting intellectual property, ensuring operational resilience, and leveraging blockchain for supply chain management"
-      },      
-    {
-        "id":7,
-        "question":"What distinct approach does Naoris Consulting bring to the table?",
-        "reponse":"Naoris Consulting distinguishes itself by fusing blockchain and Swarm AI with cybersecurity foundations, focusing on craTing decentralized, innovative, secure, and cost-effective solutions.This forward-thinking methodology ensures that organizations are well-equipped for the digital era."
     },
     {
-        "id":8,
-        "question":" How does Naoris Consulting cater to scalability in its solutions?",
-        "reponse":"The solutions are innately scalable, designed to adapt to organizational growth. The decentralized nature of Naoris technology grants the flexibility and operational scalability that organizations need to expand and evolve."
+        "id": 7,
+        "question": "What distinct approach does Naoris Consulting bring to the table?",
+        "reponse": "Naoris Consulting distinguishes itself by fusing blockchain and Swarm AI with cybersecurity foundations, focusing on craTing decentralized, innovative, secure, and cost-effective solutions.This forward-thinking methodology ensures that organizations are well-equipped for the digital era."
     },
     {
-        "id":9,
-        "question":"Where can organizations learn more about implementing Naoris Consulting solutions?",
-        "reponse":"Organizations interested in learning more about implementing our solutions can contact us directly through our website. Our team is ready to provide detailed information and guidance on how Naoris technologies can be tailored to specific organizational needs and objectives."
+        "id": 8,
+        "question": "How does Naoris Consulting cater to scalability in its solutions?",
+        "reponse": "The solutions are innately scalable, designed to adapt to organizational growth. The decentralized nature of Naoris technology grants the flexibility and operational scalability that organizations need to expand and evolve."
+    },
+    {
+        "id": 9,
+        "question": "Where can organizations learn more about implementing Naoris Consulting solutions?",
+        "reponse": "Organizations interested in learning more about implementing our solutions can contact us directly through our website. Our team is ready to provide detailed information and guidance on how Naoris technologies can be tailored to specific organizational needs and objectives."
     }
 ]

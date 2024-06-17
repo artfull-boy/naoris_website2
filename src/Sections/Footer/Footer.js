@@ -14,7 +14,9 @@ const Footer = ({ scrollToSection }) => {
           alt="Logo Footer"
         ></img>
         <div className="flex flex-col gap-4 items-start w-[240px] vsm:w-full vsm:items-center">
-          <p className="font-bold text-[16px] text-white">Our Services</p>
+          <p className="font-bold text-[16px] text-white">
+            {t("Our Services")}
+          </p>
           <Link
             to={"/"}
             onClick={() => scrollToSection("services")}
@@ -66,7 +68,7 @@ const Footer = ({ scrollToSection }) => {
           </Link>
         </div>
         <div className="flex flex-col gap-4 items-start w-[240px] vsm:w-full  vsm:items-center">
-          <p className="font-bold text-[16px] text-white">Use Cases</p>
+          <p className="font-bold text-[16px] text-white">{t("Use Cases")}</p>
           <Link
             to={"/case_studies/1"}
             className="font-normal cursor-pointer text-[14px] text-[#ffffff80] hover:text-[#00FFA3]"
@@ -106,7 +108,7 @@ const Footer = ({ scrollToSection }) => {
         </div>
         <div className="flex flex-col gap-4 items-start w-[240px] vsm:w-full  vsm:items-center">
           <p className="font-bold text-[16px] text-white">
-            They Spoke About US
+            {t("They Spoke About Us")}
           </p>
           <Link
             to={"media"}
@@ -124,7 +126,9 @@ const Footer = ({ scrollToSection }) => {
           </Link>
         </div>
         <div className="flex flex-col gap-4 items-start w-[240px] vsm:w-full  vsm:items-center">
-          <p className="font-bold text-[16px] text-white">MultiMedia Library</p>
+          <p className="font-bold text-[16px] text-white">
+            {t("MultiMedia Library")}
+          </p>
           <Link
             to={"multimedia"}
             onClick={() => scrollToSection("gitex")}
