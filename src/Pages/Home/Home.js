@@ -9,8 +9,10 @@ import About from "../../Sections/About/About";
 import Services from "../../Sections/Services/Services";
 import Contact from "../../Sections/Contact/Contact";
 import Kjell from "../../Sections/Testimonials/Kjell";
+import { Player } from "@lottiefiles/react-lottie-player";
 
 const Home = () => {
+ 
   useEffect(() => {
     // Scroll to the section specified in the URL fragment
     const sectionId = window.location.hash.substring(1); // Get the section ID from the URL fragment
@@ -26,6 +28,7 @@ const Home = () => {
   }, []);
   return (
     <div className="flex flex-col relative overflow-hidden pb-10 bg-[#0A0D17]">
+      
       <div className="relative flex flex-col gap-[54px] bg-[#0A0D17]" id="home">
         <HeroSection />
       </div>

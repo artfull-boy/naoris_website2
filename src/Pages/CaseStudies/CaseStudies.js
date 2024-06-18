@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./caseStudies.css";
 import { Player } from "@lottiefiles/react-lottie-player";
@@ -7,17 +7,6 @@ import { useTranslation } from "react-i18next";
 
 const CaseStudies = () => {
   const { t, i18n } = useTranslation();
-  const [isMobile, setIsMobile] = useState(
-    typeof window !== "undefined" && window.innerWidth <= 700
-  );
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 700);
-    };
-
-    window.addEventListener("resize", handleResize);
-  }, []);
 
   return (
     <div
@@ -27,6 +16,10 @@ const CaseStudies = () => {
       <img
         src={`${process.env.PUBLIC_URL}/assets/stars.svg`}
         className="absolute left-0 top-0"
+      ></img>
+      <img
+        src={`${process.env.PUBLIC_URL}/assets/stars.svg`}
+        className="absolute left-0 bottom-0"
       ></img>
       <div className="flex w-full justify-between items-center z-[2]">
         <div className="border-lef border-l-[5px] border-[#00FFA3]">

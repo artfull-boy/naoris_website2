@@ -18,7 +18,7 @@ import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n";
 import UseCase from "./Pages/UseCase/UseCase";
 import Multimedia from "./Pages/Multimedia/Multimedia";
-
+import { Player } from "@lottiefiles/react-lottie-player";
 function App() {
   // Reset scrolling when route changes
   const ScrollToTop = () => {
@@ -57,6 +57,9 @@ function App() {
     { id: "contact", name: "Contact Us" },
   ];
 
+  const goUp = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   const scrollToSection = (sectionId) => {
     if (
       window.location.href === "/case_studies" ||
@@ -79,6 +82,17 @@ function App() {
   return (
     <I18nextProvider i18n={i18n}>
       <Router>
+      <div
+        className="fixed bottom-[50px] right-[50px] size-[70px] rounded-[50%] bg-white z-[10] cursor-pointer overflow-hidden vsm:bottom-[40px] vsm:right-[20px]"
+        onClick={goUp}
+      >
+        <Player
+          autoplay
+          loop
+          src="https://lottie.host/0dc5f333-6b40-4dc3-866e-5b463d7a3d84/sXXy2LCV0y.json"
+          className="size-[60px]"
+        ></Player>
+      </div>
         <ScrollToTop />
 
         <Navbar sections={sections} scrollToSection={scrollToSection} />

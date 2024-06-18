@@ -1,0 +1,139 @@
+[
+    {
+        "name": "gitex",
+        "logo": "gitex/gitex.png",
+        "date": "29/05/2024 - 31/05/2024",
+        "thumbnail": "gitex/thumbnail.png",
+        "video": "gitex/video.mp4",
+        "pictures": [
+            "gitex/1.png",
+            "gitex/2.png",
+            "gitex/3.png",
+            "gitex/4.png",
+            "gitex/5.png",
+            "gitex/6.png",
+            "gitex/7.png",
+            "gitex/8.png",
+            "gitex/9.png",
+            "gitex/10.png",
+            "gitex/11.png",
+            "gitex/12.png"
+        ],
+        "picturesWeb": {
+            "pictures1": [
+                "gitex/1.png",
+                "gitex/2.png",
+                "gitex/3.png",
+                "gitex/4.png",
+                "gitex/5.png",
+                "gitex/6.png"
+            ],
+            "pictures2": [
+                "gitex/7.png",
+                "gitex/8.png",
+                "gitex/9.png",
+                "gitex/10.png",
+                "gitex/11.png",
+                "gitex/12.png"
+            ],
+            "pictures3": [],
+            "pictures4": [],
+            "pictures5": []
+        }
+    },
+    {
+        "name": "opening",
+        "logo": "",
+        "date": "18/04/2024",
+        "thumbnail": "opening/thumbnail.png",
+        "video": "opening/video.mp4",
+        "pictures": [
+            "opening/1.jpg",
+            "opening/2.jpg",
+            "opening/3.jpg",
+            "opening/4.jpg",
+            "opening/5.jpg",
+            "opening/6.jpg",
+            "opening/7.jpg",
+            "opening/8.jpg",
+            "opening/9.jpg",
+            "opening/10.jpg",
+            "opening/11.jpg",
+            "opening/12.jpg",
+            "opening/13.jpg",
+            "opening/14.jpg",
+            "opening/15.jpg",
+            "opening/16.jpg",
+            "opening/17.jpg",
+            "opening/18.jpg",
+            "opening/19.jpg",
+            "opening/20.jpg",
+            "opening/21.jpg",
+            "opening/22.jpg",
+            "opening/23.jpg",
+            "opening/24.jpg",
+            "opening/25.jpg",
+            "opening/26.jpg",
+            "opening/27.jpg",
+            "opening/28.jpg",
+            "opening/29.jpg",
+            "opening/30.jpg",
+            "opening/31.jpg",
+            "opening/32.jpg",
+            "opening/33.jpg",
+            "opening/34.jpg",
+            "opening/35.jpg",
+            "opening/36.jpg"
+        ],
+        "picturesWeb": {
+            "pictures1": [
+                "opening/1.jpg",
+                "opening/2.jpg",
+                "opening/3.png",
+                "opening/4.jpg",
+                "opening/5.jpg",
+                "opening/6.jpg"
+            ],
+            "pictures2": [
+                "opening/7.jpg",
+                "opening/8.jpg",
+                "opening/9.jpg",
+                "opening/10.jpg",
+                "opening/11.jpg",
+                "opening/12.jpg"
+            ],
+            "pictures3": [
+                "opening/13.jpg",
+                "opening/14.jpg",
+                "opening/15.jpg",
+                "opening/16.jpg",
+                "opening/17.jpg",
+                "opening/18.jpg"
+            ],
+            "pictures4": [
+                "opening/19.jpg",
+                "opening/20.jpg",
+                "opening/21.jpg",
+                "opening/22.jpg",
+                "opening/23.jpg",
+                "opening/24.jpg"
+            ],
+            "pictures5": [
+                "opening/25.jpg",
+                "opening/26.jpg",
+                "opening/27.jpg",
+                "opening/28.jpg",
+                "opening/29.jpg",
+                "opening/30.png"
+            ],
+            "pictures6": [
+                "opening/31.jpg",
+                "opening/32.jpg",
+                "opening/33.jpg",
+                "opening/34.jpg",
+                "opening/35.jpg",
+                "opening/36.jpg"
+            ]
+        }
+    }
+]

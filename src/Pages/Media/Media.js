@@ -257,7 +257,7 @@ const Media = () => {
             ))}
           </div>
         </div>
-        <hr className="bg-[#00ffa3] w-[4px] rounded-lg h-[2780px] relative z-[2] media:block hidden"></hr>
+        <hr className="seperator w-[4px] rounded-lg h-[2780px] relative z-[2] media:block hidden"></hr>
         {!isMobile2 && (
           <div className="relative z-[2] flex flex-col gap-[23px] w-[25%] h-fit items-end ">
             {socialMedia.map((post) => (
@@ -487,35 +487,36 @@ const Media = () => {
             </div>
           </div>
         </div>
-        <hr className="bg-[#00ffa3] w-[4px] rounded-lg h-[3950px] relative z-[2] media:block hidden"></hr>
+        <hr className="seperator w-[4px] rounded-lg h-[3750px] relative z-[2] media:block hidden"></hr>
         {!isMobile2 && (
           <div className="relative z-[2] flex flex-col gap-[23px] w-[25%] h-fit items-end">
-            {socialMedia.map((post) => (
-              <a href={post.link} target="_blank">
-                {post.company == "Naoris Protocol" && (
-                  <div className="w-[340px] h-[319px] flex flex-col gap-[14px] rounded-[20px] bg-white  relative">
-                    <img
-                      className="w-full h-[176] rounded-t-[20px]"
-                      src={`${process.env.PUBLIC_URL}${post.cover}.png`}
-                    ></img>
-                    <p className="text-black text-[14px] font-normal text-justify px-[14px]">
-                      {post.desc}
-                    </p>
-                    {post.platform == "Youtube" ? (
+            {socialMedia.map(
+              (post) =>
+                post.company == "Naoris Protocol" && (
+                  <a href={post.link} target="_blank">
+                    <div className="w-[340px] h-[319px] flex flex-col gap-[14px] rounded-[20px] bg-white  relative">
                       <img
-                        src={`${process.env.PUBLIC_URL}/assets/media/socialmedia/youtube.png`}
-                        className="w-[60px] h-[60px] absolute left-[14px] bottom-0"
+                        className="w-full h-[176] rounded-t-[20px]"
+                        src={`${process.env.PUBLIC_URL}${post.cover}.png`}
                       ></img>
-                    ) : (
-                      <img
-                        src={`${process.env.PUBLIC_URL}/assets/media/socialmedia/linkedin.png`}
-                        className="w-[30px] h-[30px] absolute left-[14px] bottom-2"
-                      ></img>
-                    )}
-                  </div>
-                )}
-              </a>
-            ))}
+                      <p className="text-black text-[14px] font-normal text-justify px-[14px]">
+                        {post.desc}
+                      </p>
+                      {post.platform == "Youtube" ? (
+                        <img
+                          src={`${process.env.PUBLIC_URL}/assets/media/socialmedia/youtube.png`}
+                          className="w-[60px] h-[60px] absolute left-[14px] bottom-0"
+                        ></img>
+                      ) : (
+                        <img
+                          src={`${process.env.PUBLIC_URL}/assets/media/socialmedia/linkedin.png`}
+                          className="w-[30px] h-[30px] absolute left-[14px] bottom-2"
+                        ></img>
+                      )}
+                    </div>
+                  </a>
+                )
+            )}
           </div>
         )}
       </div>
