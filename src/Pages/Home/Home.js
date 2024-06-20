@@ -12,7 +12,6 @@ import Kjell from "../../Sections/Testimonials/Kjell";
 import { Player } from "@lottiefiles/react-lottie-player";
 
 const Home = () => {
- 
   useEffect(() => {
     // Scroll to the section specified in the URL fragment
     const sectionId = window.location.hash.substring(1); // Get the section ID from the URL fragment
@@ -28,7 +27,6 @@ const Home = () => {
   }, []);
   return (
     <div className="flex flex-col relative overflow-hidden pb-10 bg-[#0A0D17]">
-      
       <div className="relative flex flex-col gap-[54px] bg-[#0A0D17]" id="home">
         <HeroSection />
       </div>
@@ -38,7 +36,7 @@ const Home = () => {
         className="relative flex flex-col gap-[100px] p-0 m-0 bg-[#0A0D17]"
       >
         <img
-          src={`${process.env.PUBLIC_URL}/assets/stars.svg`}
+          src={`${process.env.PUBLIC_URL}/assets/Stars3.svg`}
           className="absolute top-0 left-0 w-full"
         ></img>
         <David />
@@ -64,12 +62,8 @@ const Home = () => {
         ></img>
         <Services />
         <img
-          src={`${process.env.PUBLIC_URL}/assets/stars.svg`}
+          src={`${process.env.PUBLIC_URL}/assets/Stars6.svg`}
           className="absolute top-0 left-0 w-full"
-        ></img>
-        <img
-          src={`${process.env.PUBLIC_URL}/assets/stars.svg`}
-          className="absolute bottom-[-10%] left-0 w-full"
         ></img>
       </div>
       <div
