@@ -48,8 +48,8 @@
         "thumbnail": "opening/thumbnail.png",
         "video": "opening/video.mp4",
         "pictures": [
-            "opening/broken/1.jpg",
-            "opening/broken/2.jpg",
+            "opening/broken/1.png",
+            "opening/broken/2.png",
             "opening/3.png",
             "opening/broken/4.jpg",
             "opening/broken/5.jpg",
@@ -87,8 +87,8 @@
         ],
         "picturesWeb": {
             "pictures1": [
-                "opening/broken/1.jpg",
-                "opening/broken/2.jpg",
+                "opening/broken/1.png",
+                "opening/broken/2.png",
                 "opening/3.png",
                 "opening/broken/4.jpg",
                 "opening/broken/5.jpg",
