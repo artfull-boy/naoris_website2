@@ -79,7 +79,10 @@ const Multimedia = () => {
           <div className="flex flex-row justify-between items-center w-full">
             <div className="line_design w-[40%] h-[1px] rotate-180"></div>
             {event.logo == "" ? (
-              <p>Test</p>
+              <p className="text-[24px] text-white font-bold text-center">
+                <span className="text-[#3A9994]">Official Launch</span> <br />{" "}
+                Event of Naoris <br /> in Africa
+              </p>
             ) : (
               <img
                 src={`${process.env.PUBLIC_URL}/assets/multimedia/${event.logo}`}
