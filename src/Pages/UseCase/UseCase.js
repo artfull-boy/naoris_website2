@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { Player } from "@lottiefiles/react-lottie-player";
@@ -7,14 +7,17 @@ import "./usecase.css";
 import { useTranslation } from "react-i18next";
 
 const UseCase = () => {
-  const { t, i18n } = useTranslation();
   const { id } = useParams();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]); // Add 'id' as a dependency to ensure it runs when the id changes
+  const { t, i18n } = useTranslation();
   const usecase_elem = useCases.find((item) => item.id == id);
   return (
     <div className="media overflow-hidden flex flex-col justify-start w-full relative items-center gap-8 container z-[2] pb-[190px] h-fit pt-24 bg-[#0A0D17]">
       <div className="flex w-full justify-between items-center z-[2]">
         <div className="flex gap-2 items-center">
-          <Link className="vsm:w-[60px]" to={"/case_studies"}>
+          <Link className="vsm:w-[60px] w-[70px]" to={"/case_studies"}>
             <img
               src={`${process.env.PUBLIC_URL}/assets/Line.png`}
               className="vsm:w-[60px]"

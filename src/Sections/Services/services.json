@@ -1,21 +1,15 @@
 [
     {
-        "title":"Audits and Evaluations",
-        "desc":"Naoris Consulting specializes in conducting comprehensive audits of information systems and cybersecurity. Our approach leverages the Naoris Protocol to assess the current state, identify areas for improvement, and ensure secure operations. By utilizing blockchain and Swarm AI, we provide quantum-resistant security measures and instant threat detection, establishing a foundation for trust and transparency in your digital environment.",
+        "title":"Artificial Intelligence and Data Analysis",
+        "desc":"We integrate our Swarm AI to enhance decision-making, optimize operations, and bolster security. Naoris Consulting's approach to Swarm AI and data analysis not only provides insights and efficiencies but does so with a level of security and accountability unmatched by traditional models, thanks to our decentralized and blockchain-based solutions",
         "position":"Left",
-        "image":"s1.png"
+        "image":"s7.png"
     },
     {
         "title":"Digital Strategy and Cybersecurity",
         "desc":"We offer consulting services designed to seamlessly integrate new technologies and security measures into your organization's digital transformation and innovation efforts. Naoris Consulting utilizes the Naoris Protocol to develop digital roadmaps that are not only secure but also leverage the decentralized and accountable framework provided by blockchain technology. This strategy ensures your digital strategy is future-proof and aligned with cutting-edge cybersecurity practices.",
         "position":"Right",
         "image":"s2.png"
-    },
-    {
-        "title":"Risk Management and Compliance",
-        "desc":"Our risk management and compliance services are tailored to assess risks and ensure adherence to current regulations. By incorporating the Naoris Protocol, Naoris Consulting supports your security and innovation initiatives, providing a scalable and economically efficient approach to managing risk and maintaining compliance in an ever-evolving digital landscape.",
-        "position":"Left",
-        "image":"s3.png"
     },
     {
         "title":"Solutions Architecture",
@@ -30,15 +24,22 @@
         "image":"s5.png"
     },
     {
+        "title":"Audits and Evaluations",
+        "desc":"Naoris Consulting specializes in conducting comprehensive audits of information systems and cybersecurity. Our approach leverages the Naoris Protocol to assess the current state, identify areas for improvement, and ensure secure operations. By utilizing blockchain and Swarm AI, we provide quantum-resistant security measures and instant threat detection, establishing a foundation for trust and transparency in your digital environment.",
+        "position":"Left",
+        "image":"s1.png"
+    },
+    {
+        "title":"Risk Management and Compliance",
+        "desc":"Our risk management and compliance services are tailored to assess risks and ensure adherence to current regulations. By incorporating the Naoris Protocol, Naoris Consulting supports your security and innovation initiatives, providing a scalable and economically efficient approach to managing risk and maintaining compliance in an ever-evolving digital landscape.",
+        "position":"Left",
+        "image":"s3.png"
+    },
+    {
         "title":"Training and Awareness",
         "desc":"Our custom training programs are designed to develop cybersecurity and digital technology skills within your organization. Naoris Consulting emphasizes the importance of a security and innovation culture, preparing your team to leverage and manage the advanced capabilities provided by blockchain and Swarm AI technologies effectively.",
         "position":"Right",
         "image":"s6.png"
-    },
-    {
-        "title":"Artificial Intelligence and Data Analysis",
-        "desc":"We integrate our Swarm AI to enhance decision-making, optimize operations, and bolster security. Naoris Consulting's approach to Swarm AI and data analysis not only provides insights and efficiencies but does so with a level of security and accountability unmatched by traditional models, thanks to our decentralized and blockchain-based solutions",
-        "position":"Left",
-        "image":"s7.png"
     }
+    
 ]

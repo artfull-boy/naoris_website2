@@ -7,7 +7,9 @@ import { useTranslation } from "react-i18next";
 
 const CaseStudies = () => {
   const { t, i18n } = useTranslation();
-
+  const goUp = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
     <div
       id="case_studies"
@@ -41,6 +43,7 @@ const CaseStudies = () => {
           <Link
             className="group usecase_size:w-[90%] w-[40%]"
             to={`${usecase.id}`}
+            onClick={goUp}
           >
             <div className="flex relative flex-col w-[100%] gap-[13px] ">
               <img

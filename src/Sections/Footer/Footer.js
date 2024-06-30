@@ -136,6 +136,13 @@ const Footer = ({ scrollToSection }) => {
           >
             Gitex Africa 2024
           </Link>
+          <Link
+            to={"multimedia"}
+            onClick={() => scrollToSection("openning")}
+            className="font-normal cursor-pointer text-[14px] text-[#ffffff80] hover:text-[#00FFA3]"
+          >
+            Launch Event of Naoris
+          </Link>
         </div>
       </div>
       <p className=" text-[#ffffff50] font-semibold text-[14px] z-[2]">

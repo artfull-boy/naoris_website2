@@ -43,7 +43,7 @@
   bottom: 0%;
 }
 .card:hover .card_content {
-  bottom: -40%;
+  bottom: -20%;
 }
 .card:hover .card_content2 {
   bottom: 0%;

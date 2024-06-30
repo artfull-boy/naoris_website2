@@ -56,7 +56,7 @@ const Multimedia = () => {
       <div className="flex w-full justify-between items-center z-[2]">
         <div className="border-lef border-l-[5px] border-[#00FFA3]">
           <p className=" usecase_size:hidden text-white uppercase vsm:text-[20px] font-bold text-[40px] pl-[37px] leading-normal tracking-[16px]">
-            {t("MultiMedia Library")}
+            {t("Multimedia Library")}
           </p>
           <p className="hidden usecase_size:block text-white uppercase vsm:text-[20px] font-bold text-[40px] pl-[37px] leading-normal tracking-[16px]">
             {t("Multi")} {t("media")} {t("Library")}
@@ -73,7 +73,8 @@ const Multimedia = () => {
       </div>
       {MultimediaJson.map((event, index) => (
         <div
-          className="flex flex-col bg-[#ffffff04] border-[2px] border-[#0A0D1705] rounded-[20px] w-full h-full py-[50px] gap-[90px] mt-[90px]"
+          className="flex flex-col bg-[#ffffff04] border-[2px] border-[#0A0D1705] rounded-[20px] w-full h-full py-[50px] gap-[90px] mt-[90px]" 
+          id={`${event.name == "gitex" ? "gitex" : "openning"}`}
           key={index}
         >
           <div className="flex flex-row justify-between items-center w-full">

@@ -1,7 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import teamJson from "./team.json";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import {
   cardContainerVariants,
   cardVariants,
@@ -19,6 +20,13 @@ import Autoplay from "embla-carousel-autoplay";
 import { useTranslation } from "react-i18next";
 
 const Team = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
   const [isMobile, setIsMobile] = useState(
     typeof window !== "undefined" && window.innerWidth <= 1080
   );
@@ -48,6 +56,7 @@ const Team = () => {
           duration: 0.5,
         }}
         viewport={{ once: true }}
+        ref={ref}
       >
         <p className="text-[50px] font-bold text-white text-center vsm:text-[35px]">
           {t("Meet Our Team")}
@@ -108,17 +117,17 @@ const Team = () => {
           className="flex flex-wrap justify-center gap-10"
           variants={cardVariants}
           initial="hidden"
-          whileInView="visible"
           transition={{
             duration: 0.5,
             delayChildren: 0.3,
             delay: 1,
           }}
+          animate={controls}
           viewport={{ once: true }}
         >
           {teamJson.map((member) => (
             <motion.div
-              className="card focus:outline-none w-[417.5px] h-[500px] rounded-[8px] relative  overflow-hidden"
+              className="card focus:outline-none w-[350px] h-[400px] rounded-[8px] relative  overflow-hidden"
               variants={cardContainerVariants}
             >
               <img
@@ -126,7 +135,7 @@ const Team = () => {
                 alt="Team member image"
                 className="relative top-0 right-0 z-0 rounded-[8px] "
               />
-              <div className="card_background rounded-[8px] w-full h-[500px] absolute bottom-[-40%] right-0 z-[1]"></div>
+              <div className="card_background rounded-[8px] w-full h-[400px] absolute bottom-[-40%] right-0 z-[1]"></div>
               <div
                 className={`card_content rounded-[8px] absolute ${
                   member.name === "Réda Belkassem Tamssamani"
@@ -136,15 +145,15 @@ const Team = () => {
               >
                 <div className="flex flex-col gap-1">
                   {member.name === "Réda Belkassem Tamssamani" ? (
-                    <p className="text-[28px] font-bold text-black leading-none whitespace-normal">
+                    <p className="text-[22px] font-bold text-black leading-none whitespace-normal">
                       {member.name}
                     </p>
                   ) : (
-                    <p className="text-[30px] font-bold text-black leading-none whitespace-nowrap">
+                    <p className="text-[22px] font-bold text-black leading-none whitespace-nowrap">
                       {member.name}
                     </p>
                   )}
-                  <p className={`font-medium text-black text-[23px]`}>
+                  <p className={`font-medium text-black text-[20px]`}>
                     {member.position}
                   </p>
                 </div>

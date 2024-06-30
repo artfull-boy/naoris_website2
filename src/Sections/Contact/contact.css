@@ -1,12 +1,12 @@
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    margin: 0; 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
 }
 .botona {
-    border-radius: 10px;
-background: linear-gradient(90deg, #00FFA3 0%, #6729FA 100%);
-width: 80%;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #00ffa3 0%, #6729fa 100%);
+  width: 95%;
 }

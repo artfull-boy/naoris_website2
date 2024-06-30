@@ -23,7 +23,6 @@ function App() {
   // Reset scrolling when route changes
   const ScrollToTop = () => {
     const { pathname } = useLocation();
-    console.log(pathname);
     useEffect(() => {
       document.documentElement.scrollTo({
         top: 0,
@@ -51,7 +50,7 @@ function App() {
     { id: "services", name: "Services" },
     { id: "team", name: "Team" },
     { id: "faq", name: "FAQ" },
-    { id: "media", name: "They Spoke About Us" },
+    { id: "media", name: "They spoke about us" },
     { id: "case_studies", name: "Use Cases" },
     { id: "multimedia", name: "MultiMedia Library" },
     { id: "contact", name: "Contact Us" },
@@ -82,17 +81,17 @@ function App() {
   return (
     <I18nextProvider i18n={i18n}>
       <Router>
-      <div
-        className="fixed bottom-[50px] right-[50px] size-[70px] rounded-[50%] bg-white z-[10] cursor-pointer overflow-hidden vsm:bottom-[40px] vsm:right-[20px]"
-        onClick={goUp}
-      >
-        <Player
-          autoplay
-          loop
-          src="https://lottie.host/0dc5f333-6b40-4dc3-866e-5b463d7a3d84/sXXy2LCV0y.json"
-          className="size-[60px]"
-        ></Player>
-      </div>
+        <div
+          className="fixed bottom-[50px] right-[50px] size-[70px] rounded-[50%] bg-white z-[10] cursor-pointer overflow-hidden vsm:bottom-[40px] vsm:right-[20px]"
+          onClick={goUp}
+        >
+          <Player
+            autoplay
+            loop
+            src="https://lottie.host/0dc5f333-6b40-4dc3-866e-5b463d7a3d84/sXXy2LCV0y.json"
+            className="size-[60px]"
+          ></Player>
+        </div>
         <ScrollToTop />
 
         <Navbar sections={sections} scrollToSection={scrollToSection} />

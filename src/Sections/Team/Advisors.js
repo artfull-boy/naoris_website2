@@ -1,7 +1,8 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import advisorsJson from "./advisors.json";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import {
   cardContainerVariants,
   cardVariants,
@@ -19,6 +20,13 @@ import Autoplay from "embla-carousel-autoplay";
 import { useTranslation } from "react-i18next";
 
 const Advisors = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
   const { t, i18n } = useTranslation();
   const [isMobile, setIsMobile] = React.useState(
     typeof window !== "undefined" && window.innerWidth <= 1080
@@ -47,6 +55,7 @@ const Advisors = () => {
           duration: 0.5,
         }}
         viewport={{ once: true }}
+        ref={ref}
       >
         <p className="text-[50px] font-bold text-white text-center vsm:text-[35px]">
           {t("Meet Our Advisors")}
@@ -79,10 +88,10 @@ const Advisors = () => {
                     <div className="card_background w-full h-[500px] absolute bottom-[-20%] right-0 z-[1]"></div>
                     <div className="card_content absolute bottom-[0%] left-0 w-full h-full p-3 z-[1] flex flex-col gap-3 justify-end ">
                       <div className="flex flex-col gap-1">
-                        <p className="text-[30px] font-bold text-black leading-none ">
+                        <p className="text-[22px] font-bold text-black leading-none ">
                           {member.name}
                         </p>
-                        <p className="text-[23px] font-medium text-black ">
+                        <p className="text-[16px] font-medium text-black ">
                           {member.position}
                         </p>
                       </div>
@@ -117,11 +126,12 @@ const Advisors = () => {
             delay: 1,
           }}
           viewport={{ once: true }}
+          animate={controls}
         >
           {advisorsJson.map((member) => (
             <motion.div
               variants={cardContainerVariants}
-              className="card focus:outline-none rounded-[8px] relative w-[417.5px] h-[500px] overflow-hidden "
+              className="card focus:outline-none rounded-[8px] relative w-[350px] h-[400px] overflow-hidden "
             >
               <img
                 src={`${process.env.PUBLIC_URL}/team/${member.img}`}
@@ -137,12 +147,14 @@ const Advisors = () => {
                 className={`card_content2 rounded-[8px] absolute  left-0 w-full h-full p-3 z-[1] flex flex-col gap-3 justify-end ${
                   member.name == "Zakaria Fahim" ||
                   member.name == "Khalid Bouksib"
-                    ? "bottom-[-28%]"
-                    : "bottom-[-23%]"
+                    ? "bottom-[-35%]"
+                    : member.name == "Salaheddine Mezzouar"
+                    ? "bottom-[-30%]"
+                    : "bottom-[-36%]"
                 } `}
               >
                 <div className="flex flex-col gap-1">
-                  <p className="text-[28px] font-bold text-black leading-none whitespace-nowrap">
+                  <p className="text-[22px] font-bold text-black leading-none whitespace-nowrap">
                     {member.name}
                   </p>
                 </div>
