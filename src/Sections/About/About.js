@@ -88,7 +88,7 @@ const About = () => {
               x: 0,
             }}
             viewport={{ once: true }}
-            className="font-medium text-[25px] vsm:text-[18px] vsm:leading-[40px] text-justify text-white vsm:text-center leading-[60px]"
+            className="font-medium text-[20x] vsm:text-[18px] vsm:leading-[30px] text-justify text-white vsm:text-center leading-[40px]"
           >
             {t(
               "Naoris is an American company founded under a mandate from previous leaders of the North Atlantic Treaty Organization (NATO), whose protocol represents a key solution for sustainable, scalable, interoperable, and secure digitalization suited to future challenges. With several European cities as references, such as Dublin, Rijeka, Zurich, and Vienna under the Smart Cities Initiative, and the telecommunications giant T-Mobile, the company merges blockchain and artificial intelligence (AI) to revolutionize the digital world while offering advanced protection, including against post-quantum threats."

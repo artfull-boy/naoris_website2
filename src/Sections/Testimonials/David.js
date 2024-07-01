@@ -60,7 +60,7 @@ const David = () => {
               <span className="text-white lg:text-[150px] text-[120px] font-normal leading-[0]">
                 “
               </span>
-              <p className="quote text-white font-sans xl:whitespace-nowrap text-[30px] lg:text-left text-justify vsm:text-center">
+              <p className="quote text-white font-sans xl:whitespace-nowrap text-[20px] lg:text-left text-justify vsm:text-center">
                 {t(
                   "As IoT grows, the vulnerabilities grow with it, not linearly, but exponentially. Decentralized Quantum Resistance is a must now, to ensure all secrets and all computing is kept safe into the future"
                 )}
@@ -80,7 +80,7 @@ const David = () => {
               <span className="text-white lg:text-[150px] text-[120px] font-normal leading-[0]">
                 “
               </span>
-              <p className="quote text-white font-sans  xl:whitespace text-[30px] lg:text-left text-justify vsm:text-center">
+              <p className="quote text-white font-sans  xl:whitespace text-[20px] lg:text-left text-justify vsm:text-center">
                 {t(
                   "As IoT grows, the vulnerabilities grow with it, not linearly, but exponentially. Decentralized Quantum Resistance is a must now, to ensure all secrets and all computing is kept safe into the future"
                 )}

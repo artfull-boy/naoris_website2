@@ -87,7 +87,7 @@ const Kjell = () => {
               <span className="text-white 2xl:text-[200px] xl:text-[170px] lg:text-[150px] text-[120px] font-normal leading-[0]">
                 “
               </span>
-              <p className="quote text-white font-sans text-[30px] lg:text-left text-justify vsm:text-center">
+              <p className="quote text-white font-sans text-[20px] lg:text-left text-justify vsm:text-center">
                 {t(
                   "The centralized model where the hacking of a single device that could compromise an entire network is categorically flawed. This needs to change. We don’t need to play a better game against cyber-criminals, we need to play a different game. With Naoris Protocol, there is no single point of failure. Naoris Protocol uses Blockchain technology so that no single device exists in a silo."
                 )}
@@ -107,7 +107,7 @@ const Kjell = () => {
               <span className="text-white lg:text-[150px] text-[120px] font-normal leading-[0]">
                 “
               </span>
-              <p className="quote text-white font-sans text-[30px] lg:text-left text-justify vsm:text-center">
+              <p className="quote text-white font-sans text-[20px] lg:text-left text-justify vsm:text-center">
                 {t(
                   "The centralized model where the hacking of a single device that could compromise an entire network is categorically flawed. This needs to change. We don’t need to play a better game against cyber-criminals, we need to play a different game. With Naoris Protocol, there is no single point of failure. Naoris Protocol uses Blockchain technology so that no single device exists in a silo."
                 )}

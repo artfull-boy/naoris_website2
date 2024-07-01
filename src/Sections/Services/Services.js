@@ -25,7 +25,7 @@ const Services = () => {
           {t("Our Services")}
         </p>
       </motion.div>
-      <div className="flex flex-wrap w-full h-fit justify-between gap-y-[150px] relative z-[2]">
+      <div className="flex flex-wrap w-full h-fit justify-between items-start gap-y-[150px] relative z-[2]">
         {serviceData.map((service, index) => {
           return (
             <div className="flex flex-col gap-[25px] w-[400px] justify-center items-center relative  vsm:z-[2] vsm:w-[100%]">
