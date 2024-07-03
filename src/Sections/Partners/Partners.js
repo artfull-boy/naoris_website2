@@ -15,9 +15,7 @@ const logo3 = `${process.env.PUBLIC_URL}/assets/logos/3.png`;
 const logo4 = `${process.env.PUBLIC_URL}/assets/logos/4.png`;
 const logo5 = `${process.env.PUBLIC_URL}/assets/logos/5.png`;
 const logo6 = `${process.env.PUBLIC_URL}/assets/logos/6.png`;
-const logo7 = `${process.env.PUBLIC_URL}/assets/logos/7.png`;
 const logo8 = `${process.env.PUBLIC_URL}/assets/logos/8.png`;
-const logo9 = `${process.env.PUBLIC_URL}/assets/logos/9.png`;
 const logo10 = `${process.env.PUBLIC_URL}/assets/logos/10.png`;
 const logo11 = `${process.env.PUBLIC_URL}/assets/logos/11.png`;
 const logo12 = `${process.env.PUBLIC_URL}/assets/logos/12.png`;
@@ -40,7 +38,7 @@ const logo28 = `${process.env.PUBLIC_URL}/assets/logos/28.png`;
 const logo29 = `${process.env.PUBLIC_URL}/assets/logos/29.png`;
 const logo30 = `${process.env.PUBLIC_URL}/assets/logos/30.png`;
   const logos = [
-    logo1,logo2,logo3,logo4,logo5,logo6,logo7,logo8,logo9,logo10,logo11,logo12,logo13,logo14,logo15,logo16,logo17,logo18,logo19,logo20,logo21,logo22,logo23,logo24,logo25,logo26,logo27,logo28,logo29,logo30
+    logo1,logo2,logo3,logo4,logo5,logo6,logo8,logo10,logo11,logo12,logo13,logo14,logo15,logo16,logo17,logo18,logo19,logo20,logo21,logo22,logo23,logo24,logo25,logo26,logo27,logo28,logo29,logo30
   ];
 const {t, i18n} = useTranslation();
   return (

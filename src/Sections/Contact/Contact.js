@@ -162,7 +162,7 @@ const Contact = () => {
                   </span>
                 </label>
                 <input
-                  className="text-[#ffffff] bg-[#FEFFFF05] border-[1px] border-[#ffffff20] rounded-[6px] w-full h-[50px]  transition-outline duration-300 outline-none "
+                  className="text-[#ffffff] bg-[#FEFFFF05] border-[1px] border-[#ffffff20] rounded-[6px] w-full h-[50px]  transition-outline duration-300 outline-none p-[10px] "
                   {...register("email", {
                     required: "Email is Required",
                   })}
@@ -187,7 +187,7 @@ const Contact = () => {
                   Phone number{" "}
                 </label>
                 <input
-                  className="text-[#ffffff] bg-[#FEFFFF05] border-[1px] border-[#ffffff20] rounded-[6px] w-full h-[50px]  transition-outline duration-300 outline-none"
+                  className="text-[#ffffff] bg-[#FEFFFF05] border-[1px] border-[#ffffff20] rounded-[6px] w-full h-[50px]  transition-outline duration-300 outline-none p-[10px] "
                   {...register("phone")}
                   type="number"
                   id="phone"
@@ -295,7 +295,7 @@ const Contact = () => {
                   </span>
                 </label>
                 <input
-                  className="p-[10px] text-[#ffffff] bg-[#FEFFFF05] border-[1px] border-[#ffffff20] rounded-[10px] w-full h-[50px]  transition-outline duration-300 outline-none text-black"
+                  className="p-[10px] text-[#ffffff] bg-[#FEFFFF05] border-[1px] border-[#ffffff20] rounded-[10px] w-full h-[50px]  transition-outline duration-300 outline-none"
                   {...register("first_name", {
                     required: "Full Name is Required",
                   })}
@@ -323,7 +323,7 @@ const Contact = () => {
                   </span>
                 </label>
                 <input
-                  className="text-[#ffffff] bg-[#FEFFFF05] border-[1px] border-[#ffffff20] rounded-[6px] w-full h-[50px]  transition-outline duration-300 outline-none text-black"
+                  className="text-[#ffffff] bg-[#FEFFFF05] border-[1px] p-[10px] border-[#ffffff20] rounded-[6px] w-full h-[50px]  transition-outline duration-300 outline-none "
                   {...register("email", {
                     required: "Email is Required",
                   })}
@@ -348,7 +348,7 @@ const Contact = () => {
                   {t("Phone number")}{" "}
                 </label>
                 <input
-                  className="text-[#ffffff] bg-[#FEFFFF05] border-[1px] border-[#ffffff20] rounded-[6px] w-full h-[50px]  transition-outline duration-300 outline-none text-black"
+                  className="text-[#ffffff] bg-[#FEFFFF05] border-[1px] border-[#ffffff20] rounded-[6px] w-full h-[50px]  transition-outline duration-300 outline-none p-[10px]"
                   {...register("phone")}
                   type="number"
                   id="phone"
@@ -374,7 +374,7 @@ const Contact = () => {
                   </span>
                 </label>
                 <input
-                  className="p-[10px] text-[#ffffff] bg-[#FEFFFF05] border-[1px] border-[#ffffff20] rounded-[10px] w-full h-[50px]  transition-outline duration-300 outline-none text-black"
+                  className="p-[10px] text-[#ffffff] bg-[#FEFFFF05] border-[1px] border-[#ffffff20] rounded-[10px] w-full h-[50px]  transition-outline duration-300 outline-none "
                   {...register("subject", { required: "Subject is Required" })}
                   type="text"
                   id="subject"

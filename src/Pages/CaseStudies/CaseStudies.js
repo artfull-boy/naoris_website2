@@ -15,14 +15,12 @@ const CaseStudies = () => {
       id="case_studies"
       className="media overflow-hidden flex flex-col justify-start w-full relative items-center gap-8 pt-24 container z-[2] pb-[190px] h-fit bg-[#0A0D17]"
     >
-      <img
-        src={`${process.env.PUBLIC_URL}/assets/stars.svg`}
-        className="absolute left-0 top-0"
-      ></img>
-      <img
-        src={`${process.env.PUBLIC_URL}/assets/stars.svg`}
-        className="absolute left-0 bottom-0"
-      ></img>
+      <div className="absolute top-0 flex flex-col gap-6 items-center justify-center left-0">
+        <img src={`${process.env.PUBLIC_URL}/assets/Stars.svg`}></img>
+        <img src={`${process.env.PUBLIC_URL}/assets/stars2.svg`}></img>
+        <img src={`${process.env.PUBLIC_URL}/assets/stars4.svg`}></img>
+        <img src={`${process.env.PUBLIC_URL}/assets/stars2.svg`}></img>
+      </div>
       <div className="flex w-full justify-between items-center z-[2]">
         <div className="border-lef border-l-[5px] border-[#00FFA3]">
           <p className="text-white uppercase vsm:text-[25px] font-bold text-[40px] pl-[37px] leading-normal tracking-[16px]">

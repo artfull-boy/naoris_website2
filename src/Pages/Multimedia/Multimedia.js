@@ -49,10 +49,13 @@ const Multimedia = () => {
       id="multimedia"
       className="media overflow-hidden flex flex-col justify-start w-full relative items-center gap-8 pt-24 container z-[2] pb-[190px] h-fit bg-[#0A0D17]"
     >
-      <img
-        src={`${process.env.PUBLIC_URL}/assets/stars.svg`}
-        className="absolute left-0 top-0"
-      ></img>
+      <div className="absolute top-0 flex flex-col gap-6 items-center justify-center left-0">
+        <img src={`${process.env.PUBLIC_URL}/assets/Stars.svg`}></img>
+        <img src={`${process.env.PUBLIC_URL}/assets/stars2.svg`}></img>
+        <img src={`${process.env.PUBLIC_URL}/assets/stars4.svg`}></img>
+        <img src={`${process.env.PUBLIC_URL}/assets/stars2.svg`}></img>
+        <img src={`${process.env.PUBLIC_URL}/assets/Stars6.svg`}></img>
+      </div>
       <div className="flex w-full justify-between items-center z-[2]">
         <div className="border-lef border-l-[5px] border-[#00FFA3]">
           <p className=" usecase_size:hidden text-white uppercase vsm:text-[20px] font-bold text-[40px] pl-[37px] leading-normal tracking-[16px]">
@@ -73,7 +76,7 @@ const Multimedia = () => {
       </div>
       {MultimediaJson.map((event, index) => (
         <div
-          className="flex flex-col bg-[#ffffff04] border-[2px] border-[#0A0D1705] rounded-[20px] w-full h-full py-[50px] gap-[90px] mt-[90px]" 
+          className="flex flex-col bg-[#ffffff04] border-[2px] border-[#0A0D1705] rounded-[20px] w-full h-full py-[50px] gap-[90px] mt-[90px]  z-[2]"
           id={`${event.name == "gitex" ? "gitex" : "openning"}`}
           key={index}
         >

@@ -27,9 +27,12 @@ const Team = () => {
       controls.start("visible");
     }
   }, [controls, inView]);
+
   const [isMobile, setIsMobile] = useState(
     typeof window !== "undefined" && window.innerWidth <= 1080
   );
+
+  const [clicked, setClicked] = useState(Array(teamJson.length).fill(true));
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
@@ -39,6 +42,12 @@ const Team = () => {
 
     window.addEventListener("resize", handleResize);
   }, []);
+
+  const handleCardClick = (index) => {
+    setClicked((prevState) =>
+      prevState.map((state, i) => (i === index ? !state : state))
+    );
+  };
 
   return (
     <div className="container flex-col items-center justify-center gap-[50px]">
@@ -77,20 +86,30 @@ const Team = () => {
         >
           <CarouselContent>
             {teamJson.map((member, index) => (
-              <CarouselItem key={index}>
-                <div className="card rounded-[8px] relative w-[100%] overflow-hidden">
+              <CarouselItem key={index} onClick={() => handleCardClick(index)}>
+                <div className="card_mobile rounded-[8px] relative w-[100%] overflow-hidden">
                   <img
                     src={`${process.env.PUBLIC_URL}/team/${member.img}`}
                     alt="Team member image"
-                    className="relative top-0 right-0 z-0 rounded-[8px]"
+                    className={`relative top-0 right-0 z-0 rounded-[8px] transition-transform duration-300 ${
+                      clicked[index] ? "scale-110" : "scale-100"
+                    }`}
                   />
-                  <div className="card_background w-full h-[500px] absolute bottom-[0%] right-0 z-[1]"></div>
-                  <div className="card_content absolute bottom-[0%] left-0 w-full h-full p-3 z-[1] flex flex-col gap-3 justify-end ">
+                  <div
+                    className={`card_background w-full h-[500px] absolute bottom-[0%] block right-0 z-[1] ${
+                      clicked[index] ? "opacity-0" : "opacity-100"
+                    }`}
+                  ></div>
+                  <div
+                    className={` absolute bottom-[0%] left-0 w-full h-full p-3 z-[1] flex flex-col gap-3 justify-end ${
+                      clicked[index] ? "opacity-0" : "opacity-100"
+                    }`}
+                  >
                     <div className="flex flex-col gap-1">
-                      <p className="text-[30px] font-bold text-black leading-none whitespace-nowrap vsm:text-[23px]">
+                      <p className="text-[30px] font-bold text-white leading-none whitespace-nowrap vsm:text-[23px]">
                         {member.name}
                       </p>
-                      <p className="text-[23px] vsm:text-[15px] font-medium text-black">
+                      <p className="text-[23px] vsm:text-[15px] font-medium text-white">
                         {member.desc}
                       </p>
                     </div>
@@ -125,17 +144,18 @@ const Team = () => {
           animate={controls}
           viewport={{ once: true }}
         >
-          {teamJson.map((member) => (
+          {teamJson.map((member, index) => (
             <motion.div
               className="card focus:outline-none w-[350px] h-[400px] rounded-[8px] relative  overflow-hidden"
               variants={cardContainerVariants}
+              key={index}
             >
               <img
                 src={`${process.env.PUBLIC_URL}/team/${member.img}`}
                 alt="Team member image"
-                className="relative top-0 right-0 z-0 rounded-[8px] "
+                className="relative top-0 right-0 z-0 rounded-[8px]"
               />
-              <div className="card_background rounded-[8px] w-full h-[400px] absolute bottom-[-40%] right-0 z-[1]"></div>
+              <div className="card_background rounded-[8px] w-full absolute right-0 z-[1]"></div>
               <div
                 className={`card_content rounded-[8px] absolute ${
                   member.name === "Réda Belkassem Tamssamani"
@@ -145,22 +165,22 @@ const Team = () => {
               >
                 <div className="flex flex-col gap-1">
                   {member.name === "Réda Belkassem Tamssamani" ? (
-                    <p className="text-[22px] font-bold text-black leading-none whitespace-normal">
+                    <p className="text-[22px] font-bold text-white leading-none whitespace-normal">
                       {member.name}
                     </p>
                   ) : (
-                    <p className="text-[22px] font-bold text-black leading-none whitespace-nowrap">
+                    <p className="text-[22px] font-bold text-white leading-none whitespace-nowrap">
                       {member.name}
                     </p>
                   )}
-                  <p className={`font-medium text-black text-[20px]`}>
+                  <p className={`font-medium text-white text-[20px]`}>
                     {member.position}
                   </p>
                 </div>
-                <p className="text-[15px] font-medium text-black ">
+                <p className="text-[15px] font-medium text-white">
                   {member.desc}
                 </p>
-                <a target="_blank" href={member.linkedin} className="ml-auto ">
+                <a target="_blank" href={member.linkedin} className="ml-auto">
                   <img
                     src={`${process.env.PUBLIC_URL}/team/linkedin.png`}
                     alt="linkedin logo"

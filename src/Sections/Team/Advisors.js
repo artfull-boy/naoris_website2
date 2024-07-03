@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import advisorsJson from "./advisors.json";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -21,6 +21,9 @@ import { useTranslation } from "react-i18next";
 
 const Advisors = () => {
   const controls = useAnimation();
+  const [cardClicked, setCardClicked] = useState(
+    Array(advisorsJson.length).fill(true)
+  );
   const [ref, inView] = useInView();
   useEffect(() => {
     if (inView) {
@@ -31,7 +34,11 @@ const Advisors = () => {
   const [isMobile, setIsMobile] = React.useState(
     typeof window !== "undefined" && window.innerWidth <= 1080
   );
-
+  const handleCardClick = (index) => {
+    setCardClicked((prevState) =>
+      prevState.map((state, i) => (i === index ? !state : state))
+    );
+  };
   React.useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 1080);
@@ -75,23 +82,33 @@ const Advisors = () => {
           ]}
         >
           <CarouselContent>
-            {advisorsJson.map((member) => (
-              <CarouselItem>
+            {advisorsJson.map((member, index) => (
+              <CarouselItem key={index} onClick={() => handleCardClick(index)}>
                 {" "}
                 <div className="w-full justify-center">
-                  <div className="card rounded-[8px] relative w-[100%] overflow-hidden">
+                  <div className="card_mobile max-w-[100%] rounded-[8px] relative w-[100%] overflow-hidden">
                     <img
                       src={`${process.env.PUBLIC_URL}/team/${member.img}`}
                       alt="Advisor member image"
-                      className="relative top-0 right-0 z-0 rounded-[8px]"
+                      className={`relative top-0 right-0 z-0 rounded-[8px] transition-transform duration-300 ${
+                        cardClicked[index] ? "scale-[1.2]" : "scale-110"
+                      }`}
                     />
-                    <div className="card_background w-full h-[500px] absolute bottom-[-20%] right-0 z-[1]"></div>
-                    <div className="card_content absolute bottom-[0%] left-0 w-full h-full p-3 z-[1] flex flex-col gap-3 justify-end ">
+                    <div
+                      className={`card_background w-full h-[500px] absolute bottom-[0%] block right-0 z-[1] ${
+                        cardClicked[index] ? "opacity-0" : "opacity-100"
+                      }`}
+                    ></div>
+                    <div
+                      className={` absolute bottom-[0%] left-0 w-full h-full p-3 z-[1] flex flex-col gap-3 justify-end ${
+                        cardClicked[index] ? "opacity-0" : "opacity-100"
+                      }`}
+                    >
                       <div className="flex flex-col gap-1">
-                        <p className="text-[22px] font-bold text-black leading-none ">
+                        <p className="text-[22px] font-bold text-white leading-none ">
                           {member.name}
                         </p>
-                        <p className="text-[16px] font-medium text-black ">
+                        <p className="text-[16px] font-medium text-white ">
                           {member.position}
                         </p>
                       </div>
@@ -154,12 +171,12 @@ const Advisors = () => {
                 } `}
               >
                 <div className="flex flex-col gap-1">
-                  <p className="text-[22px] font-bold text-black leading-none whitespace-nowrap">
+                  <p className="text-[22px] font-bold text-white leading-none whitespace-nowrap">
                     {member.name}
                   </p>
                 </div>
                 <p
-                  className="text-[16px] font-medium text-black"
+                  className="text-[16px] font-medium text-white"
                   dangerouslySetInnerHTML={{ __html: member.desc }}
                 ></p>
                 <a target="_blank" href={member.linkedin} className="ml-auto ">
