@@ -104,36 +104,29 @@ const Multimedia = () => {
             </p>
           </div>
           <div className={`w-full   ${isMobile2 ? "px-[20px]" : "px-[45px]"}`}>
-            {!videoStates[index] && (
-              <div className="w-full relative">
-                <img
-                  src={`${process.env.PUBLIC_URL}/assets/multimedia/${event.thumbnail}`}
-                  alt="Cover Image"
-                  className="w-full object-cover relative z-0"
-                  onClick={() => handlePlay(index)}
-                />
-                <div className="bg-[#1212126c] absolute left-0 bottom-0 w-full z-[1] h-full rounded-[20px]"></div>
-                <img
-                  src={`${process.env.PUBLIC_URL}/assets/media/play.png`}
-                  className=" absolute left-[50%] bottom-[50%] translate-x-[-50%] translate-y-[50%] z-[1] w-[90px] cursor-pointer rounded-[20px] cards:w-[60px]"
-                  onClick={() => handlePlay(index)}
-                />
-              </div>
-            )}
-            {videoStates[index] && (
-              <video
-                controls
-                autoPlay
-                className={`w-full  rounded-[30px] object-cover`}
-                onEnded={() => handlePlay(index)}
-              >
-                <source
-                  src={`${process.env.PUBLIC_URL}/assets/multimedia/${event.video}`}
-                  type="video/mp4"
-                />
-                Your browser does not support the video tag.
-              </video>
-            )}
+            <div className="w-full relative">
+              {event.logo == "" ? (
+                <iframe
+                  className="w-full h-[600px] vsm:h-[300px]"
+                  src="https://www.youtube.com/embed/ECNlF8Iq7OU?si=_1ghhpmgHHxIEvqj"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              ) : (
+                <iframe
+                  className="w-full h-[600px] vsm:h-[300px]"
+                  src="https://www.youtube.com/embed/v9bDjqL8Pl4?si=aZuozpE_e7khgE5q"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              )}
+            </div>
           </div>
           {isMobile2 ? (
             <Carousel
