@@ -136,11 +136,14 @@ const David = () => {
               </div>
               <div className="relative vsm:hidden z-[1] w-[3px] h-[70%] origin-top-left bg-white"></div>
               <div className=" relative z-[1] ">
-                <p className="text-[18px] text-white whitespace-nowrap vsm:whitespace-normal vsm:text-center">
-                  Naoris Consulting Strategy Director
+              <p className=" text-[18px] text-white whitespace-nowrap vsm:whitespace-normal vsm:text-center">
+                  {t("Former Chief Scientist at IBM")}
                 </p>
-                <p className="text-[18px] text-white whitespace-nowrap vsm:whitespace-normal vsm:text-center">
-                  Architect of the DNS server
+                <p className=" text-[18px] text-white whitespace-nowrap vsm:whitespace-normal vsm:text-center">
+                  {t("CyberSecurity Adviser to White House")}
+                </p>
+                <p className=" text-[18px] text-white whitespace-nowrap vsm:whitespace-normal vsm:text-center">
+                  {t("Architect of the DNS server")}
                 </p>
               </div>
             </div>
@@ -170,10 +173,13 @@ const David = () => {
               <div className="relative vsm:hidden z-[1] w-[3px] h-[70%] origin-top-left bg-white"></div>
               <div className=" relative z-[1] ">
                 <p className=" text-[18px] text-white whitespace-nowrap vsm:whitespace-normal vsm:text-center">
-                  Naoris Consulting Strategy Director
+                  {t("Former Chief Scientist at IBM")}
                 </p>
                 <p className=" text-[18px] text-white whitespace-nowrap vsm:whitespace-normal vsm:text-center">
-                  Architect of the DNS server
+                  {t("CyberSecurity Adviser to White House")}
+                </p>
+                <p className=" text-[18px] text-white whitespace-nowrap vsm:whitespace-normal vsm:text-center">
+                  {t("Architect of the DNS server")}
                 </p>
               </div>
             </div>

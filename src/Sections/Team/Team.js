@@ -110,6 +110,8 @@ const Team = () => {
                         {member.name}
                       </p>
                       <p className="text-[23px] vsm:text-[15px] font-medium text-white">
+                        {member.position}
+                        <br />
                         {member.desc}
                       </p>
                     </div>
