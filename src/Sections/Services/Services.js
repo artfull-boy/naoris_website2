@@ -10,7 +10,7 @@ const Services = () => {
   const { t, i18n } = useTranslation();
 
   return (
-    <div className="container relative flex flex-col gap-[50px] items-center justify-center z-[2]">
+    <div className="container relative flex flex-col gap-[150px] items-center justify-center z-[2]">
       <motion.div
         className="heading relative w-fit"
         variants={headingVariants}
@@ -25,15 +25,17 @@ const Services = () => {
           {t("Our Services")}
         </p>
       </motion.div>
-      <div className="flex flex-wrap w-full h-fit justify-between items-start gap-y-[150px] relative z-[2]">
+      <div className="flex flex-wrap w-full h-fit justify-center items-start gap-y-[150px] gap-x-[100px] relative z-[2]">
         {serviceData.map((service, index) => {
           return (
             <div className="flex flex-col gap-[25px] w-[400px] justify-center items-center relative  vsm:z-[2] vsm:w-[100%]">
-              <img
-                src={`${process.env.PUBLIC_URL}/services/${service.image}`}
-                width={140}
-              ></img>
-              <div className="heading relative w-fit">
+              <div className="flex justify-center items-center h-[50px]">
+                <img
+                  src={`${process.env.PUBLIC_URL}/services/${service.image}`}
+                  width={150}
+                ></img>
+              </div>
+              <div className="heading relative w-fit h-[90px] flex items-center pb-[4px] mt-9">
                 <p className="font-bold text-[30px] text-white text-center">
                   {t(`${service.title}`)}
                 </p>

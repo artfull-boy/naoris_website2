@@ -168,7 +168,7 @@ const Multimedia = () => {
                         <Dialog className="w-full bg-black" key={index}>
                           <DialogTrigger asChild>
                             <img
-                              src={`${process.env.PUBLIC_URL}/assets/multimedia/${picture}`}
+                              src={`${process.env.PUBLIC_URL}/assets/multimedia/compressed/${picture}`}
                               className={`relative border-[3px] border-[#E2E2E2] w-[280px] ${
                                 index == 0 ? "ml-[0px]" : "ml-[-55px]"
                               } rotate-[-9deg] hover:rotate-0 hover:z-[3] hover:w-[320px] transition-all duration-[0.8] ease-in-out cursor-pointer`}

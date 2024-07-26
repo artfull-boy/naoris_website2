@@ -91,7 +91,7 @@ const Team = () => {
                   <img
                     src={`${process.env.PUBLIC_URL}/team/${member.img}`}
                     alt="Team member image"
-                    className={`relative top-0 right-0 z-0 rounded-[8px] transition-transform duration-300 ${
+                    className={`relative w-[100%] top-0 right-0 z-0 rounded-[8px] transition-transform duration-300 ${
                       clicked[index] ? "scale-110" : "scale-100"
                     }`}
                   />

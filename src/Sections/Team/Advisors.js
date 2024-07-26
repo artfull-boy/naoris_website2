@@ -90,7 +90,7 @@ const Advisors = () => {
                     <img
                       src={`${process.env.PUBLIC_URL}/team/${member.img}`}
                       alt="Advisor member image"
-                      className={`relative top-0 right-0 z-0 rounded-[8px] transition-transform duration-300 ${
+                      className={`relative top-0 right-0 w-[100%] z-0 rounded-[8px] transition-transform duration-300 ${
                         cardClicked[index] ? "scale-[1.2]" : "scale-110"
                       }`}
                     />

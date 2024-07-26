@@ -52,7 +52,7 @@ function App() {
     { id: "faq", name: "FAQ" },
     { id: "media", name: "They spoke about us" },
     { id: "case_studies", name: "Use Cases" },
-    { id: "multimedia", name: "MultiMedia Library" },
+    { id: "multimedia", name: "Multimedia Library" },
     { id: "contact", name: "Contact Us" },
   ];
 
