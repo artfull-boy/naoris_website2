@@ -8,31 +8,6 @@ const Navbar = ({ sections, scrollToSection }) => {
 
   const [activeSection, setActiveSection] = React.useState("home");
 
-  /*React.useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + 100; 
-      const sectionIds = sections.map((section) => section.id);
-      const currentActiveSection = sectionIds.find((id) => {
-        const sectionElement = document.getElementById(id);
-        if (sectionElement) {
-          const sectionTop = sectionElement.offsetTop;
-          const sectionBottom = sectionTop + sectionElement.offsetHeight;
-          
-          return scrollPosition >= sectionTop && scrollPosition < sectionBottom;
-        }
-        return false;
-      });
-      console.log("Current active section:", currentActiveSection);
-      setActiveSection(currentActiveSection || "");
-    };
-    
-    if (activeSection !== "case_studies" && activeSection !== "media") {
-      window.addEventListener("scroll", handleScroll);
-    }
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [sections]);*/
   const [isOpen, setIsOpen] = React.useState(false);
   const dropdownRef = React.useRef(null);
 
@@ -126,6 +101,47 @@ const Navbar = ({ sections, scrollToSection }) => {
                   )}
                 </li>
               ))}
+              <li className="mt-2">
+                <details>
+                  <summary className="flex items-center gap-2">
+                    <img
+                      src={`${process.env.PUBLIC_URL}/assets/icon_world.png`}
+                      alt="Language icon"
+                    />
+                    Language
+                  </summary>
+                  <ul className="p-2 w-full">
+                    <li>
+                      <a
+                        className={`${
+                          i18n.language === "en" ? "text-[#00FFA3]" : ""
+                        }`}
+                        onClick={() => changeLanguage("en")}
+                      >
+                        <img
+                          src={`${process.env.PUBLIC_URL}/assets/us.png`}
+                          alt="US flag"
+                        />
+                        English
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className={`${
+                          i18n.language === "fr" ? "text-[#00FFA3]" : ""
+                        }`}
+                        onClick={() => changeLanguage("fr")}
+                      >
+                        <img
+                          src={`${process.env.PUBLIC_URL}/assets/Fr.png`}
+                          alt="FR flag"
+                        />
+                        French
+                      </a>
+                    </li>
+                  </ul>
+                </details>
+              </li>
             </ul>
           )}
         </div>
@@ -198,38 +214,37 @@ const Navbar = ({ sections, scrollToSection }) => {
               <summary>
                 <img
                   src={`${process.env.PUBLIC_URL}/assets/icon_world.png`}
-                ></img>
+                  alt="Language icon"
+                />
                 Language
               </summary>
               <ul className="p-2 w-[100%]">
                 <li>
                   <a
                     className={`${
-                      i18n.language == "en" ? "text-[#00FFA3]" : ""
+                      i18n.language === "en" ? "text-[#00FFA3]" : ""
                     }`}
                     onClick={() => changeLanguage("en")}
                   >
-                    {" "}
                     <img
                       src={`${process.env.PUBLIC_URL}/assets/us.png`}
                       alt="US flag"
-                    />{" "}
-                    Ang
+                    />
+                    English
                   </a>
                 </li>
                 <li>
                   <a
                     className={`${
-                      i18n.language == "fr" ? "text-[#00FFA3]" : ""
+                      i18n.language === "fr" ? "text-[#00FFA3]" : ""
                     }`}
                     onClick={() => changeLanguage("fr")}
                   >
-                    {" "}
                     <img
                       src={`${process.env.PUBLIC_URL}/assets/Fr.png`}
                       alt="FR flag"
-                    />{" "}
-                    Fr
+                    />
+                    French
                   </a>
                 </li>
               </ul>
