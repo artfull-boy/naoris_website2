@@ -22,5 +22,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 public/assets/naorisconsulting.mp4
-build.zip
+/build.zip
 *.zip
