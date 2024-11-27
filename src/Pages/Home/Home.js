@@ -10,6 +10,7 @@ import Services from "../../Sections/Services/Services";
 import Contact from "../../Sections/Contact/Contact";
 import Kjell from "../../Sections/Testimonials/Kjell";
 import { Player } from "@lottiefiles/react-lottie-player";
+import BreakingNewsMarquee from "../../Sections/BreakingNews/BreakingNews";
 
 const Home = () => {
   useEffect(() => {
@@ -85,6 +86,7 @@ const Home = () => {
         <Team />
         <Advisors />
         <Partners />
+        <BreakingNewsMarquee />
       </div>
       <div
         id="faq"

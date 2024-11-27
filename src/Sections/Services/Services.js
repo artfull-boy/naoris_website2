@@ -28,14 +28,14 @@ const Services = () => {
       <div className="flex flex-wrap w-full h-fit justify-center items-start gap-y-[150px] gap-x-[100px] relative z-[2]">
         {serviceData.map((service, index) => {
           return (
-            <div className="flex flex-col gap-[25px] w-[400px] justify-center items-center relative  vsm:z-[2] vsm:w-[100%]">
+            <div className="flex flex-col gap-[25px] w-[320px] justify-center items-center relative  vsm:z-[2] vsm:w-[100%]">
               <div className="flex justify-center items-center h-[50px]">
                 <img
                   src={`${process.env.PUBLIC_URL}/services/${service.image}`}
                   width={150}
                 ></img>
               </div>
-              <div className="heading relative w-fit h-[90px] flex items-center pb-[4px] mt-9">
+              <div className="heading relative w-fit h-fit flex items-center pb-[4px] mt-9">
                 <p className="font-bold text-[30px] text-white text-center">
                   {t(`${service.title}`)}
                 </p>

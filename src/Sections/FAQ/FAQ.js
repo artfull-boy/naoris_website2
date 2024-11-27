@@ -100,8 +100,7 @@ const FAQ = () => {
                       {t(
                         "Naoris Consulting can assist a wide range of organizations including:"
                       )}
-                      <br/>
-                      <li>
+                      <li className="mt-3">
                         <span className="font-semibold text-[#00FFA3]">
                           {"Governments:"}
                         </span>{" "}
