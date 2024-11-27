@@ -2,16 +2,12 @@ import React, { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useTranslation } from "react-i18next";
-import {
-  cardContainerVariants,
-  cardVariants,
-  headingVariants,
-} from "../../animations";
+import { cardContainerVariants, headingVariants } from "../../animations";
 import "./faq.css";
 import FaqData from "./faq.json";
 
 const FAQ = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const controls = useAnimation();
   const [ref, inView] = useInView();
   useEffect(() => {
@@ -57,7 +53,7 @@ const FAQ = () => {
           </p>
         </motion.div>
         <motion.div
-          className="flex flex-col gap-[45px] w-full items-center"
+          className="flex flex-col w-full items-center"
           animate={controls}
           initial="hidden"
           variants={FaqAnimation}
@@ -72,7 +68,7 @@ const FAQ = () => {
             <motion.div
               key={faq.id}
               variants={cardContainerVariants}
-              className="flex question flex-col overflow-hidden gap-[20px] md:w-[80%] w-[100%] relative items-center cursor-pointer border-b-[1.7px] border-[white] py-[20px] "
+              className="flex question flex-col overflow-hidden gap-[20px] md:w-[80%] w-[100%] relative items-center cursor-pointer border-b-[1.7px] border-[white] pt-[55px] pb-[35px] "
               onClick={toggleVisibility}
             >
               {faq.question ==
@@ -132,7 +128,7 @@ const FAQ = () => {
                           "Ensuring transparency and trust in transactions and donations."
                         )}
                       </li>
-                      <li>
+                      <li className="pb-[20px]">
                         <span className="font-semibold text-[#00FFA3]">
                           {t("Private Corporations:")}
                         </span>{" "}
@@ -161,7 +157,7 @@ const FAQ = () => {
                     className="max-h-0 overflow-hidden answer duration-[0.4s]"
                     suppressHydrationWarning={true}
                   >
-                    <p className="text-white font-normal text-[20px] leading-[1.6] vsm:text-[18px]">
+                    <p className="text-white font-normal text-[20px] leading-[1.6] vsm:text-[18px] pb-[20px]">
                       {t(`${faq.reponse}`)}
                     </p>
                   </div>

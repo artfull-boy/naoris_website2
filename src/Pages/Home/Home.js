@@ -9,10 +9,9 @@ import About from "../../Sections/About/About";
 import Services from "../../Sections/Services/Services";
 import Contact from "../../Sections/Contact/Contact";
 import Kjell from "../../Sections/Testimonials/Kjell";
-import { Player } from "@lottiefiles/react-lottie-player";
-import BreakingNewsMarquee from "../../Sections/BreakingNews/BreakingNews";
-
 const Home = () => {
+  
+
   useEffect(() => {
     // Scroll to the section specified in the URL fragment
     const sectionId = window.location.hash.substring(1); // Get the section ID from the URL fragment
@@ -86,7 +85,6 @@ const Home = () => {
         <Team />
         <Advisors />
         <Partners />
-        <BreakingNewsMarquee />
       </div>
       <div
         id="faq"

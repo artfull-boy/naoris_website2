@@ -14,15 +14,21 @@ import {
 } from "../../components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { useTranslation } from "react-i18next";
+import NewsTicker from "../../Sections/BreakingNews/BreakingNews";
 
 const Media = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [isMobile, setIsMobile] = useState(
     typeof window !== "undefined" && window.innerWidth <= 719
   );
   const [isMobile2, setIsMobile2] = useState(
     typeof window !== "undefined" && window.innerWidth <= 1420
   );
+  const breakingNews = [
+    t(
+      "Get ready to explore our groundbreaking tools and cutting-edge innovations, coming your way soon with exciting announcements!"
+    ),
+  ];
 
   useEffect(() => {
     const handleResize = () => {
@@ -72,34 +78,24 @@ const Media = () => {
               Naoris Consulting
             </p>
           </div>
-          <div className="background_media flex flex-col justify-end gap-3 z-[2] w-full h-[600px] rounded-[20px] relative overflow-hidden pl-[60px] pb-[20px] vsm:pl-[20px] vsm:pb-0 object-cover">
-            <img
-              src={`${process.env.PUBLIC_URL}/assets/media/comingsoon.png`}
-              className="absolute left-[60px] top-[40px] cards:hidden"
-            ></img>
-            <p className="font-bold text-[55px] text-white relative z-[2] uppercase cards:text-center cards:text-[40px]">
-              Discover <br /> Our Future Tools!
-            </p>
-            <div className="flex flex-row gap-3 flex-wrap items-center z-[2] relative cards:flex-col cards:gap-5">
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/media/SentinelScan.png`}
-                className="vsm:w-[200px]"
-              ></img>
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/media/webGuard.png`}
-                className="vsm:w-[200px]"
-              ></img>
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/media/PhishBlock.png`}
-                className="vsm:w-[200px]"
-              ></img>
-              <Player
-                autoplay
-                loop
-                src="https://lottie.host/4cfaad1f-0a63-476c-a04d-6ee9f6b1a2ed/3zBmdeCjlC.json"
-                className="size-[150px] self-end"
-              ></Player>
+          <div className="background_media flex flex-col items-center z-[2] w-full h-[600px]  overflow-hidden pl-[60px] pb-[20px] vsm:pl-[20px] vsm:pb-0 object-cover relative">
+            <div className="flex flex-col gap-[57px] h-[100%] justify-center items-center">
+              <div className="flex gap-[75px] items-center">
+                <img
+                  src={`${process.env.PUBLIC_URL}/assets/bdoLogo.png`}
+                  className="h-[93px]"
+                ></img>
+                <div className="w-[5px] h-[100%] rounded-xl bg-white"></div>
+                <img
+                  className="h-[93px]"
+                  src={`${process.env.PUBLIC_URL}/assets/naorisLogo.png`}
+                ></img>
+              </div>
+              <p className="text-[43px] font-bold text-white text-center">
+                {t("United for a secure and sovereign digital transformation")}
+              </p>
             </div>
+            <NewsTicker news={breakingNews} />
           </div>
           {isMobile2 && (
             <Carousel
