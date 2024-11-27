@@ -6,7 +6,10 @@ const NewsTicker = ({ news }) => {
     <div className="bg-[#f00] text-white py-[10px] absolute left-0 bottom-0">
       <Marquee gradient={false} speed={150}>
         {news.map((item, index) => (
-          <span key={index} style={{ marginRight: "50px" }}>
+          <span
+            key={index}
+            style={{ marginRight: "50px", fontWeight: "medium" }}
+          >
             {item}
           </span>
         ))}
