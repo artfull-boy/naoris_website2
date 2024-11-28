@@ -17,7 +17,7 @@ import { useTranslation } from "react-i18next";
 import NewsTicker from "../../Sections/BreakingNews/BreakingNews";
 
 const Media = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [isMobile, setIsMobile] = useState(
     typeof window !== "undefined" && window.innerWidth <= 719
   );
@@ -80,18 +80,21 @@ const Media = () => {
           </div>
           <div className="background_media flex flex-col items-center z-[2] w-full h-[600px]  overflow-hidden pl-[60px] pb-[20px] vsm:pl-[20px] vsm:pb-0 object-cover relative">
             <div className="flex flex-col gap-[57px] h-[100%] justify-center items-center">
-              <div className="flex gap-[75px] items-center">
+              <div className="flex gap-[75px] items-center  banner_size:gap-[30px] cards:flex-col">
                 <img
                   src={`${process.env.PUBLIC_URL}/assets/bdoLogo.png`}
-                  className="h-[93px]"
+                  className="h-[93px]  banner_size:h-[70px]"
                 ></img>
-                <div className="w-[5px] h-[100%] rounded-xl bg-white"></div>
+                <div className="w-[5px] h-[100%] rounded-xl bg-white cards:hidden"></div>
+                <p className="text-[40px] text-white cards:block font-bold hidden">
+                  X
+                </p>
                 <img
-                  className="h-[93px]"
+                  className="h-[93px] banner_size:h-[70px]"
                   src={`${process.env.PUBLIC_URL}/assets/naorisLogo.png`}
                 ></img>
               </div>
-              <p className="text-[43px] font-bold text-white text-center">
+              <p className="text-[43px] vsm:text-[20px] banner_size:text-[22px] font-bold text-white text-center ">
                 {t("United for a secure and sovereign digital transformation")}
               </p>
             </div>
