@@ -98,7 +98,7 @@ const FAQ = () => {
                       )}
                       <li className="mt-3">
                         <span className="font-semibold text-[#00FFA3]">
-                          {"Governments:"}
+                          {t("Governments:")}
                         </span>{" "}
                         {t(
                           "Enhancing national security, streamlining public services, and supporting smart governance models."
