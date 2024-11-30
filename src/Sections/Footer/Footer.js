@@ -22,49 +22,49 @@ const Footer = ({ scrollToSection }) => {
             onClick={() => scrollToSection("services")}
             className="font-normal cursor-pointer text-[14px] text-[#ffffff80] hover:text-[#00FFA3]"
           >
-            {t("Audits and Evaluations")}
+            {t("Audits and evaluations")}
           </Link>
           <Link
             to={"/"}
             onClick={() => scrollToSection("services")}
             className="font-normal cursor-pointer text-[14px] text-[#ffffff80] hover:text-[#00FFA3]"
           >
-            {t("Digital Strategy and Cybersecurity")}
+            {t("Digital strategy and cybersecurity")}
           </Link>
           <Link
             to={"/"}
             onClick={() => scrollToSection("services")}
             className="font-normal cursor-pointer text-[14px] text-[#ffffff80] hover:text-[#00FFA3]"
           >
-            {t("Risk Management and Compliance")}
+            {t("Risk management and compliance")}
           </Link>
           <Link
             to={"/"}
             onClick={() => scrollToSection("services")}
             className="font-normal cursor-pointer text-[14px] text-[#ffffff80] hover:text-[#00FFA3]"
           >
-            {t("Solutions Architecture")}
+            {t("Solutions architecture")}
           </Link>
           <Link
             to={"/"}
             onClick={() => scrollToSection("services")}
             className="font-normal cursor-pointer text-[14px] text-[#ffffff80] hover:text-[#00FFA3]"
           >
-            {t("Infrastructure and Applications Optimization")}
+            {t("Infrastructure and applications optimization")}
           </Link>
           <Link
             to={"/"}
             onClick={() => scrollToSection("services")}
             className="font-normal cursor-pointer text-[14px] text-[#ffffff80] hover:text-[#00FFA3]"
           >
-            {t("Training and Awareness")}
+            {t("Training and awareness")}
           </Link>
           <Link
             to={"/"}
             onClick={() => scrollToSection("services")}
             className="font-normal cursor-pointer text-[14px] text-[#ffffff80] hover:text-[#00FFA3]"
           >
-            {t("Artificial Intelligence and Data Analysis")}
+            {t("Artificial intelligence and data analysis")}
           </Link>
         </div>
         <div className="flex flex-col gap-4 items-start w-[240px] vsm:w-full  vsm:items-center">
@@ -73,37 +73,37 @@ const Footer = ({ scrollToSection }) => {
             to={"/case_studies/1"}
             className="font-normal cursor-pointer text-[14px] text-[#ffffff80] hover:text-[#00FFA3]"
           >
-            {t("Autonomous Fraud Detection System")}
+            {t("Autonomous fraud detection system")}
           </Link>
           <Link
             to={"/case_studies/2"}
             className="font-normal cursor-pointer text-[14px] text-[#ffffff80] hover:text-[#00FFA3]"
           >
-            {t("Secure Quantum Blockchain for Real-Time Fraud Detection")}
+            {t("Secure quantum blockchain for real-time fraud detection")}
           </Link>
           <Link
             to={"/case_studies/3"}
             className="font-normal cursor-pointer text-[14px] text-[#ffffff80] hover:text-[#00FFA3]"
           >
-            {t("Enhanced Cybersecurity Mesh for Enterprise Clients")}
+            {t("Enhanced cybersecurity mesh for enterprise clients")}
           </Link>
           <Link
             to={"/case_studies/4"}
             className="font-normal cursor-pointer text-[14px] text-[#ffffff80] hover:text-[#00FFA3]"
           >
-            {t("Personalized AI-Based Financial Advisory Services")}
+            {t("Personalized AI-based financial advisory services")}
           </Link>
           <Link
             to={"/case_studies/5"}
             className="font-normal cursor-pointer text-[14px] text-[#ffffff80] hover:text-[#00FFA3]"
           >
-            {t("Transforming the Insurance Sector with AI and Blockchain")}
+            {t("Transforming the insurance sector with AI and blockchain")}
           </Link>
           <Link
             to={"/case_studies/6"}
             className="font-normal cursor-pointer text-[14px] text-[#ffffff80] hover:text-[#00FFA3]"
           >
-            {t("IntelliChain Inventory System")}
+            {t("IntelliChain inventory system")}
           </Link>
         </div>
         <div className="flex flex-col gap-4 items-start w-[240px] vsm:w-full  vsm:items-center">
