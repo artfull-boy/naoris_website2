@@ -22,19 +22,13 @@ import MultimediaJson from "./multimedia.json";
 
 const Multimedia = () => {
   const { t, i18n } = useTranslation();
-  const [videoStates, setVideoStates] = useState({});
   const [isMobile, setIsMobile] = useState(
     typeof window !== "undefined" && window.innerWidth <= 719
   );
   const [isMobile2, setIsMobile2] = useState(
     typeof window !== "undefined" && window.innerWidth <= 1420
   );
-  const handlePlay = (index) => {
-    setVideoStates((prevState) => ({
-      ...prevState,
-      [index]: !prevState[index],
-    }));
-  };
+
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 719);
@@ -43,7 +37,14 @@ const Multimedia = () => {
 
     window.addEventListener("resize", handleResize);
   }, []);
-  const plugins = [];
+
+  const logos = {
+    en: "assets/naorisEventAng.png",
+    fr: "assets/naorisEventFr.png",
+  };
+
+  const currentLang = i18n.language;
+
   return (
     <div
       id="multimedia"
@@ -83,10 +84,10 @@ const Multimedia = () => {
           <div className="flex flex-row justify-between items-center w-full">
             <div className="line_design w-[40%] h-[1px] rotate-180"></div>
             {event.logo == "" ? (
-              <p className="text-[24px] text-white font-bold text-center">
-                <span className="text-[#3A9994]">{t("Official Launch")}</span> <br />{" "}
-                {t("Event of Naoris")} <br /> {t("in Africa")}
-              </p>
+              <img
+                className="w-[200px]"
+                src={`${process.env.PUBLIC_URL}/${logos[currentLang]}`}
+              ></img>
             ) : (
               <img
                 src={`${process.env.PUBLIC_URL}/assets/multimedia/${event.logo}`}
